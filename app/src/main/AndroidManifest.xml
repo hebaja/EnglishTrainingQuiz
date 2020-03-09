@@ -9,14 +9,14 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".ui.activity.FinalScoreActivity"></activity>
-        <activity android:name=".ui.activity.MainActivity">
+        <activity android:name=".ui.activity.FinalScoreActivity"
+            android:screenOrientation="nosensor"></activity>
+        <activity android:name=".ui.activity.MainActivity"
+            android:screenOrientation="nosensor">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
     </application>
-
 </manifest>
