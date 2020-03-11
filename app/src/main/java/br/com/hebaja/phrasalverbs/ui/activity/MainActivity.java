@@ -15,12 +15,10 @@ import android.widget.Toast;
 import java.io.IOException;
 import java.io.InputStream;
 import java.util.ArrayList;
-import java.util.Iterator;
 import java.util.Scanner;
 
 import br.com.hebaja.phrasalverbs.R;
 import br.com.hebaja.phrasalverbs.model.Question;
-import br.com.hebaja.phrasalverbs.model.RightAnswer;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -30,7 +28,6 @@ public class MainActivity extends AppCompatActivity {
 
     //Create an list of questions to be populated by the method createQuestionsObjects();
     ArrayList<Question> questions = new ArrayList<>();
-    ArrayList<RightAnswer> rightAnswers = new ArrayList<>();
 
     //Create scanners for text files in assets folder
     Scanner scannerQuestionsOptions;
@@ -42,9 +39,6 @@ public class MainActivity extends AppCompatActivity {
     private Button buttonOptionB;
     private Button buttonOptionC;
     private Button buttonQuit;
-
-    private RightAnswer rightAnswerForTest;
-    String positionRightAnswer;
 
     private int score = 0;
 
@@ -71,20 +65,13 @@ public class MainActivity extends AppCompatActivity {
 
         createQuestionsObjects();
 
-        createRightAnswersObjects();
-
         initializeViews();
 
         updatePosition();
 
         updateViewsQuestions();
 
-        updateRightAnswerObjects();
-
         setOptionsButtons();
-
-
-
     }
 
     private void initializeViews() {
@@ -100,7 +87,7 @@ public class MainActivity extends AppCompatActivity {
         buttonOptionA.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                if (optionPositionA.equals(positionRightAnswer)) {
+                if (optionPositionA.equals(questions.get(position).getRightOption())) {
                     score++;
                     position++;
                     updateScore(score);
@@ -117,7 +104,7 @@ public class MainActivity extends AppCompatActivity {
         buttonOptionB.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                if (optionPositionB.equals(positionRightAnswer)) {
+                if (optionPositionB.equals(questions.get(position).getRightOption())) {
                     score++;
                     position++;
                     updateScore(score);
@@ -127,7 +114,6 @@ public class MainActivity extends AppCompatActivity {
                     position++;
                     updateMainActivityOrGoToFinalActivity();
                     Toast.makeText(MainActivity.this, "Wrong Answer", Toast.LENGTH_SHORT).show();
-
                 }
             }
         });
@@ -135,7 +121,7 @@ public class MainActivity extends AppCompatActivity {
         buttonOptionC.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                if (optionPositionC.equals(positionRightAnswer)) {
+                if (optionPositionC.equals(questions.get(position).getRightOption())) {
                     score++;
                     position++;
                     updateScore(score);
@@ -161,14 +147,12 @@ public class MainActivity extends AppCompatActivity {
         try {
             updateViewsQuestions();
             updatePosition();
-            updateRightAnswerObjects();
         } catch (IndexOutOfBoundsException e) {
             e.printStackTrace();
             Intent intent = new Intent(MainActivity.this, FinalScoreActivity.class);
             intent.putExtra("score", score);
             startActivity(intent);
             finish();
-
         }
     }
 
@@ -185,24 +169,10 @@ public class MainActivity extends AppCompatActivity {
                 question.setOptionA(formattedLine.next());
                 question.setOptionB(formattedLine.next());
                 question.setOptionC(formattedLine.next());
+                question.setRightOption(formattedLine.next());
 
                 questions.add(question);
-
             }
-        }
-
-        private void createRightAnswersObjects() {
-            while(scannerRightAnswers.hasNextLine()) {
-                String lineRightAnswers = scannerRightAnswers.nextLine();
-                Scanner separatedLine = new Scanner(lineRightAnswers);
-
-                RightAnswer rightAnswerObject = new RightAnswer();
-
-                rightAnswerObject.setRightAnswer(separatedLine.next());
-                rightAnswers.add(rightAnswerObject);
-
-            }
-
         }
 
         private void updateViewsQuestions() {
@@ -217,11 +187,6 @@ public class MainActivity extends AppCompatActivity {
                 optionPositionC = "c";
 
                 updateScore(score);
-        }
-
-        private void updateRightAnswerObjects() {
-                rightAnswerForTest = rightAnswers.get(position);
-                positionRightAnswer = rightAnswerForTest.getRightAnswer();
         }
 
         private void updatePosition() {
@@ -241,7 +206,6 @@ public class MainActivity extends AppCompatActivity {
             outState.putInt(STATE_POSITION, position);
         }
 
-
         @Override
         protected void onRestoreInstanceState(@NonNull Bundle savedInstanceState) {
             super.onRestoreInstanceState(savedInstanceState);
@@ -251,7 +215,6 @@ public class MainActivity extends AppCompatActivity {
 
             position = savedInstanceState.getInt(STATE_POSITION);
             updateViewsQuestions();
-            updateRightAnswerObjects();
         }
 
     private void getAssetsFromFiles() throws IOException {
