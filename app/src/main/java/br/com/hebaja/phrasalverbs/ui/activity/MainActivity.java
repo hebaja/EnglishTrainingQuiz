@@ -31,7 +31,6 @@ public class MainActivity extends AppCompatActivity {
 
     //Create scanners for text files in assets folder
     Scanner scannerQuestionsOptions;
-    Scanner scannerRightAnswers;
 
     private TextView textViewQuestion;
     private TextView scoreView;
@@ -48,6 +47,7 @@ public class MainActivity extends AppCompatActivity {
 
     private int position;
     private int positionRestored = 0;
+    private String rightAnswer;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -55,7 +55,6 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         setTitle(APPBAR_TITLE);
-
 
         try {
             getAssetsFromFiles();
@@ -84,10 +83,13 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void setOptionsButtons() {
+
+
+
         buttonOptionA.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                if (optionPositionA.equals(questions.get(position).getRightOption())) {
+                if (optionPositionA.equals(rightAnswer)) {
                     score++;
                     position++;
                     updateScore(score);
@@ -104,7 +106,7 @@ public class MainActivity extends AppCompatActivity {
         buttonOptionB.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                if (optionPositionB.equals(questions.get(position).getRightOption())) {
+                if (optionPositionB.equals(rightAnswer)) {
                     score++;
                     position++;
                     updateScore(score);
@@ -121,7 +123,7 @@ public class MainActivity extends AppCompatActivity {
         buttonOptionC.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                if (optionPositionC.equals(questions.get(position).getRightOption())) {
+                if (optionPositionC.equals(rightAnswer)) {
                     score++;
                     position++;
                     updateScore(score);
@@ -144,16 +146,31 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void updateMainActivityOrGoToFinalActivity() {
-        try {
+        if(questions.size() > position) {
             updateViewsQuestions();
             updatePosition();
-        } catch (IndexOutOfBoundsException e) {
-            e.printStackTrace();
-            Intent intent = new Intent(MainActivity.this, FinalScoreActivity.class);
-            intent.putExtra("score", score);
-            startActivity(intent);
-            finish();
+        } else {
+            goToFinalSocreActivity();
         }
+    }
+
+    private void goToFinalSocreActivity() {
+        disableAllButtons();
+        startFinalScoreActivity();
+        finish();
+    }
+
+    private void startFinalScoreActivity() {
+        Intent intent = new Intent(MainActivity.this, FinalScoreActivity.class);
+        intent.putExtra("score", score);
+        startActivity(intent);
+    }
+
+    private void disableAllButtons() {
+        buttonOptionA.setEnabled(false);
+        buttonOptionB.setEnabled(false);
+        buttonOptionC.setEnabled(false);
+        buttonQuit.setEnabled(false);
     }
 
     private void createQuestionsObjects() {
@@ -191,6 +208,8 @@ public class MainActivity extends AppCompatActivity {
 
         private void updatePosition() {
             position = position + positionRestored;
+            rightAnswer = questions.get(position).getRightOption();
+
             Log.i("position", "updatePosition: " + position);
         }
 
@@ -222,8 +241,5 @@ public class MainActivity extends AppCompatActivity {
 
             InputStream questionsFileFromAsset = assetManager.open("questions.csv");
             scannerQuestionsOptions = new Scanner(questionsFileFromAsset);
-
-            InputStream rightAnswersFileFromAsset = assetManager.open("questions_answers.txt");
-            scannerRightAnswers = new Scanner(rightAnswersFileFromAsset);
         }
 }

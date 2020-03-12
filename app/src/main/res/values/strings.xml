@@ -1,3 +1,13 @@
 <resources>
     <string name="app_name">PhrasalVerbs</string>
+    <string name="question_main_activity">Question</string>
+    <string name="option_a_main_activity">Option A</string>
+    <string name="option_b_main_activity">Option B</string>
+    <string name="option_c_main_activity">Option C</string>
+    <string name="score_main_activity">Score:</string>
+    <string name="score_counter_main_activity">0</string>
+    <string name="quit_main_activity">Quit</string>
+    <string name="quit_final_score_activity">Quit</string>
+    <string name="headline_final_score_activity">Your final score is:</string>
+    <string name="score_counter_final_score_activity">0</string>
 </resources>
