@@ -1,21 +1,22 @@
 package br.com.hebaja.phrasalverbs.ui.activity;
 
-import androidx.annotation.NonNull;
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Intent;
-import android.content.res.AssetManager;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.AppCompatActivity;
+
+import org.json.JSONArray;
+import org.json.JSONException;
+import org.json.JSONObject;
+
 import java.io.IOException;
 import java.io.InputStream;
 import java.util.ArrayList;
-import java.util.Scanner;
 
 import br.com.hebaja.phrasalverbs.R;
 import br.com.hebaja.phrasalverbs.model.Question;
@@ -28,9 +29,6 @@ public class MainActivity extends AppCompatActivity {
 
     //Create an list of questions to be populated by the method createQuestionsObjects();
     ArrayList<Question> questions = new ArrayList<>();
-
-    //Create scanners for text files in assets folder
-    Scanner scannerQuestionsOptions;
 
     private TextView textViewQuestion;
     private TextView scoreView;
@@ -56,13 +54,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         setTitle(APPBAR_TITLE);
 
-        try {
-            getAssetsFromFiles();
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-
-        createQuestionsObjects();
+        createQuestionObjectsFromJsonFile();
 
         initializeViews();
 
@@ -71,6 +63,7 @@ public class MainActivity extends AppCompatActivity {
         updateViewsQuestions();
 
         setOptionsButtons();
+
     }
 
     private void initializeViews() {
@@ -173,73 +166,78 @@ public class MainActivity extends AppCompatActivity {
         buttonQuit.setEnabled(false);
     }
 
-    private void createQuestionsObjects() {
+    private void updateViewsQuestions() {
+        textViewQuestion.setText(questions.get(position).getPrompt());
+        buttonOptionA.setText(questions.get(position).getOptionA());
+        buttonOptionB.setText(questions.get(position).getOptionB());
+        buttonOptionC.setText(questions.get(position).getOptionC());
 
-            while(scannerQuestionsOptions.hasNextLine()) {
-                String lineQuestionOptions = scannerQuestionsOptions.nextLine();
-                Scanner formattedLine = new Scanner(lineQuestionOptions);
-                formattedLine.useDelimiter(",");
+        optionPositionA = "a";
+        optionPositionB = "b";
+        optionPositionC = "c";
+
+        updateScore(score);
+    }
+
+    private void updatePosition() {
+        position = position + positionRestored;
+        rightAnswer = questions.get(position).getRightOption();
+    }
+
+    private void updateScore(int score) {
+        scoreView.setText(String.valueOf(score));
+    }
+    @Override
+    protected void onSaveInstanceState(@NonNull Bundle outState) {
+        super.onSaveInstanceState(outState);
+
+        outState.putInt(STATE_SCORE, score);
+        outState.putInt(STATE_POSITION, position);
+    }
+
+    @Override
+    protected void onRestoreInstanceState(@NonNull Bundle savedInstanceState) {
+        super.onRestoreInstanceState(savedInstanceState);
+
+        score = savedInstanceState.getInt(STATE_SCORE);
+        updateScore(score);
+
+        position = savedInstanceState.getInt(STATE_POSITION);
+        updateViewsQuestions();
+    }
+
+    private void createQuestionObjectsFromJsonFile() {
+        try {
+            InputStream inputStream = getAssets().open("phrasal_verbs_questions.json");
+            int size = inputStream.available();
+            byte[] buffer = new byte[size];
+            inputStream.read(buffer);
+            inputStream.close();
+            String jsonQuestionsFile = new String(buffer, "UTF-8");
+            JSONArray jsonArray = new JSONArray(jsonQuestionsFile);
+
+            for(int i = 0; i<jsonArray.length(); i++) {
+                JSONObject obj = jsonArray.getJSONObject(i);
+                JSONObject questionsObj = (JSONObject) obj.get("question");
+
+                String prompt = (String) questionsObj.get("prompt");
+                String optionA = (String) questionsObj.get("optionA");
+                String optionB = (String) questionsObj.get("optionB");
+                String optionC = (String) questionsObj.get("optionC");
+                String rightOption = (String) questionsObj.get("rightOption");
 
                 Question question = new Question();
-
-                question.setPrompt(formattedLine.next());
-                question.setOptionA(formattedLine.next());
-                question.setOptionB(formattedLine.next());
-                question.setOptionC(formattedLine.next());
-                question.setRightOption(formattedLine.next());
+                question.setPrompt(prompt);
+                question.setOptionA(optionA);
+                question.setOptionB(optionB);
+                question.setOptionC(optionC);
+                question.setRightOption(rightOption);
 
                 questions.add(question);
             }
+
+        } catch (IOException | JSONException e) {
+            e.printStackTrace();
         }
-
-        private void updateViewsQuestions() {
-                textViewQuestion.setText(questions.get(position).getPrompt());
-                buttonOptionA.setText(questions.get(position).getOptionA());
-                buttonOptionB.setText(questions.get(position).getOptionB());
-                buttonOptionC.setText(questions.get(position).getOptionC());
-
-
-                optionPositionA = "a";
-                optionPositionB = "b";
-                optionPositionC = "c";
-
-                updateScore(score);
-        }
-
-        private void updatePosition() {
-            position = position + positionRestored;
-            rightAnswer = questions.get(position).getRightOption();
-
-            Log.i("position", "updatePosition: " + position);
-        }
-
-        private void updateScore(int score) {
-            scoreView.setText(String.valueOf(score));
-        }
-
-        @Override
-        protected void onSaveInstanceState(@NonNull Bundle outState) {
-            super.onSaveInstanceState(outState);
-
-            outState.putInt(STATE_SCORE, score);
-            outState.putInt(STATE_POSITION, position);
-        }
-
-        @Override
-        protected void onRestoreInstanceState(@NonNull Bundle savedInstanceState) {
-            super.onRestoreInstanceState(savedInstanceState);
-
-            score = savedInstanceState.getInt(STATE_SCORE);
-            updateScore(score);
-
-            position = savedInstanceState.getInt(STATE_POSITION);
-            updateViewsQuestions();
-        }
-
-    private void getAssetsFromFiles() throws IOException {
-            AssetManager assetManager = getAssets();
-
-            InputStream questionsFileFromAsset = assetManager.open("questions.csv");
-            scannerQuestionsOptions = new Scanner(questionsFileFromAsset);
-        }
+    }
 }
