@@ -1,0 +1,202 @@
+[
+   {
+      "question":
+        {
+          "prompt": "I need to concentrate ___ my homework.",
+          "optionA": "a) at",
+          "optionB": "b) on",
+          "optionC": "c) of",
+          "rightAnswer": "b"
+         }
+   },
+   {
+      "question":
+        {
+          "prompt": "He's really bad ___ cooking.",
+          "optionA": "a) at",
+          "optionB": "b) for",
+          "optionC": "c) with",
+          "rightAnswer": "a"
+       }
+   },
+   {
+      "question":
+        {
+          "prompt": "I've always had difficulty ___ math.",
+          "optionA": "a) against",
+          "optionB": "b) from",
+          "optionC": "c) with",
+          "rightAnswer": "c"
+       }
+   },
+   {
+         "question":
+        {
+          "prompt": "Mark applied ___ a scholarship.",
+          "optionA": "a) for",
+          "optionB": "b) on",
+          "optionC": "c) to",
+          "rightAnswer": "a"
+       }
+   },
+   {
+         "question":
+        {
+          "prompt": "I'm incapable ___ playing sports.",
+          "optionA": "a) to",
+          "optionB": "b) about",
+          "optionC": "c) of",
+          "rightAnswer": "c"
+       }
+   },
+   {
+          "question":
+        {
+          "prompt": "They have to work ___ this project.",
+          "optionA": "a) at",
+          "optionB": "b) on",
+          "optionC": "c) with",
+          "rightAnswer": "b"
+       }
+   },
+   {
+         "question":
+        {
+          "prompt": "I need a moment to recover ___ the shock.",
+          "optionA": "a) from",
+          "optionB": "b) about",
+          "optionC": "c) against",
+          "rightAnswer": "a"
+       }
+   },
+   {
+         "question":
+        {
+          "prompt": "These sneakers are not suitable ___ jogging.",
+          "optionA": "a) at",
+          "optionB": "b) for",
+          "optionC": "c) of",
+          "rightAnswer": "b"
+       }
+   },
+   {
+           "question":
+        {
+          "prompt": "This book had a profound influence ___ me.",
+          "optionA": "a) at",
+          "optionB": "b) for",
+          "optionC": "c) on",
+          "rightAnswer": "c"
+       }
+   },
+   {
+         "question":
+        {
+          "prompt": "I've always struggled ___ Physics at school.",
+          "optionA": "a) with",
+          "optionB": "b) on",
+          "optionC": "c) about",
+          "rightAnswer": "a"
+       }
+   },
+   {
+         "question":
+        {
+          "prompt": "She asked ___ the condition of the house.",
+          "optionA": "a) about",
+          "optionB": "b) on",
+          "optionC": "c) in",
+          "rightAnswer": "a"
+       }
+   },
+   {
+         "question":
+        {
+          "prompt": "I'm certain ___ it.",
+          "optionA": "a) at",
+          "optionB": "b) about",
+          "optionC": "c) in",
+          "rightAnswer": "b"
+       }
+   },
+   {
+         "question":
+        {
+          "prompt": "The hotel has the advantage ___ being cheap.",
+          "optionA": "a) at",
+          "optionB": "b) on",
+          "optionC": "c) of",
+          "rightAnswer": "c"
+       }
+   },
+   {
+         "question":
+        {
+          "prompt": "This town is specialized ___ receiving tourists.",
+          "optionA": "a) in",
+          "optionB": "b) on",
+          "optionC": "c) about",
+          "rightAnswer": "b"
+       }
+   },
+   {
+         "question":
+        {
+          "prompt": "The event was crowded ___ young people.",
+          "optionA": "a) in",
+          "optionB": "b) on",
+          "optionC": "c) with",
+          "rightAnswer": "c"
+       }
+   },
+   {
+           "question":
+        {
+          "prompt": "They deserve the credit ___ planning the trip.",
+          "optionA": "a) with",
+          "optionB": "b) for",
+          "optionC": "c) of",
+          "rightAnswer": "b"
+       }
+   },
+   {
+           "question":
+        {
+          "prompt": "She just glanced ___ the newspaper.",
+          "optionA": "a) at",
+          "optionB": "b) on",
+          "optionC": "c) of",
+          "rightAnswer": "a"
+       }
+   },
+   {
+           "question":
+        {
+          "prompt": "We were furious ___ the hotel manager.",
+          "optionA": "a) with",
+          "optionB": "b) against",
+          "optionC": "c) about",
+          "rightAnswer": "a"
+       }
+   },
+   {
+           "question":
+        {
+          "prompt": "Everyone was surprised ___ the low prices.",
+          "optionA": "a) at",
+          "optionB": "b) in",
+          "optionC": "c) of",
+          "rightAnswer": "b"
+       }
+   },
+   {
+           "question":
+        {
+          "prompt": "I trust ___ your ability.",
+          "optionA": "a) at",
+          "optionB": "b) on",
+          "optionC": "c) in",
+          "rightAnswer": "c"
+       }
+   }
+]

@@ -11,7 +11,7 @@
         android:theme="@style/AppTheme">
         <activity android:name=".ui.activity.FinalScoreActivity"
             android:screenOrientation="nosensor"></activity>
-        <activity android:name=".ui.activity.MainActivity"
+        <activity android:name=".ui.activity.QuizActivity"
             android:screenOrientation="nosensor">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
