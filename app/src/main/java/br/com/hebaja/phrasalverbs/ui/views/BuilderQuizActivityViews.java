@@ -10,6 +10,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import java.util.ArrayList;
+import java.util.List;
 
 import br.com.hebaja.phrasalverbs.R;
 import br.com.hebaja.phrasalverbs.model.Question;
@@ -19,7 +20,8 @@ import br.com.hebaja.phrasalverbs.ui.activity.QuizActivity;
 
 public class BuilderQuizActivityViews {
 
-    private final ArrayList<Question> questions;
+//    private final ArrayList<Question> questions;
+    private final List<Question> questions;
 
     private final Context context;
 
@@ -43,7 +45,7 @@ public class BuilderQuizActivityViews {
 
     private Activity mainActivity = QuizActivity.mainActivity;
 
-    public BuilderQuizActivityViews(ArrayList<Question> questions, Context context) {
+    public BuilderQuizActivityViews(List<Question> questions, Context context) {
         this.questions = questions;
         this.context = context;
     }
@@ -119,8 +121,6 @@ public class BuilderQuizActivityViews {
     }
 
     public void updateScore(int score) {
-        Log.i("score", "updateScore: " + score);
-        Log.i("score", "updateScore: " + scoreView);
         scoreView.setText(String.valueOf(score));
     }
 
@@ -148,6 +148,8 @@ public class BuilderQuizActivityViews {
 
     public void updatePosition () {
         position = position + positionRestored;
+        Log.i("questions", "updatePosition: " + position + " - " + positionRestored);
+        Log.i("questions", "updatePosition: " + questions.size());
         rightAnswer = questions.get(position).getRightOption();
     }
 

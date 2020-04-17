@@ -6,7 +6,7 @@
           "optionA": "a) at",
           "optionB": "b) on",
           "optionC": "c) of",
-          "rightAnswer": "b"
+          "rightOption": "b"
          }
    },
    {
@@ -16,7 +16,7 @@
           "optionA": "a) at",
           "optionB": "b) for",
           "optionC": "c) with",
-          "rightAnswer": "a"
+          "rightOption": "a"
        }
    },
    {
@@ -26,7 +26,7 @@
           "optionA": "a) against",
           "optionB": "b) from",
           "optionC": "c) with",
-          "rightAnswer": "c"
+          "rightOption": "c"
        }
    },
    {
@@ -36,7 +36,7 @@
           "optionA": "a) for",
           "optionB": "b) on",
           "optionC": "c) to",
-          "rightAnswer": "a"
+          "rightOption": "a"
        }
    },
    {
@@ -46,7 +46,7 @@
           "optionA": "a) to",
           "optionB": "b) about",
           "optionC": "c) of",
-          "rightAnswer": "c"
+          "rightOption": "c"
        }
    },
    {
@@ -56,7 +56,7 @@
           "optionA": "a) at",
           "optionB": "b) on",
           "optionC": "c) with",
-          "rightAnswer": "b"
+          "rightOption": "b"
        }
    },
    {
@@ -66,7 +66,7 @@
           "optionA": "a) from",
           "optionB": "b) about",
           "optionC": "c) against",
-          "rightAnswer": "a"
+          "rightOption": "a"
        }
    },
    {
@@ -76,7 +76,7 @@
           "optionA": "a) at",
           "optionB": "b) for",
           "optionC": "c) of",
-          "rightAnswer": "b"
+          "rightOption": "b"
        }
    },
    {
@@ -86,7 +86,7 @@
           "optionA": "a) at",
           "optionB": "b) for",
           "optionC": "c) on",
-          "rightAnswer": "c"
+          "rightOption": "c"
        }
    },
    {
@@ -96,7 +96,7 @@
           "optionA": "a) with",
           "optionB": "b) on",
           "optionC": "c) about",
-          "rightAnswer": "a"
+          "rightOption": "a"
        }
    },
    {
@@ -106,7 +106,7 @@
           "optionA": "a) about",
           "optionB": "b) on",
           "optionC": "c) in",
-          "rightAnswer": "a"
+          "rightOption": "a"
        }
    },
    {
@@ -116,7 +116,7 @@
           "optionA": "a) at",
           "optionB": "b) about",
           "optionC": "c) in",
-          "rightAnswer": "b"
+          "rightOption": "b"
        }
    },
    {
@@ -126,7 +126,7 @@
           "optionA": "a) at",
           "optionB": "b) on",
           "optionC": "c) of",
-          "rightAnswer": "c"
+          "rightOption": "c"
        }
    },
    {
@@ -136,7 +136,7 @@
           "optionA": "a) in",
           "optionB": "b) on",
           "optionC": "c) about",
-          "rightAnswer": "b"
+          "rightOption": "b"
        }
    },
    {
@@ -146,7 +146,7 @@
           "optionA": "a) in",
           "optionB": "b) on",
           "optionC": "c) with",
-          "rightAnswer": "c"
+          "rightOption": "c"
        }
    },
    {
@@ -156,7 +156,7 @@
           "optionA": "a) with",
           "optionB": "b) for",
           "optionC": "c) of",
-          "rightAnswer": "b"
+          "rightOption": "b"
        }
    },
    {
@@ -166,7 +166,7 @@
           "optionA": "a) at",
           "optionB": "b) on",
           "optionC": "c) of",
-          "rightAnswer": "a"
+          "rightOption": "a"
        }
    },
    {
@@ -176,7 +176,7 @@
           "optionA": "a) with",
           "optionB": "b) against",
           "optionC": "c) about",
-          "rightAnswer": "a"
+          "rightOption": "a"
        }
    },
    {
@@ -186,7 +186,7 @@
           "optionA": "a) at",
           "optionB": "b) in",
           "optionC": "c) of",
-          "rightAnswer": "b"
+          "rightOption": "b"
        }
    },
    {
@@ -196,7 +196,7 @@
           "optionA": "a) at",
           "optionB": "b) on",
           "optionC": "c) in",
-          "rightAnswer": "c"
+          "rightOption": "c"
        }
    }
 ]

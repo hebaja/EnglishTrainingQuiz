@@ -2,6 +2,7 @@ package br.com.hebaja.phrasalverbs.ui.activity;
 
 import android.app.Activity;
 import android.os.Bundle;
+import android.util.Log;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
@@ -13,6 +14,8 @@ import org.json.JSONObject;
 import java.io.IOException;
 import java.io.InputStream;
 import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
 
 import br.com.hebaja.phrasalverbs.R;
 import br.com.hebaja.phrasalverbs.model.Question;
@@ -27,6 +30,8 @@ public class QuizActivity extends AppCompatActivity {
     //Create an list of questions to be populated by the method createQuestionsObjects();
     ArrayList<Question> questions = new ArrayList<>();
 
+    List<Question> finalQuestions = new ArrayList<>();
+
     private int score = 0;
 
     private int position;
@@ -40,8 +45,10 @@ public class QuizActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         setTitle(APPBAR_TITLE);
         mainActivity = this;
-        builderQuizActivityViews = new BuilderQuizActivityViews(questions, this);
+//        builderQuizActivityViews = new BuilderQuizActivityViews(questions, this);
         createQuestionObjectsFromJsonFile();
+        Log.i("questions", "onCreate: " + finalQuestions.size());
+        builderQuizActivityViews = new BuilderQuizActivityViews(finalQuestions, this);
         builderQuizActivityViews.initializeViews();
         builderQuizActivityViews.setOptionsButtons();
         builderQuizActivityViews.updatePosition();
@@ -69,7 +76,8 @@ public class QuizActivity extends AppCompatActivity {
 
     private void createQuestionObjectsFromJsonFile() {
         try {
-            InputStream inputStream = getAssets().open("phrasal_verbs_questions.json");
+//            InputStream inputStream = getAssets().open("phrasal_verbs_questions.json");
+            InputStream inputStream = getAssets().open("prepositions_questions.json");
             int size = inputStream.available();
             byte[] buffer = new byte[size];
             inputStream.read(buffer);
@@ -100,5 +108,7 @@ public class QuizActivity extends AppCompatActivity {
         } catch (IOException | JSONException e) {
             e.printStackTrace();
         }
+        Collections.shuffle(questions);
+        finalQuestions = questions.subList(0, 10);
     }
 }
