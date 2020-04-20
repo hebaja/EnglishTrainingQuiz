@@ -10,11 +10,12 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import br.com.hebaja.phrasalverbs.R;
 
+import static br.com.hebaja.phrasalverbs.ui.activity.Constants.APPBAR_TITLE;
+import static br.com.hebaja.phrasalverbs.ui.activity.Constants.SCORE_KEY;
+
 public class FinalScoreActivity extends AppCompatActivity {
 
-    public static final String APPBAR_TITLE = "Phrasal Verbs Quiz";
     private int score;
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -24,7 +25,7 @@ public class FinalScoreActivity extends AppCompatActivity {
         setTitle(APPBAR_TITLE);
 
         Intent intent = getIntent();
-        int finalScore = intent.getIntExtra("score", this.score);
+        int finalScore = intent.getIntExtra(SCORE_KEY, this.score);
 
         TextView scoreView = findViewById(R.id.final_activity_score_counter);
         scoreView.setText(String.valueOf(finalScore));

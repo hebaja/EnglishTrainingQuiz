@@ -9,7 +9,6 @@ import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import java.util.ArrayList;
 import java.util.List;
 
 import br.com.hebaja.phrasalverbs.R;
@@ -17,10 +16,16 @@ import br.com.hebaja.phrasalverbs.model.Question;
 import br.com.hebaja.phrasalverbs.ui.activity.FinalScoreActivity;
 import br.com.hebaja.phrasalverbs.ui.activity.QuizActivity;
 
+import static br.com.hebaja.phrasalverbs.ui.activity.Constants.OPTION_POSITION_A;
+import static br.com.hebaja.phrasalverbs.ui.activity.Constants.OPTION_POSITION_B;
+import static br.com.hebaja.phrasalverbs.ui.activity.Constants.OPTION_POSITION_C;
+import static br.com.hebaja.phrasalverbs.ui.activity.Constants.RIGHT_ANSWER;
+import static br.com.hebaja.phrasalverbs.ui.activity.Constants.SCORE_KEY;
+import static br.com.hebaja.phrasalverbs.ui.activity.Constants.WRONG_ANSWER;
 
 public class BuilderQuizActivityViews {
 
-//    private final ArrayList<Question> questions;
+    //    private final ArrayList<Question> questions;
     private final List<Question> questions;
 
     private final Context context;
@@ -56,7 +61,7 @@ public class BuilderQuizActivityViews {
         buttonOptionA = mainActivity.findViewById(R.id.button_option_a);
         buttonOptionB = mainActivity.findViewById(R.id.button_option_b);
         buttonOptionC = mainActivity.findViewById(R.id.button_option_c);
-        buttonQuit = mainActivity.findViewById(R.id.button_quit);
+        buttonQuit = mainActivity.findViewById(R.id.button_quit_quiz_activity);
     }
 
     public void setOptionsButtons() {
@@ -69,11 +74,11 @@ public class BuilderQuizActivityViews {
                     position++;
                     updateScore(score);
                     updateMainActivityOrGoToFinalActivity();
-                    Toast.makeText(context, "Right Answer", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(context, RIGHT_ANSWER, Toast.LENGTH_SHORT).show();
                 } else {
                     position++;
                     updateMainActivityOrGoToFinalActivity();
-                    Toast.makeText(context, "Wrong Answer", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(context, WRONG_ANSWER, Toast.LENGTH_SHORT).show();
                 }
             }
         });
@@ -86,11 +91,11 @@ public class BuilderQuizActivityViews {
                     position++;
                     updateScore(score);
                     updateMainActivityOrGoToFinalActivity();
-                    Toast.makeText(context, "Right Answer", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(context, RIGHT_ANSWER, Toast.LENGTH_SHORT).show();
                 } else {
                     position++;
                     updateMainActivityOrGoToFinalActivity();
-                    Toast.makeText(context, "Wrong Answer", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(context, WRONG_ANSWER, Toast.LENGTH_SHORT).show();
                 }
             }
         });
@@ -103,11 +108,11 @@ public class BuilderQuizActivityViews {
                     position++;
                     updateScore(score);
                     updateMainActivityOrGoToFinalActivity();
-                    Toast.makeText(context, "Right Answer", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(context, RIGHT_ANSWER, Toast.LENGTH_SHORT).show();
                 } else {
                     position++;
                     updateMainActivityOrGoToFinalActivity();
-                    Toast.makeText(context, "Wrong Answer", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(context, WRONG_ANSWER, Toast.LENGTH_SHORT).show();
                 }
             }
         });
@@ -139,17 +144,15 @@ public class BuilderQuizActivityViews {
         buttonOptionB.setText(questions.get(position).getOptionB());
         buttonOptionC.setText(questions.get(position).getOptionC());
 
-        optionPositionA = "a";
-        optionPositionB = "b";
-        optionPositionC = "c";
+        optionPositionA = OPTION_POSITION_A;
+        optionPositionB = OPTION_POSITION_B;
+        optionPositionC = OPTION_POSITION_C;
 
         updateScore(score);
     }
 
     public void updatePosition () {
         position = position + positionRestored;
-        Log.i("questions", "updatePosition: " + position + " - " + positionRestored);
-        Log.i("questions", "updatePosition: " + questions.size());
         rightAnswer = questions.get(position).getRightOption();
     }
 
@@ -168,7 +171,7 @@ public class BuilderQuizActivityViews {
 
     private void startFinalScoreActivity() {
         Intent intent = new Intent(context, FinalScoreActivity.class);
-        intent.putExtra("score", score);
+        intent.putExtra(SCORE_KEY, score);
         context.startActivity(intent);
     }
 }

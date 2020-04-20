@@ -18,14 +18,13 @@ public class SplashScreenActivity extends AppCompatActivity {
         handler.postDelayed(new Runnable() {
             @Override
             public void run() {
-                showQuizActivity();
+                showMenuActivity();
             }
-        },2000);
-
+        },1500);
     }
 
-    private void showQuizActivity() {
-        Intent intent = new Intent(SplashScreenActivity.this, QuizActivity.class);
+    private void showMenuActivity() {
+        Intent intent = new Intent(SplashScreenActivity.this, MenuActivity.class);
         startActivity(intent);
         finish();
     }

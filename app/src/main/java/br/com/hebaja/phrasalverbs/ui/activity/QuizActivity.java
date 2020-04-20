@@ -1,8 +1,8 @@
 package br.com.hebaja.phrasalverbs.ui.activity;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
-import android.util.Log;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
@@ -21,11 +21,19 @@ import br.com.hebaja.phrasalverbs.R;
 import br.com.hebaja.phrasalverbs.model.Question;
 import br.com.hebaja.phrasalverbs.ui.views.BuilderQuizActivityViews;
 
-public class QuizActivity extends AppCompatActivity {
+import static br.com.hebaja.phrasalverbs.ui.activity.Constants.APPBAR_TITLE;
+import static br.com.hebaja.phrasalverbs.ui.activity.Constants.CHOSEN_OPTION_KEY;
+import static br.com.hebaja.phrasalverbs.ui.activity.Constants.INVALID_NUMBER;
+import static br.com.hebaja.phrasalverbs.ui.activity.Constants.PHRASAL_VERBS_OPTION;
+import static br.com.hebaja.phrasalverbs.ui.activity.Constants.PHRASAL_VERBS_QUESTIONS_JSON_KEY;
+import static br.com.hebaja.phrasalverbs.ui.activity.Constants.PREPOSITIONS_OPTION;
+import static br.com.hebaja.phrasalverbs.ui.activity.Constants.PREPOSITIONS_QUESTIONS_JSON_KEY;
+import static br.com.hebaja.phrasalverbs.ui.activity.Constants.QUESTIONS_LIST_FINAL_INDEX;
+import static br.com.hebaja.phrasalverbs.ui.activity.Constants.QUESTIONS_LIST_INITIAL_INDEX;
+import static br.com.hebaja.phrasalverbs.ui.activity.Constants.STATE_POSITION;
+import static br.com.hebaja.phrasalverbs.ui.activity.Constants.STATE_SCORE;
 
-    public static final String STATE_SCORE = "stateScore";
-    public static final String STATE_POSITION = "statePosition";
-    public static final String APPBAR_TITLE = "Phrasal Verbs Quiz";
+public class QuizActivity extends AppCompatActivity {
 
     //Create an list of questions to be populated by the method createQuestionsObjects();
     ArrayList<Question> questions = new ArrayList<>();
@@ -38,6 +46,7 @@ public class QuizActivity extends AppCompatActivity {
     private BuilderQuizActivityViews builderQuizActivityViews;
 
     public static Activity mainActivity;
+    private int chosenOptionMenuActivity;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -45,9 +54,11 @@ public class QuizActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         setTitle(APPBAR_TITLE);
         mainActivity = this;
-//        builderQuizActivityViews = new BuilderQuizActivityViews(questions, this);
+
+        Intent intent = getIntent();
+        chosenOptionMenuActivity = intent.getIntExtra(CHOSEN_OPTION_KEY, INVALID_NUMBER);
+
         createQuestionObjectsFromJsonFile();
-        Log.i("questions", "onCreate: " + finalQuestions.size());
         builderQuizActivityViews = new BuilderQuizActivityViews(finalQuestions, this);
         builderQuizActivityViews.initializeViews();
         builderQuizActivityViews.setOptionsButtons();
@@ -76,8 +87,8 @@ public class QuizActivity extends AppCompatActivity {
 
     private void createQuestionObjectsFromJsonFile() {
         try {
-//            InputStream inputStream = getAssets().open("phrasal_verbs_questions.json");
-            InputStream inputStream = getAssets().open("prepositions_questions.json");
+            InputStream inputStream = checkMenuChosenOption();
+            assert inputStream != null;
             int size = inputStream.available();
             byte[] buffer = new byte[size];
             inputStream.read(buffer);
@@ -85,7 +96,7 @@ public class QuizActivity extends AppCompatActivity {
             String jsonQuestionsFile = new String(buffer, "UTF-8");
             JSONArray jsonArray = new JSONArray(jsonQuestionsFile);
 
-            for(int i = 0; i<jsonArray.length(); i++) {
+            for (int i = 0; i < jsonArray.length(); i++) {
                 JSONObject obj = jsonArray.getJSONObject(i);
                 JSONObject questionsObj = (JSONObject) obj.get("question");
 
@@ -109,6 +120,17 @@ public class QuizActivity extends AppCompatActivity {
             e.printStackTrace();
         }
         Collections.shuffle(questions);
-        finalQuestions = questions.subList(0, 10);
+        finalQuestions = questions.subList(QUESTIONS_LIST_INITIAL_INDEX, QUESTIONS_LIST_FINAL_INDEX);
+    }
+
+    private InputStream checkMenuChosenOption() throws IOException {
+        InputStream inputStream = null;
+        if (chosenOptionMenuActivity == PHRASAL_VERBS_OPTION) {
+            inputStream = getAssets().open(PHRASAL_VERBS_QUESTIONS_JSON_KEY);
+        }
+        if (chosenOptionMenuActivity == PREPOSITIONS_OPTION) {
+            inputStream = getAssets().open(PREPOSITIONS_QUESTIONS_JSON_KEY);
+        }
+        return inputStream;
     }
 }
