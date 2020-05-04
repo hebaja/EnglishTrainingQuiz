@@ -1,23 +1,25 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="br.com.hebaja.phrasalverbs">
+    package="br.com.hebaja.englishtrainingquizzes">
 
     <application
         android:allowBackup="true"
-        android:icon="@mipmap/ic_launcher"
+        android:icon="@mipmap/ic_launcher_custom"
         android:label="@string/app_name"
-        android:roundIcon="@mipmap/ic_launcher_round"
+        android:roundIcon="@mipmap/ic_launcher_custom_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".ui.activity.MenuActivity"></activity>
+        <activity android:name="br.com.hebaja.englishtrainingquizzes.ui.activity.MenuActivity"
+            android:screenOrientation="nosensor">
+        </activity>
         <activity
-            android:name=".ui.activity.FinalScoreActivity"
+            android:name="br.com.hebaja.englishtrainingquizzes.ui.activity.FinalScoreActivity"
             android:screenOrientation="nosensor" />
         <activity
-            android:name=".ui.activity.QuizActivity"
+            android:name="br.com.hebaja.englishtrainingquizzes.ui.activity.QuizActivity"
             android:screenOrientation="nosensor"></activity>
         <activity
-            android:name=".ui.activity.SplashScreenActivity"
+            android:name="br.com.hebaja.englishtrainingquizzes.ui.activity.SplashScreenActivity"
             android:screenOrientation="nosensor"
             android:theme="@style/AppCompat.FullScreen">
             <intent-filter>

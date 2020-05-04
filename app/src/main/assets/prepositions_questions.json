@@ -136,7 +136,7 @@
           "optionA": "a) in",
           "optionB": "b) on",
           "optionC": "c) about",
-          "rightOption": "b"
+          "rightOption": "a"
        }
    },
    {
@@ -186,7 +186,7 @@
           "optionA": "a) at",
           "optionB": "b) in",
           "optionC": "c) of",
-          "rightOption": "b"
+          "rightOption": "a"
        }
    },
    {

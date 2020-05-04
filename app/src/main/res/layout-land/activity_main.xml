@@ -101,7 +101,7 @@
             android:layout_marginStart="10dp"
             android:layout_marginEnd="10dp"
             android:layout_marginBottom="16dp"
-            android:background="@drawable/orange_round_button_quit"
+            android:background="@drawable/red_round_button_quit"
             android:text="Quit"
             android:textColor="@android:color/white"
             android:textSize="18sp"

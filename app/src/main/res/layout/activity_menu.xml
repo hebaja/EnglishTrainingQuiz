@@ -27,7 +27,7 @@
         android:layout_marginStart="10dp"
         android:layout_marginEnd="10dp"
         android:layout_marginBottom="24dp"
-        android:background="@drawable/orange_round_button_quit"
+        android:background="@drawable/red_round_button_quit"
         android:text="@string/quit_quiz_activity"
         android:textColor="@color/textColorSecondary"
         android:textSize="18sp"
