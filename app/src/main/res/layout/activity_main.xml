@@ -119,8 +119,8 @@
 
         <androidx.cardview.widget.CardView
             android:id="@+id/right_option_green"
-            android:layout_width="91dp"
-            android:layout_height="91dp"
+            android:layout_width="95dp"
+            android:layout_height="95dp"
             android:visibility="invisible"
             app:cardBackgroundColor="@android:color/transparent"
             app:cardElevation="0dp"
@@ -168,8 +168,8 @@
 
         <androidx.cardview.widget.CardView
             android:id="@+id/wrong_option_red"
-            android:layout_width="91dp"
-            android:layout_height="91dp"
+            android:layout_width="95dp"
+            android:layout_height="95dp"
             android:visibility="invisible"
             app:cardBackgroundColor="@android:color/transparent"
             app:cardElevation="0dp"
@@ -217,8 +217,8 @@
 
         <androidx.cardview.widget.CardView
             android:id="@+id/next_green"
-            android:layout_width="91dp"
-            android:layout_height="91dp"
+            android:layout_width="95dp"
+            android:layout_height="95dp"
             android:visibility="invisible"
             app:cardBackgroundColor="@android:color/transparent"
             app:cardElevation="0dp"
