@@ -1,10 +1,10 @@
 {
-  options: [
+  "options": [
     {
-      prompt : "Phrasal Verbs"
+      "prompt" : "Phrasal Verbs"
     },
     {
-      prompt : "Prepositions"
+      "prompt" : "Prepositions"
     }
   ]
 }

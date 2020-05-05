@@ -20,6 +20,8 @@ import java.util.Collections;
 import java.util.List;
 
 import br.com.hebaja.englishtrainingquizzes.R;
+import br.com.hebaja.englishtrainingquizzes.daos.OptionDAO;
+import br.com.hebaja.englishtrainingquizzes.model.Option;
 import br.com.hebaja.englishtrainingquizzes.model.Question;
 import br.com.hebaja.englishtrainingquizzes.ui.dialog.QuitAppDialog;
 import br.com.hebaja.englishtrainingquizzes.ui.views.BuilderQuizActivityViews;
@@ -28,6 +30,8 @@ import static br.com.hebaja.englishtrainingquizzes.ui.activity.Constants.APPBAR_
 import static br.com.hebaja.englishtrainingquizzes.ui.activity.Constants.CHOSEN_OPTION_KEY;
 import static br.com.hebaja.englishtrainingquizzes.ui.activity.Constants.CHOSEN_OPTION_TRY_AGAIN_KEY;
 import static br.com.hebaja.englishtrainingquizzes.ui.activity.Constants.INVALID_NUMBER;
+import static br.com.hebaja.englishtrainingquizzes.ui.activity.Constants.MODAL_VERBS_OPTIONS;
+import static br.com.hebaja.englishtrainingquizzes.ui.activity.Constants.MODAL_VERBS_QUESTIONS_JSON_KEY;
 import static br.com.hebaja.englishtrainingquizzes.ui.activity.Constants.PHRASAL_VERBS_OPTION;
 import static br.com.hebaja.englishtrainingquizzes.ui.activity.Constants.PHRASAL_VERBS_QUESTIONS_JSON_KEY;
 import static br.com.hebaja.englishtrainingquizzes.ui.activity.Constants.PREPOSITIONS_OPTION;
@@ -51,6 +55,7 @@ public class QuizActivity extends AppCompatActivity {
 
     public static Activity mainActivity;
     private int chosenOptionMenuActivity;
+    private List<Option> optionsList;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -59,14 +64,14 @@ public class QuizActivity extends AppCompatActivity {
         setTitle(APPBAR_TITLE);
         mainActivity = this;
 
-
-
         Intent intent = getIntent();
         if(intent.hasExtra(CHOSEN_OPTION_KEY)) {
             chosenOptionMenuActivity = intent.getIntExtra(CHOSEN_OPTION_KEY, INVALID_NUMBER);
         } else {
             chosenOptionMenuActivity = intent.getIntExtra(CHOSEN_OPTION_TRY_AGAIN_KEY, INVALID_NUMBER);
         }
+
+        optionsList = new OptionDAO().list();
 
         createQuestionObjectsFromJsonFile();
         builderQuizActivityViews = new BuilderQuizActivityViews(finalQuestions, this, chosenOptionMenuActivity);
@@ -75,9 +80,6 @@ public class QuizActivity extends AppCompatActivity {
         builderQuizActivityViews.updatePosition();
         builderQuizActivityViews.updateViewsQuestions();
     }
-
-
-
 
     @Override
     protected void onSaveInstanceState(@NonNull Bundle outState) {
@@ -138,11 +140,10 @@ public class QuizActivity extends AppCompatActivity {
 
     private InputStream checkMenuChosenOption() throws IOException {
         InputStream inputStream = null;
-        if (chosenOptionMenuActivity == PHRASAL_VERBS_OPTION) {
-            inputStream = getAssets().open(PHRASAL_VERBS_QUESTIONS_JSON_KEY);
-        }
-        if (chosenOptionMenuActivity == PREPOSITIONS_OPTION) {
-            inputStream = getAssets().open(PREPOSITIONS_QUESTIONS_JSON_KEY);
+        for(int i = 0; i < optionsList.size(); i++ ) {
+            if(chosenOptionMenuActivity == optionsList.get(i).getCounterOrder()) {
+                inputStream = getAssets().open(optionsList.get(i).getFileName());
+            }
         }
         return inputStream;
     }

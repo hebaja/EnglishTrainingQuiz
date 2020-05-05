@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.Button;
@@ -48,7 +49,6 @@ public class MenuActivity extends AppCompatActivity {
             public void onClick(View v) {
                 QuitAppDialog quitAppDialog = new QuitAppDialog(MenuActivity.this);
                 quitAppDialog.show(getSupportFragmentManager(), "quit_app");
-//                finish();
             }
         });
     }
