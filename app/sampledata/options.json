@@ -1,10 +1,43 @@
 {
-  "options": [
+  options: [
     {
-      "prompt" : "Phrasal Verbs"
+      prompt : "Phrasal Verbs"
     },
     {
-      "prompt" : "Prepositions"
+      prompt : "Prepositions"
+    },
+    {
+      prompt : "Modals"
+    },
+    {
+      prompt : "First Conditional"
+    },
+    {
+      prompt : "Second Conditional"
+    },
+    {
+      prompt : "Third Conditional"
+    },
+    {
+      prompt : "Verb Tenses"
+    },
+    {
+      prompt : "Simple present"
+    },
+    {
+      prompt : "Present Perfect Progressive"
+    },
+    {
+      prompt : "Mixed Conditionals"
+    },
+    {
+      prompt : "Colocations"
+    },
+    {
+      prompt : "Linking Words"
+    },
+    {
+      prompt : "Conjunctions"
     }
   ]
 }

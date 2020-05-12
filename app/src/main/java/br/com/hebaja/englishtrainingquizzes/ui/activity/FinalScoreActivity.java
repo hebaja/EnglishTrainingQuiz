@@ -1,13 +1,14 @@
 package br.com.hebaja.englishtrainingquizzes.ui.activity;
 
-import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
-import android.util.Log;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import br.com.hebaja.englishtrainingquizzes.R;
@@ -54,6 +55,18 @@ public class FinalScoreActivity extends AppCompatActivity {
                 finish();
             }
         });
+    }
 
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.menu_final_score_access_feedback_form, menu);
+        return super.onCreateOptionsMenu(menu);
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
+        Intent iniciaFeedbackActivity = new Intent(FinalScoreActivity.this, FeedbackActivity.class);
+        startActivity(iniciaFeedbackActivity);
+        return super.onOptionsItemSelected(item);
     }
 }

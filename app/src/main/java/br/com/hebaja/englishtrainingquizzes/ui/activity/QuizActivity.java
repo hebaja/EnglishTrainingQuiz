@@ -7,7 +7,6 @@ import android.util.Log;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.fragment.app.FragmentManager;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -23,19 +22,12 @@ import br.com.hebaja.englishtrainingquizzes.R;
 import br.com.hebaja.englishtrainingquizzes.daos.OptionDAO;
 import br.com.hebaja.englishtrainingquizzes.model.Option;
 import br.com.hebaja.englishtrainingquizzes.model.Question;
-import br.com.hebaja.englishtrainingquizzes.ui.dialog.QuitAppDialog;
 import br.com.hebaja.englishtrainingquizzes.ui.views.BuilderQuizActivityViews;
 
 import static br.com.hebaja.englishtrainingquizzes.ui.activity.Constants.APPBAR_TITLE;
 import static br.com.hebaja.englishtrainingquizzes.ui.activity.Constants.CHOSEN_OPTION_KEY;
 import static br.com.hebaja.englishtrainingquizzes.ui.activity.Constants.CHOSEN_OPTION_TRY_AGAIN_KEY;
 import static br.com.hebaja.englishtrainingquizzes.ui.activity.Constants.INVALID_NUMBER;
-import static br.com.hebaja.englishtrainingquizzes.ui.activity.Constants.MODAL_VERBS_OPTIONS;
-import static br.com.hebaja.englishtrainingquizzes.ui.activity.Constants.MODAL_VERBS_QUESTIONS_JSON_KEY;
-import static br.com.hebaja.englishtrainingquizzes.ui.activity.Constants.PHRASAL_VERBS_OPTION;
-import static br.com.hebaja.englishtrainingquizzes.ui.activity.Constants.PHRASAL_VERBS_QUESTIONS_JSON_KEY;
-import static br.com.hebaja.englishtrainingquizzes.ui.activity.Constants.PREPOSITIONS_OPTION;
-import static br.com.hebaja.englishtrainingquizzes.ui.activity.Constants.PREPOSITIONS_QUESTIONS_JSON_KEY;
 import static br.com.hebaja.englishtrainingquizzes.ui.activity.Constants.QUESTIONS_LIST_FINAL_INDEX;
 import static br.com.hebaja.englishtrainingquizzes.ui.activity.Constants.QUESTIONS_LIST_INITIAL_INDEX;
 import static br.com.hebaja.englishtrainingquizzes.ui.activity.Constants.STATE_POSITION;
@@ -143,6 +135,7 @@ public class QuizActivity extends AppCompatActivity {
         for(int i = 0; i < optionsList.size(); i++ ) {
             if(chosenOptionMenuActivity == optionsList.get(i).getCounterOrder()) {
                 inputStream = getAssets().open(optionsList.get(i).getFileName());
+                break;
             }
         }
         return inputStream;

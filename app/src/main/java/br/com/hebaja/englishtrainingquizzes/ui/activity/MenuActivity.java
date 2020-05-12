@@ -2,6 +2,7 @@ package br.com.hebaja.englishtrainingquizzes.ui.activity;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
@@ -22,25 +23,20 @@ import static br.com.hebaja.englishtrainingquizzes.ui.activity.Constants.CHOSEN_
 
 public class MenuActivity extends AppCompatActivity {
 
+    public static Activity activity;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_menu);
         setTitle("Menu");
 
+        activity = this;
+
         ListView optionsList = findViewById(R.id.list_button_options_listview);
         final List<Option> options = new OptionDAO().list();
 
         optionsList.setAdapter(new OptionsListAdapter(options, this));
-        optionsList.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-            @Override
-            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                Intent intent = new Intent(MenuActivity.this, QuizActivity.class);
-                intent.putExtra(CHOSEN_OPTION_KEY, position);
-                startActivity(intent);
-                finish();
-            }
-        });
 
         Button buttonQuit = findViewById(R.id.button_quit_menu_activity);
 

@@ -9,17 +9,18 @@
         android:roundIcon="@mipmap/ic_launcher_custom_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name="br.com.hebaja.englishtrainingquizzes.ui.activity.MenuActivity"
-            android:screenOrientation="nosensor">
-        </activity>
+        <activity android:name=".ui.activity.FeedbackActivity"></activity>
         <activity
-            android:name="br.com.hebaja.englishtrainingquizzes.ui.activity.FinalScoreActivity"
-            android:screenOrientation="nosensor" />
-        <activity
-            android:name="br.com.hebaja.englishtrainingquizzes.ui.activity.QuizActivity"
+            android:name=".ui.activity.MenuActivity"
             android:screenOrientation="nosensor"></activity>
         <activity
-            android:name="br.com.hebaja.englishtrainingquizzes.ui.activity.SplashScreenActivity"
+            android:name=".ui.activity.FinalScoreActivity"
+            android:screenOrientation="nosensor" />
+        <activity
+            android:name=".ui.activity.QuizActivity"
+            android:screenOrientation="nosensor" />
+        <activity
+            android:name=".ui.activity.SplashScreenActivity"
             android:screenOrientation="nosensor"
             android:theme="@style/AppCompat.FullScreen">
             <intent-filter>

@@ -38,16 +38,17 @@
     <ListView
         android:id="@+id/list_button_options_listview"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="0dp"
         android:layout_marginStart="16dp"
+        android:layout_marginTop="32dp"
         android:layout_marginEnd="16dp"
+        android:layout_marginBottom="32dp"
         android:divider="@android:color/transparent"
         android:dividerHeight="10sp"
-        app:layout_constraintBottom_toTopOf="@+id/button_quit_menu_activity"
+        app:layout_constraintBottom_toTopOf="@id/button_quit_menu_activity"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/id_prompt_menu"
-        app:layout_constraintVertical_bias="0.06999999"
-        tools:listitem="@layout/button_menu_item" />
+        tools:listitem="@layout/button_menu_list_item" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
