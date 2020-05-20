@@ -1,0 +1,102 @@
+[
+	{
+	"question":
+		{
+			"prompt":"John asked me ____.",
+			"optionA":"where was his wallet",
+			"optionB":"where his wallet was",
+			"optionC":"where is his wallet",
+			"rightOption":"b"
+		}
+	},
+	{
+	"question":
+		{
+			"prompt":"I couldn't tell him ____.",
+			"optionA":"where I is",
+			"optionB":"where was I",
+			"optionC":"where I was",
+			"rightOption":"c"
+		}
+	},
+	{
+	"question":
+		{
+			"prompt":"I don't know ____.",
+			"optionA":"how many children he has",
+			"optionB":"how many chidren he does have",
+			"optionC":"how many chidren does he have",
+			"rightOption":"a"
+		}
+	},
+	{
+	"question":
+		{
+			"prompt":"____ is not important.",
+			"optionA":"How close are we",
+			"optionB":"How close we are",
+			"optionC":"How we are close",
+			"rightOption":"b"
+		}
+	},
+	{
+	"question":
+		{
+			"prompt":"____ was sad.",
+			"optionA":"What did she say",
+			"optionB":"What she did said",
+			"optionC":"What she said",
+			"rightOption":"c"
+		}
+	},
+	{
+	"question":
+		{
+			"prompt":"We are not responsible for ____.",
+			"optionA":"what our children say",
+			"optionB":"what our children do said",
+			"optionC":"what do our children say",
+			"rightOption":"a"
+		}
+	},
+	{
+	"question":
+		{
+			"prompt":"Is it true ____ about you?",
+			"optionA":"What he did said",
+			"optionB":"what did he say",
+			"optionC":"what he said",
+			"rightOption":"c"
+		}
+	},
+	{
+	"question":
+		{
+			"prompt":"I'm not going to tell you ____.",
+			"optionA":"what should you do",
+			"optionB":"what you should do",
+			"optionC":"what should I do",
+			"rightOption":"b"
+		}
+	},
+	{
+	"question":
+		{
+			"prompt":"I wonder if ____ from Germany.",
+			"optionA":"is he",
+			"optionB":"he is",
+			"optionC":"was he",
+			"rightOption":"b"
+		}
+	},
+	{
+	"question":
+		{
+			"prompt":"The teacher told us ____ our finished exams.",
+			"optionA":"where we should leave",
+			"optionB":"where we should left",
+			"optionC":"where should we leave",
+			"rightOption":"a"
+		}
+	}
+]

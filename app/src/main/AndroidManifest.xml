@@ -9,10 +9,12 @@
         android:roundIcon="@mipmap/ic_launcher_custom_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".ui.activity.FeedbackActivity"></activity>
+        <activity
+            android:name=".ui.activity.FeedbackActivity"
+            android:screenOrientation="nosensor" />
         <activity
             android:name=".ui.activity.MenuActivity"
-            android:screenOrientation="nosensor"></activity>
+            android:screenOrientation="nosensor" />
         <activity
             android:name=".ui.activity.FinalScoreActivity"
             android:screenOrientation="nosensor" />

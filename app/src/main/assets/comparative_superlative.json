@@ -1,0 +1,202 @@
+[
+  {
+    "question":
+    {
+      "prompt": "My brother used to play ___ does now.",
+      "optionA": "tennis best than him",
+      "optionB": "tennis better than he",
+      "optionC": "tennis better then him",
+      "rightOption": "b"
+    }
+  },
+  {
+    "question":
+    {
+      "prompt": "These sunglasses ___ than my last pair.",
+      "optionA": "were a bit more cheap",
+      "optionB": "were a bit cheapest",
+      "optionC": "were a bit cheaper",
+      "rightOption": "c"
+    }
+  },
+  {
+    "question":
+    {
+      "prompt": "He was one of __ in the world.",
+      "optionA": "more talented than designers",
+      "optionB": "the most talented designers",
+      "optionC": "the most talent design",
+      "rightOption": "b"
+    }
+  },
+  {
+    "question":
+    {
+      "prompt": "I liked your hair when it ___ is now.",
+      "optionA": "wasn't as straight as it",
+      "optionB": "wasn't more straight as it",
+      "optionC": "wasn't less straighter as it",
+      "rightOption": "a"
+    }
+  },
+  {
+    "question":
+    {
+      "prompt": "This shop is ___ all.",
+      "optionA": "the more expensive of",
+      "optionB": "the least expensive of",
+      "optionC": "the most expensiver of",
+      "rightOption": "b"
+    }
+  },
+  {
+    "question":
+    {
+      "prompt": "Suzanne was far ___ her sister.",
+      "optionA": "elegantlier dressed than",
+      "optionB": "the most elegantly dressed than",
+      "optionC": "more elegantly dressed than",
+      "rightOption": "c"
+    }
+  },
+  {
+    "question":
+    {
+      "prompt": "Travelling by train ___ travelling by car.",
+      "optionA": "is a more faster than",
+      "optionB": "is the fastest than",
+      "optionC": "is a lot quicker than",
+      "rightOption": "c"
+    }
+  },
+  {
+    "question":
+    {
+      "prompt": "Harry dressed ___ didn't have a girlfriend.",
+      "optionA": "less smartly when he",
+      "optionB": "more smarter when he",
+      "optionC": "less smartly than he",
+      "rightOption": "a"
+    }
+  },
+  {
+    "question":
+    {
+      "prompt": "That model is ___ I thought.",
+      "optionA": "not as old as",
+      "optionB": "not as older as",
+      "optionC": "not as old than",
+      "rightOption": "a"
+    }
+  },
+  {
+    "question":
+    {
+      "prompt": "The more she thought, ___ she became.",
+      "optionA": "the most concerned",
+      "optionB": "the more concerned",
+      "optionC": "the more concerned than",
+      "rightOption": "b"
+    }
+  },
+  {
+    "question":
+    {
+      "prompt": "This year's designer clothes ___ they did last year",
+      "optionA": "have sold slightly less well than",
+      "optionB": "have sold slightly most well than",
+      "optionC": "have sold slightly least well than",
+      "rightOption": "a"
+    }
+  },
+  {
+    "question":
+    {
+      "prompt": "She earned ___ last year.",
+      "optionA": "as much than me",
+      "optionB": "as much as me",
+      "optionC": "as more as me",
+      "rightOption": "b"
+    }
+  },
+  {
+    "question":
+    {
+      "prompt": "Now I can ___ than I did in the past.",
+      "optionA": "save a good deal the most",
+      "optionB": "save a good deal most",
+      "optionC": "save a good deal more",
+      "rightOption": "c"
+    }
+  },
+  {
+    "question":
+    {
+      "prompt": "The more people worry about banks, .",
+      "optionA": "the most they use cash",
+      "optionB": "they use cash more",
+      "optionC": "the more they use cash",
+      "rightOption": "c"
+    }
+  },
+  {
+    "question":
+    {
+      "prompt": "Making ends meet is getting ___ difficult",
+      "optionA": "more and more",
+      "optionB": "the most",
+      "optionC": "most than",
+      "rightOption": "a"
+    }
+  },
+  {
+    "question":
+    {
+      "prompt": "The harder the game got, the ___ .",
+      "optionA": "least interested in it I was",
+      "optionB": "less interested in it I was",
+      "optionC": "more interesting in it I was",
+      "rightOption": "b"
+    }
+  },
+  {
+    "question":
+    {
+      "prompt": "The course ___ I'd expected.",
+      "optionA": "as difficult than",
+      "optionB": "less difficult as",
+      "optionC": "more difficult than",
+      "rightOption": "c"
+    }
+  },
+  {
+    "question":
+    {
+      "prompt": "This exercise ___ the last one.",
+      "optionA": "is as hard than",
+      "optionB": "is not as hard as",
+      "optionC": "is not as harder as",
+      "rightOption": "b"
+    }
+  },
+  {
+    "question":
+    {
+      "prompt": "The rainfall in London ___ in previous decades.",
+      "optionA": "has been considerably higher than",
+      "optionB": "has been considerably highest",
+      "optionC": "has been considerably highest than",
+      "rightOption": "a"
+    }
+  },
+  {
+    "question":
+    {
+      "prompt": "The comedian ___ the audience expected.",
+      "optionA": "was more nearly funny",
+      "optionB": "wasn't as nearly funny than",
+      "optionC": "wasn't nearly as funny as",
+      "rightOption": "c"
+    }
+  }
+]
