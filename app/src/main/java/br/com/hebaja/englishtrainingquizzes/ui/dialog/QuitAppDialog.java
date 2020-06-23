@@ -35,7 +35,6 @@ public class QuitAppDialog extends AppCompatDialogFragment {
                 .setNegativeButton(QUIT_CANCEL_ANSWER_CONSTANT, new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialogInterface, int i) {
-                        // User cancels
                     }
                 });
         return builder.create();

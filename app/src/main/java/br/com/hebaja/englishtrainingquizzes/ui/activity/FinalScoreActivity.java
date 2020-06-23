@@ -33,11 +33,12 @@ public class FinalScoreActivity extends AppCompatActivity {
         int finalScore = intent.getIntExtra(SCORE_KEY, score);
         int mainActivityChosenOption = intent.getIntExtra(CHOSEN_OPTION_TRY_AGAIN_KEY, chosenOption);
 
-        TextView scoreView = findViewById(R.id.final_activity_score_counter);
+        TextView scoreView = findViewById(R.id.final_score_activity_score_counter);
         scoreView.setText(String.valueOf(finalScore));
 
-        Button buttonQuit = findViewById(R.id.button_final_activity_quit);
-        Button buttonTryAgain = findViewById(R.id.button_final_activity_try_again);
+        Button buttonQuit = findViewById(R.id.final_score_activity_button_quit);
+        Button buttonTryAgain = findViewById(R.id.final_score_activity_button_try_again);
+        Button buttonBackToMainMenu = findViewById(R.id.final_score_activity_button_back_main_menu);
 
         buttonQuit.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -51,6 +52,15 @@ public class FinalScoreActivity extends AppCompatActivity {
             public void onClick(View view) {
                 Intent intent = new Intent(FinalScoreActivity.this, QuizActivity.class);
                 intent.putExtra("chosen_option_try_again", mainActivityChosenOption);
+                startActivity(intent);
+                finish();
+            }
+        });
+
+        buttonBackToMainMenu.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(FinalScoreActivity.this, MenuActivity.class);
                 startActivity(intent);
                 finish();
             }

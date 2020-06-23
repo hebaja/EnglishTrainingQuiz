@@ -7,7 +7,7 @@
     tools:context=".ui.activity.FinalScoreActivity">
 
     <Button
-        android:id="@+id/button_final_activity_quit"
+        android:id="@+id/final_score_activity_button_quit"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="10dp"
@@ -23,22 +23,38 @@
         app:layout_constraintStart_toStartOf="parent" />
 
     <Button
-        android:id="@+id/button_final_activity_try_again"
+        android:id="@+id/final_score_activity_button_try_again"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:background="@drawable/orange_round_button"
-        android:text="@string/try_again"
         android:layout_marginStart="10dp"
         android:layout_marginEnd="10dp"
         android:layout_marginBottom="10dp"
+        android:background="@drawable/light_orange_round_button"
+        android:text="@string/try_again"
         android:textColor="@color/textColorPrimary"
         android:textSize="18sp"
-        app:layout_constraintBottom_toTopOf="@+id/button_final_activity_quit"
+        app:layout_constraintBottom_toTopOf="@+id/final_score_activity_button_back_main_menu"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 
+    <Button
+        android:id="@+id/final_score_activity_button_back_main_menu"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="10dp"
+        android:background="@drawable/orange_round_button"
+        android:text="Back to main menu"
+        android:textColor="@color/textColorPrimary"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toTopOf="@+id/final_score_activity_button_quit"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent" />
+
     <TextView
-        android:id="@+id/textViewScore"
+        android:id="@+id/final_score_activity_textview"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:fontFamily="@font/allerta"
@@ -52,7 +68,7 @@
         app:layout_constraintVertical_bias="0.16000003" />
 
     <TextView
-        android:id="@+id/final_activity_score_counter"
+        android:id="@+id/final_score_activity_score_counter"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="100dp"
@@ -62,5 +78,5 @@
         android:textColor="@color/textColorPrimary"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textViewScore" />
+        app:layout_constraintTop_toBottomOf="@+id/final_score_activity_textview" />
 </androidx.constraintlayout.widget.ConstraintLayout>

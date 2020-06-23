@@ -118,10 +118,9 @@
             app:layout_constraintStart_toStartOf="parent" />
 
         <androidx.cardview.widget.CardView
-            android:id="@+id/right_option_green"
+            android:id="@+id/chosen_option_warning"
             android:layout_width="95dp"
             android:layout_height="95dp"
-            android:visibility="invisible"
             app:cardBackgroundColor="@android:color/transparent"
             app:cardElevation="0dp"
             app:layout_constraintBottom_toTopOf="@+id/button_quit_quiz_activity"
@@ -137,86 +136,36 @@
                 android:layout_height="match_parent">
 
                 <ImageView
+                    android:id="@+id/chosen_option_warning_view"
                     android:layout_width="0dp"
                     android:layout_height="0dp"
                     android:adjustViewBounds="true"
-                    android:contentDescription="@string/right_answer_icon"
-                    android:src="@drawable/right_answer_circle_outline"
-                    app:layout_constraintBottom_toTopOf="@+id/right_answer_cardview_prompt"
+                    android:contentDescription="@string/chosen_option_warning_icon"
+                    app:layout_constraintBottom_toTopOf="@+id/chosen_option_warning_textview"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent" />
 
                 <TextView
-                    android:id="@+id/right_answer_cardview_prompt"
-                    android:layout_width="wrap_content"
+                    android:id="@+id/chosen_option_warning_textview"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:fontFamily="@font/allerta"
-                    android:text="@string/right_answer"
-                    android:textColor="#024c01"
                     android:textSize="12sp"
+                    android:gravity="center"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent"
                     app:layout_constraintVertical_bias="0.95"
-                    tools:text="Right Answer" />
+                    tools:text="Warning" />
 
             </androidx.constraintlayout.widget.ConstraintLayout>
 
         </androidx.cardview.widget.CardView>
 
         <androidx.cardview.widget.CardView
-            android:id="@+id/wrong_option_red"
-            android:layout_width="95dp"
-            android:layout_height="95dp"
-            android:visibility="invisible"
-            app:cardBackgroundColor="@android:color/transparent"
-            app:cardElevation="0dp"
-            app:layout_constraintBottom_toTopOf="@+id/button_quit_quiz_activity"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.11"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/button_option_c"
-            app:layout_constraintVertical_bias="0.07999998"
-            tools:targetApi="lollipop">
-
-            <androidx.constraintlayout.widget.ConstraintLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent">
-
-                <ImageView
-                    android:layout_width="0dp"
-                    android:layout_height="0dp"
-                    android:adjustViewBounds="true"
-                    android:contentDescription="@string/wrong_answer_icon"
-                    android:src="@drawable/wrong_answer_circle_outline"
-                    app:layout_constraintBottom_toTopOf="@+id/wrong_answer_cardview_prompt"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent" />
-
-                <TextView
-                    android:id="@+id/wrong_answer_cardview_prompt"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:fontFamily="@font/allerta"
-                    android:text="@string/wrong_answer"
-                    android:textColor="#A40000"
-                    android:textSize="12sp"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent"
-                    app:layout_constraintVertical_bias="0.95"
-                    tools:text="Wrong answer" />
-
-            </androidx.constraintlayout.widget.ConstraintLayout>
-
-        </androidx.cardview.widget.CardView>
-
-        <androidx.cardview.widget.CardView
-            android:id="@+id/next_green"
+            android:id="@+id/next_clickable_cardview"
             android:layout_width="95dp"
             android:layout_height="95dp"
             android:visibility="invisible"
@@ -235,22 +184,22 @@
                 android:layout_height="match_parent">
 
                 <ImageView
+                    android:id="@+id/next_clickable_cardview_view"
                     android:layout_width="0dp"
                     android:layout_height="0dp"
                     android:adjustViewBounds="true"
                     android:contentDescription="@string/next_question_icon"
                     android:src="@drawable/next_circle_outline"
-                    app:layout_constraintBottom_toTopOf="@+id/next_prompt_cardview"
+                    app:layout_constraintBottom_toTopOf="@+id/next_clickable_cardview_textview"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent" />
 
                 <TextView
-                    android:id="@+id/next_prompt_cardview"
+                    android:id="@+id/next_clickable_cardview_textview"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:fontFamily="@font/allerta"
-                    android:text="@string/next_question"
                     android:textColor="#024c01"
                     android:textSize="12sp"
                     app:layout_constraintBottom_toBottomOf="parent"

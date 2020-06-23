@@ -16,8 +16,7 @@
     <string name="right_answer">Right Answer</string>
     <string name="wrong_answer">Wrong answer</string>
     <string name="next_question">Next Question</string>
-    <string name="right_answer_icon">Right answer icon</string>
-    <string name="wrong_answer_icon">Wrong answer icon</string>
+    <string name="chosen_option_warning_icon">Chosen option warning icon</string>
     <string name="next_question_icon">Next question icon</string>
     <string name="try_again">Try Again</string>
 </resources>

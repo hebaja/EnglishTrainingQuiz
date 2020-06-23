@@ -5,10 +5,14 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.net.Uri;
+import android.os.Build;
 import android.os.Bundle;
+import android.text.Layout;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
 import android.widget.EditText;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import br.com.hebaja.englishtrainingquizzes.R;
@@ -27,7 +31,11 @@ public class FeedbackActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_feedback);
         setTitle("Feedback");
-        editTextInput = findViewById(R.id.text_input_layout_feedback_message);
+        editTextInput = findViewById(R.id.feedback_activity_message_edit_text);
+        TextView instructionsTextView = findViewById(R.id.feedback_activity_instructions_layout);
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
+            instructionsTextView.setJustificationMode(Layout.JUSTIFICATION_MODE_INTER_WORD);
+        }
     }
 
     @Override
@@ -67,7 +75,9 @@ public class FeedbackActivity extends AppCompatActivity {
     }
 
     private Intent configureEmailClientsIntent(String[] myEmail, String subject, String message, Intent emailSelectorIntent) {
-        final Intent intent = new Intent(Intent.ACTION_SEND);
+//        final Intent intent = new Intent(Intent.ACTION_SEND);
+        final Intent intent = new Intent();
+        intent.setAction(Intent.ACTION_SEND);
         intent.putExtra(Intent.EXTRA_EMAIL, myEmail);
         intent.putExtra(Intent.EXTRA_SUBJECT, subject);
         intent.putExtra(Intent.EXTRA_TEXT, message);

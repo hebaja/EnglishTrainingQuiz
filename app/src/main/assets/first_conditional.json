@@ -1,0 +1,202 @@
+[
+	{
+	"question":
+		{
+			"prompt":"If you ____ greasy food, you will become fat.",
+			"optionA":"eat",
+			"optionB":"will eat",
+			"optionC":"eats",
+			"rightOption":"a"
+		}
+	},
+	{
+	"question":
+		{
+			"prompt":"If your sister goes to Paris, she ____ a good time.",
+			"optionA":"has",
+			"optionB":"will have",
+			"optionC":"have",
+			"rightOption":"b"
+		}
+	},
+	{
+	"question":
+		{
+			"prompt":"If he ____ that, he will be sorry.",
+			"optionA":"do",
+			"optionB":"will do",
+			"optionC":"does",
+			"rightOption":"c"
+		}
+	},
+	{
+	"question":
+		{
+			"prompt":"If I leave now, I ____ in New York by 8:00 PM.",
+			"optionA":"will arrive",
+			"optionB":"arrive",
+			"optionC":"arrives",
+			"rightOption":"a"
+		}
+	},
+	{
+	"question":
+		{
+			"prompt":"You ____ on your test if you don't study.",
+			"optionA":"won't do well",
+			"optionB":"don't do well",
+			"optionC":"won't does well",
+			"rightOption":"a"
+		}
+	},
+	{
+	"question":
+		{
+			"prompt":"They won't know the truth if you ____ them.",
+			"optionA":"won't tell",
+			"optionB":"don't tell",
+			"optionC":"told",
+			"rightOption":"b"
+		}
+	},
+	{
+	"question":
+		{
+			"prompt":"If I bake a cake, ____ have some?",
+			"optionA":"you will",
+			"optionB":"do you",
+			"optionC":"will you",
+			"rightOption":"c"
+		}
+	},
+	{
+	"question":
+		{
+			"prompt":"If he ____ you, will you answer the phone?",
+			"optionA":"will call",
+			"optionB":"calls",
+			"optionC":"call",
+			"rightOption":"b"
+		}
+	},
+	{
+	"question":
+		{
+			"prompt":"If you don't go to the party, I ____ very upset.",
+			"optionA":"am",
+			"optionB":"will be",
+			"optionC":"be",
+			"rightOption":"b"
+		}
+	},
+	{
+	"question":
+		{
+			"prompt":"If you get a haircut, you ____ much better.",
+			"optionA":"will look",
+			"optionB":"look",
+			"optionC":"don't look",
+			"rightOption":"a"
+		}
+	},
+	{
+	"question":
+		{
+			"prompt":"If the children noisy, I ____ them to be quiet.",
+			"optionA":"will tell",
+			"optionB":"tell",
+			"optionC":"don't tell",
+			"rightOption":"a"
+		}
+	},
+	{
+	"question":
+		{
+			"prompt":"We ____ if they offer us a free meal.",
+			"optionA":"don't say no",
+			"optionB":"won't say no",
+			"optionC":"will no",
+			"rightOption":"b"
+		}
+	},
+	{
+	"question":
+		{
+			"prompt":"The bird ____ any closer if you keep making noise.",
+			"optionA":"fly",
+			"optionB":"doesn't fly",
+			"optionC":"won't fly",
+			"rightOption":"c"
+		}
+	},
+	{
+	"question":
+		{
+			"prompt":"If they fix my car, I ____ to Arizona.",
+			"optionA":"drive",
+			"optionB":"don't drive",
+			"optionC":"will drive",
+			"rightOption":"c"
+		}
+	},
+	{
+	"question":
+		{
+			"prompt":"You will break it if ____ banging it against the floor.",
+			"optionA":"you keep",
+			"optionB":"you will keep",
+			"optionC":"won't keep",
+			"rightOption":"b"
+		}
+	},
+	{
+	"question":
+		{
+			"prompt":"If I ____ him adopt the kitten, he will be very sad.",
+			"optionA":"won't let",
+			"optionB":"will let",
+			"optionC":"don't let",
+			"rightOption":"c"
+		}
+	},
+	{
+	"question":
+		{
+			"prompt":"If I give you a letter, ____ mail it for me?",
+			"optionA":"do you",
+			"optionB":"will you",
+			"optionC":"you will",
+			"rightOption":"b"
+		}
+	},
+	{
+	"question":
+		{
+			"prompt":"Will you fix the door if I ____ the right tools?",
+			"optionA":"get",
+			"optionB":"will get",
+			"optionC":"won't get",
+			"rightOption":"a"
+		}
+	},
+	{
+	"question":
+		{
+			"prompt":"If the weather doesn't get cooler, I ____ an air conditioner.",
+			"optionA":"don't buy",
+			"optionB":"buy",
+			"optionC":"will buy",
+			"rightOption":"c"
+		}
+	},
+	{
+	"question":
+		{
+			"prompt":"I will wash the dishes if you ________ the bathroom.",
+			"optionA":"will clean",
+			"optionB":"clean",
+			"optionC":"will not clean",
+			"rightOption":"b"
+		}
+	}
+]
