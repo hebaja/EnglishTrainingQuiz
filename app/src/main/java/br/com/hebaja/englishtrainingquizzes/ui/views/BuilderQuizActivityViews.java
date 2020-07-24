@@ -17,18 +17,18 @@ import java.util.List;
 import br.com.hebaja.englishtrainingquizzes.R;
 import br.com.hebaja.englishtrainingquizzes.model.Question;
 import br.com.hebaja.englishtrainingquizzes.ui.activity.FinalScoreActivity;
-import br.com.hebaja.englishtrainingquizzes.ui.activity.QuizActivity;
 import br.com.hebaja.englishtrainingquizzes.ui.dialog.QuitAppDialog;
 
-import static br.com.hebaja.englishtrainingquizzes.ui.activity.Constants.CHOSEN_OPTION_TRY_AGAIN_KEY;
-import static br.com.hebaja.englishtrainingquizzes.ui.activity.Constants.FINAL_SCORE;
-import static br.com.hebaja.englishtrainingquizzes.ui.activity.Constants.NEXT_QUESTION;
-import static br.com.hebaja.englishtrainingquizzes.ui.activity.Constants.OPTION_POSITION_A;
-import static br.com.hebaja.englishtrainingquizzes.ui.activity.Constants.OPTION_POSITION_B;
-import static br.com.hebaja.englishtrainingquizzes.ui.activity.Constants.OPTION_POSITION_C;
-import static br.com.hebaja.englishtrainingquizzes.ui.activity.Constants.RIGHT_ANSWER;
-import static br.com.hebaja.englishtrainingquizzes.ui.activity.Constants.SCORE_KEY;
-import static br.com.hebaja.englishtrainingquizzes.ui.activity.Constants.WRONG_ANSWER;
+import static br.com.hebaja.englishtrainingquizzes.Constants.CHOSEN_LEVEL_TRY_AGAIN_KEY;
+import static br.com.hebaja.englishtrainingquizzes.Constants.CHOSEN_OPTION_TRY_AGAIN_KEY;
+import static br.com.hebaja.englishtrainingquizzes.Constants.FINAL_SCORE;
+import static br.com.hebaja.englishtrainingquizzes.Constants.NEXT_QUESTION;
+import static br.com.hebaja.englishtrainingquizzes.Constants.OPTION_POSITION_A;
+import static br.com.hebaja.englishtrainingquizzes.Constants.OPTION_POSITION_B;
+import static br.com.hebaja.englishtrainingquizzes.Constants.OPTION_POSITION_C;
+import static br.com.hebaja.englishtrainingquizzes.Constants.RIGHT_ANSWER;
+import static br.com.hebaja.englishtrainingquizzes.Constants.SCORE_KEY;
+import static br.com.hebaja.englishtrainingquizzes.Constants.WRONG_ANSWER;
 
 public class BuilderQuizActivityViews {
 
@@ -59,11 +59,13 @@ public class BuilderQuizActivityViews {
     private int position;
 
     private int chosenOption;
+    private int chosenLevel;
 
-    public BuilderQuizActivityViews(List<Question> questions, Context context, int chosenOptionMainActivity) {
+    public BuilderQuizActivityViews(List<Question> questions, Context context, int chosenOptionMenuActivity, int chosenLevelMenuActivity) {
         this.questions = questions;
         this.context = context;
-        this.chosenOption = chosenOptionMainActivity;
+        this.chosenOption = chosenOptionMenuActivity;
+        this.chosenLevel = chosenLevelMenuActivity;
     }
 
     public void initializeViews() {
@@ -82,43 +84,22 @@ public class BuilderQuizActivityViews {
 
     public void setOptionsButtons(FragmentManager supportFragmentManager) {
 
-        buttonOptionA.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                configureButtonOption(optionPositionA);
-            }
+        buttonOptionA.setOnClickListener(view -> configureButtonOption(optionPositionA));
+
+        buttonOptionB.setOnClickListener(view -> configureButtonOption(optionPositionB));
+
+        buttonOptionC.setOnClickListener(view -> configureButtonOption(optionPositionC));
+
+        buttonQuit.setOnClickListener(view -> {
+            QuitAppDialog quitAppDialog = new QuitAppDialog((Activity) context);
+            quitAppDialog.show(supportFragmentManager, "quit_app");
         });
 
-        buttonOptionB.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                configureButtonOption(optionPositionB);
-            }
-        });
-
-        buttonOptionC.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                configureButtonOption(optionPositionC);
-            }
-        });
-
-        buttonQuit.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                QuitAppDialog quitAppDialog = new QuitAppDialog((Activity) context);
-                quitAppDialog.show(supportFragmentManager, "quit_app");
-            }
-        });
-
-        buttonNext.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                updateMainActivityOrGoToFinalActivity();
-                enableAllButtons();
-                buttonNext.setVisibility(View.INVISIBLE);
-                chosenOptionWarning.setVisibility(View.INVISIBLE);
-            }
+        buttonNext.setOnClickListener(view -> {
+            updateMainActivityOrGoToFinalActivity();
+            enableAllButtons();
+            buttonNext.setVisibility(View.INVISIBLE);
+            chosenOptionWarning.setVisibility(View.INVISIBLE);
         });
     }
 
@@ -222,6 +203,7 @@ public class BuilderQuizActivityViews {
         Intent intent = new Intent(context, FinalScoreActivity.class);
         intent.putExtra(SCORE_KEY, score);
         intent.putExtra(CHOSEN_OPTION_TRY_AGAIN_KEY, chosenOption);
+        intent.putExtra(CHOSEN_LEVEL_TRY_AGAIN_KEY, chosenLevel);
         context.startActivity(intent);
     }
 }

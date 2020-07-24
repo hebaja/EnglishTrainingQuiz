@@ -1,0 +1,202 @@
+[
+	{
+	"question":
+		{
+			"prompt":"The shops are a lot ___ than usual.",
+			"optionA":"quieter",
+			"optionB":"more quiet",
+			"optionC":"quietter",
+			"rightOption":"a"
+		}
+	},
+	{
+	"question":
+		{
+			"prompt":"I feel much ___ since I started exercising.",
+			"optionA":"fiter",
+			"optionB":"fitter",
+			"optionC":"more fit",
+			"rightOption":"b"
+		}
+	},
+	{
+	"question":
+		{
+			"prompt":"The girl ___ than she seemed in her photo.",
+			"optionA":"more pretty",
+			"optionB":"most pretty",
+			"optionC":"prettier",
+			"rightOption":"c"
+		}
+	},
+	{
+	"question":
+		{
+			"prompt":"The town on Sunday ___.",
+			"optionA":"less crowded",
+			"optionB":"least crowded",
+			"optionC":"crowdeder",
+			"rightOption":"a"
+		}
+	},
+	{
+	"question":
+		{
+			"prompt":"I think this sofa is ___ than the other.",
+			"optionA":"comfortabler",
+			"optionB":"more comfortable",
+			"optionC":"most comfortable",
+			"rightOption":"b"
+		}
+	},
+	{
+	"question":
+		{
+			"prompt":"The Eiffel Tower is ___ site in France.",
+			"optionA":"the more popular",
+			"optionB":"popularest",
+			"optionC":"the most popular",
+			"rightOption":"c"
+		}
+	},
+	{
+	"question":
+		{
+			"prompt":"She is a ___ Musican than her friend.",
+			"optionA":"better",
+			"optionB":"gooder",
+			"optionC":"best",
+			"rightOption":"a"
+		}
+	},
+	{
+	"question":
+		{
+			"prompt":"What is ___ river in the world?",
+			"optionA":"the longer",
+			"optionB":"the longest",
+			"optionC":"longer than",
+			"rightOption":"b"
+		}
+	},
+	{
+	"question":
+		{
+			"prompt":"Which gloves are ___ ?",
+			"optionA":"the cheap",
+			"optionB":"more cheaper",
+			"optionC":"cheaper",
+			"rightOption":"c"
+		}
+	},
+	{
+	"question":
+		{
+			"prompt":"My friend is much ___ than I am",
+			"optionA":"taller",
+			"optionB":"most tall",
+			"optionC":"the tallest",
+			"rightOption":"a"
+		}
+	},
+	{
+	"question":
+		{
+			"prompt":"Who is ___ politician in the Parliment?",
+			"optionA":"the badest",
+			"optionB":"the worst",
+			"optionC":"worse",
+			"rightOption":"b"
+		}
+	},
+	{
+	"question":
+		{
+			"prompt":"What is ___ painting in this Gallery?",
+			"optionA":"the more beautiful",
+			"optionB":"the beautifulest",
+			"optionC":"the most beautiful",
+			"rightOption":"c"
+		}
+	},
+	{
+	"question":
+		{
+			"prompt":"My car is ___ than yours.",
+			"optionA":"less expensive",
+			"optionB":"least expensive",
+			"optionC":"expensiver",
+			"rightOption":"a"
+		}
+	},
+	{
+	"question":
+		{
+			"prompt":"It was ___ thing.",
+			"optionA":"the less surprising",
+			"optionB":"the least surprising",
+			"optionC":"the surprisinger",
+			"rightOption":"b"
+		}
+	},
+	{
+	"question":
+		{
+			"prompt":"It's not ___  it was yesterday.",
+			"optionA":"as hot than",
+			"optionB":"as hot so",
+			"optionC":"as hot as",
+			"rightOption":"c"
+		}
+	},
+	{
+	"question":
+		{
+			"prompt":"He wasn't ___ I thought he would be.",
+			"optionA":"as tall as",
+			"optionB":"as tall like",
+			"optionC":"the tall as",
+			"rightOption":"a"
+		}
+	},
+	{
+	"question":
+		{
+			"prompt":"3) The children were ___ gold.",
+			"optionA":"more good than",
+			"optionB":"as good as",
+			"optionC":"less better than",
+			"rightOption":"b"
+		}
+	},
+	{
+	"question":
+		{
+			"prompt":"The tickets were twice ___  before.",
+			"optionA":"as expensive like",
+			"optionB":"more expensiver than",
+			"optionC":"as expensive as",
+			"rightOption":"c"
+		}
+	},
+	{
+	"question":
+		{
+			"prompt":"We climbed ___ up the hill.",
+			"optionA":"further",
+			"optionB":"farer",
+			"optionC":"fartest",
+			"rightOption":"a"
+		}
+	},
+	{
+	"question":
+		{
+			"prompt":"What is the ___ planet from the sun?",
+			"optionA":"farest",
+			"optionB":"furthest",
+			"optionC":"fariest",
+			"rightOption":"b"
+		}
+	}
+]

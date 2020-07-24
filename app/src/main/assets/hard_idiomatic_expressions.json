@@ -1,0 +1,152 @@
+[
+	{
+	"question":
+		{
+			"prompt":"Losing the bet felt like a kick in the ___.",
+			"optionA":"teeth",
+			"optionB":"head",
+			"optionC":"back",
+			"rightOption":"a"
+		}
+	},
+	{
+	"question":
+		{
+			"prompt":"Enough! I am at the end of my ___.",
+			"optionA":"leash",
+			"optionB":"tether",
+			"optionC":"rope",
+			"rightOption":"b"
+		}
+	},
+	{
+	"question":
+		{
+			"prompt":"You have some ___ for thought for next class.",
+			"optionA":"grains",
+			"optionB":"bread",
+			"optionC":"food",
+			"rightOption":"c"
+		}
+	},
+	{
+	"question":
+		{
+			"prompt":"I went ___ , and you never you thanked me!",
+			"optionA":"out on a limb for your",
+			"optionB":"off on a limb for your",
+			"optionC":"away on a limb for your",
+			"rightOption":"a"
+		}
+	},
+	{
+	"question":
+		{
+			"prompt":"He fought for 5 rounds. He's no ___ chicken.",
+			"optionA":"young",
+			"optionB":"spring",
+			"optionC":"baby",
+			"rightOption":"b"
+		}
+	},
+	{
+	"question":
+		{
+			"prompt":"He'll argue till he's ___ in the face.",
+			"optionA":"white",
+			"optionB":"red",
+			"optionC":"blue",
+			"rightOption":"c"
+		}
+	},
+	{
+	"question":
+		{
+			"prompt":"His grandchildren have given him ___ life.",
+			"optionA":"a new lease of",
+			"optionB":"a new run of",
+			"optionC":"a new offer of",
+			"rightOption":"a"
+		}
+	},
+	{
+	"question":
+		{
+			"prompt":"Are they still arguing? They really ___!",
+			"optionA":"have an axe to sharpen",
+			"optionB":"have an axe to grind",
+			"optionC":"have an axe to shine",
+			"rightOption":"b"
+		}
+	},
+	{
+	"question":
+		{
+			"prompt":"finishing in time was ___ but we did it.",
+			"optionA":"a long order",
+			"optionB":"a big order",
+			"optionC":"a tall order",
+			"rightOption":"c"
+		}
+	},
+	{
+	"question":
+		{
+			"prompt":"The way kids behave in this school is ___",
+			"optionA":"beyond the pale",
+			"optionB":"beyond the bleached",
+			"optionC":"beyond the white",
+			"rightOption":"a"
+		}
+	},
+	{
+	"question":
+		{
+			"prompt":"Be patient, tolerant and ___ your time.",
+			"optionA":"bid",
+			"optionB":"bide",
+			"optionC":"bite",
+			"rightOption":"b"
+		}
+	},
+	{
+	"question":
+		{
+			"prompt":"Sorry, but sometimes I fly ___ the handle.",
+			"optionA":"out",
+			"optionB":"away",
+			"optionC":"off",
+			"rightOption":"c"
+		}
+	},
+	{
+	"question":
+		{
+			"prompt":"Are starting to ___ about the wedding?",
+			"optionA":"have cold feet",
+			"optionB":"have cool feet",
+			"optionC":"have frozen feet",
+			"rightOption":"a"
+		}
+	},
+	{
+	"question":
+		{
+			"prompt":"Are you sure they're brothers? They're ___ .",
+			"optionA":"like cream and cheese",
+			"optionB":"like chalk and cheese",
+			"optionC":"like butter and cheese",
+			"rightOption":"b"
+		}
+	},
+	{
+	"question":
+		{
+			"prompt":"That's impossible to happen! maybe ___ .",
+			"optionA":"when cats fly",
+			"optionB":"when dogs fly",
+			"optionC":"when pigs fly",
+			"rightOption":"c"
+		}
+	}
+]

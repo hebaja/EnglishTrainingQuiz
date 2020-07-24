@@ -19,4 +19,7 @@
     <string name="chosen_option_warning_icon">Chosen option warning icon</string>
     <string name="next_question_icon">Next question icon</string>
     <string name="try_again">Try Again</string>
+    <string name="level_menu_easy">Easy mode (A1/A2)</string>
+    <string name="level_menu_medium">Medium mode (B1/B2)</string>
+    <string name="level_menu_hard">Hard mode (C1/C2)</string>
 </resources>

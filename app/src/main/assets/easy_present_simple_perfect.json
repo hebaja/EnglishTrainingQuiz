@@ -1,0 +1,152 @@
+[
+	{
+	"question":
+		{
+			"prompt":"I started my English course 3 weeks ago.",
+			"optionA":"I have been on this English course for three weeks.",
+			"optionB":"I was on this English course for three weeks.",
+			"optionC":"I am on this English course for three weeks.",
+			"rightOption":"a"
+		}
+	},
+	{
+	"question":
+		{
+			"prompt":"2. I haven't seen John since Friday.",
+			"optionA":"The last time I have seen John was Friday.",
+			"optionB":"The last time I saw John was Friday.",
+			"optionC":"The last time I have saw John was Friday.",
+			"rightOption":"b"
+		}
+	},
+	{
+	"question":
+		{
+			"prompt":"3. The last time Claire went on holiday was five years ago.",
+			"optionA":"Claire hasn't been on holiday for five years.",
+			"optionB":"Claire wasn't on holiday for five years.",
+			"optionC":"Claire haven't been on holiday for five years.",
+			"rightOption":"c"
+		}
+	},
+	{
+	"question":
+		{
+			"prompt":"Marie has been married for seven months.",
+			"optionA":"Marie got married seven months ago.",
+			"optionB":"Marie has got married seven months ago.",
+			"optionC":"Marie get married seven months ago.",
+			"rightOption":"a"
+		}
+	},
+	{
+	"question":
+		{
+			"prompt":"Do you know what score you got in the test?",
+			"optionA":"Have you have the result of your test?",
+			"optionB":"Have you had the result of your test?",
+			"optionC":"Had you had the result of your test?",
+			"rightOption":"b"
+		}
+	},
+	{
+	"question":
+		{
+			"prompt":"I watched one film this morning and one this afternoon.",
+			"optionA":"I watched 2 films so far today.",
+			"optionB":"I has watched 2 films so far today.",
+			"optionC":"I have watched 2 films so far today.",
+			"rightOption":"c"
+		}
+	},
+	{
+	"question":
+		{
+			"prompt":"I ___ you for a long time.",
+			"optionA":"haven't seen",
+			"optionB":"didn't see",
+			"optionC":"saw",
+			"rightOption":"a"
+		}
+	},
+	{
+	"question":
+		{
+			"prompt":"Jane ___ her car two weeks ago.",
+			"optionA":"has bought",
+			"optionB":"bought",
+			"optionC":"did bought",
+			"rightOption":"b"
+		}
+	},
+	{
+	"question":
+		{
+			"prompt":"We ___ in England last summer.",
+			"optionA":"did stayed",
+			"optionB":"have stayed",
+			"optionC":"stayed",
+			"rightOption":"c"
+		}
+	},
+	{
+	"question":
+		{
+			"prompt":"We ___ here since five o’clock.",
+			"optionA":"have been",
+			"optionB":"were",
+			"optionC":"was",
+			"rightOption":"a"
+		}
+	},
+	{
+	"question":
+		{
+			"prompt":"This is the first time she ___ a car.",
+			"optionA":"didn't drive",
+			"optionB":"drove",
+			"optionC":"has driven",
+			"rightOption":"b"
+		}
+	},
+	{
+	"question":
+		{
+			"prompt":"John ___ to Paris two days ago.",
+			"optionA":"has gone",
+			"optionB":"have gone",
+			"optionC":"went",
+			"rightOption":"c"
+		}
+	},
+	{
+	"question":
+		{
+			"prompt":"I ___ finished my letter yet.",
+			"optionA":"haven't",
+			"optionB":"didn't",
+			"optionC":"hasn't",
+			"rightOption":"a"
+		}
+	},
+	{
+	"question":
+		{
+			"prompt":"I ___ home late last night.",
+			"optionA":"have arrived",
+			"optionB":"arrived",
+			"optionC":"haven't arrived",
+			"rightOption":"b"
+		}
+	},
+	{
+	"question":
+		{
+			"prompt":"This is the easiest quiz I ___ in my life.",
+			"optionA":"didn't take",
+			"optionB":"took",
+			"optionC":"have taken",
+			"rightOption":"c"
+		}
+	}
+]

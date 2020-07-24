@@ -16,8 +16,11 @@ import br.com.hebaja.englishtrainingquizzes.daos.OptionDAO;
 import br.com.hebaja.englishtrainingquizzes.model.Option;
 import br.com.hebaja.englishtrainingquizzes.model.Question;
 
-import static br.com.hebaja.englishtrainingquizzes.ui.activity.Constants.QUESTIONS_LIST_FINAL_INDEX;
-import static br.com.hebaja.englishtrainingquizzes.ui.activity.Constants.QUESTIONS_LIST_INITIAL_INDEX;
+import static br.com.hebaja.englishtrainingquizzes.Constants.EASY_MODE;
+import static br.com.hebaja.englishtrainingquizzes.Constants.HARD_MODE;
+import static br.com.hebaja.englishtrainingquizzes.Constants.MEDIUM_MODE;
+import static br.com.hebaja.englishtrainingquizzes.Constants.QUESTIONS_LIST_FINAL_INDEX;
+import static br.com.hebaja.englishtrainingquizzes.Constants.QUESTIONS_LIST_INITIAL_INDEX;
 
 public class QuestionObjectsGenerator {
 
@@ -26,14 +29,26 @@ public class QuestionObjectsGenerator {
     private List<Option> optionsList;
     private final int chosenOptionMenuActivity;
     private final Context context;
+    private final int levelKey;
 
-    public QuestionObjectsGenerator(int chosenOptionMenuActivity, Context context) {
+    public QuestionObjectsGenerator(int levelKey, int chosenOptionMenuActivity, Context context) {
         this.chosenOptionMenuActivity = chosenOptionMenuActivity;
         this.context = context;
+        this.levelKey = levelKey;
     };
 
     public List<Question> generateQuestionObjectsFromJsonFile() {
-        optionsList = new OptionDAO().list();
+        switch (levelKey) {
+            case EASY_MODE:
+                optionsList = new OptionDAO().easyList();
+                break;
+            case MEDIUM_MODE:
+                optionsList = new OptionDAO().mediumList();
+                break;
+            case HARD_MODE:
+                optionsList = new OptionDAO().hardList();
+                break;
+        }
 
         try {
             InputStream inputStream = checkMenuChosenOption();

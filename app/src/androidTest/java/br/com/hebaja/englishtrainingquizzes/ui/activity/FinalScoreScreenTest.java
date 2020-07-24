@@ -19,8 +19,9 @@ import static androidx.test.espresso.matcher.ViewMatchers.isDisplayed;
 import static androidx.test.espresso.matcher.ViewMatchers.withContentDescription;
 import static androidx.test.espresso.matcher.ViewMatchers.withId;
 import static androidx.test.espresso.matcher.ViewMatchers.withText;
-import static br.com.hebaja.englishtrainingquizzes.ui.activity.Constants.CHOSEN_OPTION_TRY_AGAIN_KEY;
-import static br.com.hebaja.englishtrainingquizzes.ui.activity.Constants.SCORE_KEY;
+import static br.com.hebaja.englishtrainingquizzes.Constants.CHOSEN_LEVEL_TRY_AGAIN_KEY;
+import static br.com.hebaja.englishtrainingquizzes.Constants.CHOSEN_OPTION_TRY_AGAIN_KEY;
+import static br.com.hebaja.englishtrainingquizzes.Constants.SCORE_KEY;
 import static org.hamcrest.Matchers.allOf;
 import static org.junit.Assert.assertTrue;
 
@@ -34,6 +35,7 @@ public class FinalScoreScreenTest extends TestBase {
         Intent intent = new Intent();
         intent.putExtra(SCORE_KEY, 10);
         intent.putExtra(CHOSEN_OPTION_TRY_AGAIN_KEY, 0);
+        intent.putExtra(CHOSEN_LEVEL_TRY_AGAIN_KEY, 0);
         finalScoreActivity.launchActivity(intent);
     }
 

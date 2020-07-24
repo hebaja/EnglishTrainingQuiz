@@ -26,16 +26,8 @@ public class QuitAppDialog extends AppCompatDialogFragment {
     public Dialog onCreateDialog(@Nullable Bundle savedInstanceState) {
         AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
         builder.setMessage(QUIT_DIALOG_QUESTION_CONSTANT)
-                .setPositiveButton(QUIT_ANSWER_CONSTANT, new DialogInterface.OnClickListener() {
-                    @Override
-                    public void onClick(DialogInterface dialogInterface, int i) {
-                        originActivity.finish();
-                    }
-                })
-                .setNegativeButton(QUIT_CANCEL_ANSWER_CONSTANT, new DialogInterface.OnClickListener() {
-                    @Override
-                    public void onClick(DialogInterface dialogInterface, int i) {
-                    }
+                .setPositiveButton(QUIT_ANSWER_CONSTANT, (dialogInterface, i) -> originActivity.finish())
+                .setNegativeButton(QUIT_CANCEL_ANSWER_CONSTANT, (dialogInterface, i) -> {
                 });
         return builder.create();
     }

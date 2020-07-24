@@ -1,0 +1,202 @@
+[
+  {
+    "question":
+    {
+      "prompt": "People of all ages do crossword puzzles.",
+      "optionA": "crossword puzzles are done by People of all ages.",
+      "optionB": "crossword puzzles is done by People of all ages.",
+      "optionC": "crossword puzzles are did by People of all ages.",
+      "rightOption": "a"
+    }
+  },
+  {
+    "question":
+    {
+      "prompt": "Leonardo Da vinci painted Monalisa.",
+      "optionA": "Monalisa was paint by Leonardo Da vinci .",
+      "optionB": "Monalisa is painted by Leonardo Da vinci .",
+      "optionC": "Monalisa was painted by Leonardo Da vinci.",
+      "rightOption": "c"
+    }
+  },
+  {
+    "question":
+    {
+      "prompt": "Everyone will use Internet.",
+      "optionA": "Internet will use Everyone.",
+      "optionB": "Internet will be used by Everyone.",
+      "optionC": "Internet will be using by Everyone.",
+      "rightOption": "b"
+    }
+  },
+  {
+    "question":
+    {
+      "prompt": "People are restoring many buildings downtown.",
+      "optionA": "many buildings downtown are being restored.",
+      "optionB": "many buildings downtown is being restored.",
+      "optionC": "many buildings downtown will be restored.",
+      "rightOption": "a"
+    }
+  },
+  {
+    "question":
+    {
+      "prompt": "The president has taken evasive actions.",
+      "optionA": "evasive actions have been taken by the president.",
+      "optionB": "evasive actions has been taken by the president.",
+      "optionC": "evasive actions have been took by the president.",
+      "rightOption": "a"
+    }
+  },
+  {
+    "question":
+    {
+      "prompt": "A volcano destroyed Pompeii.",
+      "optionA": "Pompeii is destroyed by a volcano.",
+      "optionB": "Pompeii were destroyed by a volcano.",
+      "optionC": "Pompeii was destroyed by a volcano.",
+      "rightOption": "c"
+    }
+  },
+  {
+    "question":
+    {
+      "prompt": "Madonna sings 'Vogue'.",
+      "optionA": "'Vogue' is sing by Madonna.",
+      "optionB": "'Vogue' is sang by Madonna.",
+      "optionC": "'Vogue' is sung by Madonna.",
+      "rightOption": "c"
+    }
+  },
+  {
+    "question":
+    {
+      "prompt": "People cut several trees everyday.",
+      "optionA": "Several trees are cut everyday.",
+      "optionB": "Several trees is cut everyday.",
+      "optionC": "Several trees are cutted everyday.",
+      "rightOption": "a"
+    }
+  },
+  {
+    "question":
+    {
+      "prompt": "William Bonner hosts a news program.",
+      "optionA": "A news program is hosted by William Bonner.",
+      "optionB": "A news program is host by William Bonner.",
+      "optionC": "A news program is hosted for William Bonner.",
+      "rightOption": "a"
+    }
+  },
+  {
+    "question":
+    {
+      "prompt": "Spielberg will cast Will Smith.",
+      "optionA": "Will Smith will be casted by Spielberg.",
+      "optionB": "Will Smith will be cast by Spielberg.",
+      "optionC": "Will Smith will cast Spielberg.",
+      "rightOption": "b"
+    }
+  },
+  {
+    "question":
+    {
+      "prompt": "She ___ me to start studying Spanish.",
+      "optionA": "encouraged",
+      "optionB": "admitted",
+      "optionC": "insisted",
+      "rightOption": "a"
+    }
+  },
+  {
+    "question":
+    {
+      "prompt": "King has been writing a new novel.",
+      "optionA": "A new novel has been written by King.",
+      "optionB": "A new novel has been wrote by King.",
+      "optionC": "A new novel have been writing by King.",
+      "rightOption": "a"
+    }
+  },
+  {
+    "question":
+    {
+      "prompt": "She had never broken a promise.",
+      "optionA": "A promisse has never been braked by her.",
+      "optionB": "A promisse never has be broken by her.",
+      "optionC": "A promisse has never been broken by her.",
+      "rightOption": "c"
+    }
+  },
+  {
+    "question":
+    {
+      "prompt": "Paul insisted ___ for dinner.",
+      "optionA": "to paying",
+      "optionB": "paying",
+      "optionC": "on paying",
+      "rightOption": "c"
+    }
+  },
+  {
+    "question":
+    {
+      "prompt": "They will have forgotten it.",
+      "optionA": "It will have been forgotten.",
+      "optionB": "It has will been forgotten.",
+      "optionC": "It will has been forgotten.",
+      "rightOption": "a"
+    }
+  },
+  {
+    "question":
+    {
+      "prompt": "A taxi driver drove us into town.",
+      "optionA": "We were drove into town by a taxi driver.",
+      "optionB": "We were driven into town by a taxi driver.",
+      "optionC": "We were driver into town by a taxi driver.",
+      "rightOption": "b"
+    }
+  },
+  {
+    "question":
+    {
+      "prompt": "They didn't sell many programmes.",
+      "optionA": "Very few programs were sold.",
+      "optionB": "Few programs were very sold.",
+      "optionC": "Very programs few were sold.",
+      "rightOption": "a"
+    }
+  },
+  {
+    "question":
+    {
+      "prompt": "'Well done for scoring twice, Mark', said the coach.",
+      "optionA": "Mark was praised for scored twice.",
+      "optionB": "Mark was praised for scoring twice.",
+      "optionC": "Mark was praising for scoring twice.",
+      "rightOption": "b"
+    }
+  },
+  {
+    "question":
+    {
+      "prompt": "People say that shop is very good",
+      "optionA": "That shop is supposed to be very good.",
+      "optionB": "That shop is supposed be very good.",
+      "optionC": "That shop is supposing to be very good.",
+      "rightOption": "a"
+    }
+  },
+  {
+    "question":
+    {
+      "prompt": "My boss told me of his decision yesterday.",
+      "optionA": "I will inform his decision yesterday.",
+      "optionB": "I am informed of his decision yesterday.",
+      "optionC": "I was informed of his decision yesterday.",
+      "rightOption": "c"
+    }
+  }
+]

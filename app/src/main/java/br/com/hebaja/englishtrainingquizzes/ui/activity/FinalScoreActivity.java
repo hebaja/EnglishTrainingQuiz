@@ -8,14 +8,18 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
+import androidx.activity.OnBackPressedCallback;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import br.com.hebaja.englishtrainingquizzes.R;
+import br.com.hebaja.englishtrainingquizzes.ui.dialog.QuitAppDialog;
 
-import static br.com.hebaja.englishtrainingquizzes.ui.activity.Constants.APPBAR_TITLE;
-import static br.com.hebaja.englishtrainingquizzes.ui.activity.Constants.CHOSEN_OPTION_TRY_AGAIN_KEY;
-import static br.com.hebaja.englishtrainingquizzes.ui.activity.Constants.SCORE_KEY;
+import static br.com.hebaja.englishtrainingquizzes.Constants.APPBAR_TITLE;
+import static br.com.hebaja.englishtrainingquizzes.Constants.CHOSEN_LEVEL_TRY_AGAIN_KEY;
+import static br.com.hebaja.englishtrainingquizzes.Constants.CHOSEN_OPTION_TRY_AGAIN_KEY;
+import static br.com.hebaja.englishtrainingquizzes.Constants.INVALID_NUMBER;
+import static br.com.hebaja.englishtrainingquizzes.Constants.SCORE_KEY;
 
 public class FinalScoreActivity extends AppCompatActivity {
 
@@ -26,12 +30,10 @@ public class FinalScoreActivity extends AppCompatActivity {
 
         setTitle(APPBAR_TITLE);
 
-        int score = -1;
-        int chosenOption = -1;
-
         Intent intent = getIntent();
-        int finalScore = intent.getIntExtra(SCORE_KEY, score);
-        int mainActivityChosenOption = intent.getIntExtra(CHOSEN_OPTION_TRY_AGAIN_KEY, chosenOption);
+        int finalScore = intent.getIntExtra(SCORE_KEY, INVALID_NUMBER);
+        int mainActivityChosenOption = intent.getIntExtra(CHOSEN_OPTION_TRY_AGAIN_KEY, INVALID_NUMBER);
+        int mainActivityChosenLevel = intent.getIntExtra(CHOSEN_LEVEL_TRY_AGAIN_KEY, INVALID_NUMBER);
 
         TextView scoreView = findViewById(R.id.final_score_activity_score_counter);
         scoreView.setText(String.valueOf(finalScore));
@@ -40,31 +42,34 @@ public class FinalScoreActivity extends AppCompatActivity {
         Button buttonTryAgain = findViewById(R.id.final_score_activity_button_try_again);
         Button buttonBackToMainMenu = findViewById(R.id.final_score_activity_button_back_main_menu);
 
-        buttonQuit.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                finish();
-            }
+        buttonQuit.setOnClickListener(view -> finish());
+
+        buttonTryAgain.setOnClickListener(view -> {
+            Intent intent1 = new Intent(FinalScoreActivity.this, QuizActivity.class);
+            intent1.putExtra(CHOSEN_OPTION_TRY_AGAIN_KEY, mainActivityChosenOption);
+            intent1.putExtra(CHOSEN_LEVEL_TRY_AGAIN_KEY, mainActivityChosenLevel);
+            startActivity(intent1);
+            finish();
         });
 
-        buttonTryAgain.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(FinalScoreActivity.this, QuizActivity.class);
-                intent.putExtra("chosen_option_try_again", mainActivityChosenOption);
-                startActivity(intent);
-                finish();
-            }
+        buttonBackToMainMenu.setOnClickListener(view -> {
+            Intent intent12 = new Intent(FinalScoreActivity.this, MenuActivity.class);
+            startActivity(intent12);
+            finish();
         });
 
-        buttonBackToMainMenu.setOnClickListener(new View.OnClickListener() {
+        configureBackPressedCallback();
+    }
+
+    private void configureBackPressedCallback() {
+        OnBackPressedCallback callback = new OnBackPressedCallback(true) {
             @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(FinalScoreActivity.this, MenuActivity.class);
-                startActivity(intent);
-                finish();
+            public void handleOnBackPressed() {
+                QuitAppDialog quitAppDialog = new QuitAppDialog(FinalScoreActivity.this);
+                quitAppDialog.show(getSupportFragmentManager(), "quit_app");
             }
-        });
+        };
+        getOnBackPressedDispatcher().addCallback(this, callback);
     }
 
     @Override

@@ -1,0 +1,241 @@
+[
+  {
+    "question":
+    {
+      "prompt": "She hadn't bargained for this.",
+      "optionA": "a) She hadn't expected this.",
+      "optionB": "b) She hadn't bought this.",
+      "optionC": "c) She hadn't profited from this.",
+      "rightOption": "a"
+    }
+  },
+  {
+    "question":
+    {
+      "prompt": "It suddenly dawned on her.",
+      "optionA": "a) She suddenly turned the lights on.",
+      "optionB": "b) She suddenly realised.",
+      "optionC": "c) She was suddenly seen.",
+      "rightOption": "b"
+    }
+  },
+  {
+    "question":
+    {
+      "prompt": "They talked it over.",
+      "optionA": "a) They discussed it.",
+      "optionB": "b) They talked a lot.",
+      "optionC": "c) They gossiped.",
+      "rightOption": "a"
+    }
+  },
+  {
+    "question":
+    {
+      "prompt": "She did up her laces.",
+      "optionA": "a) She tied her laces.",
+      "optionB": "b) She painted her laces.",
+      "optionC": "c) She sewed her laces.",
+      "rightOption": "a"
+    }
+  },
+  {
+    "question":
+    {
+      "prompt": "He called on her.",
+      "optionA": "a) He telephoned her.",
+      "optionB": "b) He visited her.",
+      "optionC": "c) He blamed her.",
+      "rightOption": "b"
+    }
+  },
+  {
+    "question":
+    {
+      "prompt": "She made for the living room.",
+      "optionA": "a) She went towards the living room.",
+      "optionB": "b) She paid to build the living room.",
+      "optionC": "c) She decorated the living room.",
+      "rightOption": "a"
+    }
+  },
+  {
+    "question":
+    {
+      "prompt": "He launched into a long speech.",
+      "optionA": "a) He improvised a long speech.",
+      "optionB": "b) He got lost in his long speech.",
+      "optionC": "c) He began a long speech.",
+      "rightOption": "c"
+    }
+  },
+  {
+    "question":
+    {
+      "prompt": "He takes after his mother.",
+      "optionA": "a) He has the same profession as his mother.",
+      "optionB": "b) He looks like his mother.",
+      "optionC": "c) He is like his mother.",
+      "rightOption": "c"
+    }
+  },
+  {
+    "question":
+    {
+      "prompt": "He pointed out the mall would be closed.",
+      "optionA": "a) He informed the mall would be closed.",
+      "optionB": "a) He forgot the mall would be closed.",
+      "optionC": "a) He remembered the mall would be closed.",
+      "rightOption": "a"
+    }
+  },
+  {
+    "question":
+    {
+      "prompt": "Who's going to take on the new client?",
+      "optionA": "a) Who's going to be responsible for the new client?",
+      "optionB": "b) Who's going to bring the new client?",
+      "optionC": "c) Who's going to talk to the new client?",
+      "rightOption": "a"
+    }
+  },
+  {
+    "question":
+    {
+      "prompt": "He will not back down on his decision.",
+      "optionA": "a) He will not change his mind about his decision.",
+      "optionB": "b) He will not think about his decision.",
+      "optionC": "c) He won't ellaborate his decision.",
+      "rightOption": "a"
+    }
+  },
+  {
+    "question":
+    {
+      "prompt": "Book in at the reception.",
+      "optionA": "a) Take your book at the reception",
+      "optionB": "b) Pay for the book at the reception",
+      "optionC": "c) Register at the reception",
+      "rightOption": "c"
+    }
+  },
+  {
+  "question":
+     {
+        "prompt":"The team have been ___ at developing the software.",
+        "optionA":"slogging away",
+        "optionB":"slogging around",
+        "optionC":"sloggin through",
+        "rightOption":"a"
+     }
+  },
+  {
+  "question":
+     {
+        "prompt":"Britain ___ the rest of Europe on this issue.",
+        "optionA":"is droping far behind",
+        "optionB":"is lagging far behind",
+        "optionC":"is straggling far behind",
+        "rightOption":"b"
+     }
+  },
+  {
+  "question":
+     {
+        "prompt":"he comes home ___ fried food from the restaurant.",
+        "optionA":"reeking in",
+        "optionB":"reeking with",
+        "optionC":"reeking of",
+        "rightOption":"c"
+     }
+  },
+  {
+  "question":
+     {
+        "prompt":"It took me a while to ___ of spicy food.",
+        "optionA":"cotton on to the pleasures",
+        "optionB":"wool on to the pleasures",
+        "optionC":"nylon on to the pleasures",
+        "rightOption":"a"
+     }
+  },
+  {
+  "question":
+     {
+        "prompt":"They tried to goad us ___ attacking the police.",
+        "optionA":"onto",
+        "optionB":"into",
+        "optionC":"at",
+        "rightOption":"b"
+     }
+  },
+  {
+  "question":
+     {
+        "prompt":"Both countries are trying to ___ the cease-fire.",
+        "optionA":"expand out details of",
+        "optionB":"pad out details of",
+        "optionC":"flesh out details of",
+        "rightOption":"c"
+     }
+  },
+  {
+  "question":
+     {
+        "prompt":"I managed to ___ my exams get good grades.",
+        "optionA":"muddle through",
+        "optionB":"muddle over",
+        "optionC":"muddle around",
+        "rightOption":"a"
+     }
+  },
+  {
+  "question":
+     {
+        "prompt":"Growth in the economy may have ___ out.",
+        "optionA":"fallen",
+        "optionB":"bottomed",
+        "optionC":"flattened",
+        "rightOption":"b"
+     }
+  },
+  {
+  "question":
+     {
+        "prompt":"The sound of his footsteps gradually died ___.",
+        "optionA":"down",
+        "optionB":"out",
+        "optionC":"away",
+        "rightOption":"c"
+     }
+  },
+  {
+  "question":
+     {
+        "prompt":"Let’s ___ this meeting, it’s time for lunch.",
+        "optionA":"wind up",
+        "optionB":"wind out",
+        "optionC":"wind over",
+        "rightOption":"a"
+     }
+  },
+  {
+    "question": {
+      "prompt": "I mistook a piece of rope ___ a snake.",
+      "optionA": "from",
+      "optionB": "for",
+      "optionC": "to",
+      "rightOption": "b"
+    }
+  },
+  {
+    "question":
+    {
+      "prompt": "I can't piece together the truth about it.",
+      "optionA": "a) I can't discover the truth about it.",
+      "optionB": "b) I can't hide the truth about it.",
+      "optionC": "c) I can't deny the truth about it.",
+      "rightOption": "a"
+    }
+  }
+]

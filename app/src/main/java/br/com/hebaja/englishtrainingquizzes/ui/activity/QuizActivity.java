@@ -1,9 +1,9 @@
 package br.com.hebaja.englishtrainingquizzes.ui.activity;
 
-import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 
+import androidx.activity.OnBackPressedCallback;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -12,22 +12,24 @@ import java.util.List;
 
 import br.com.hebaja.englishtrainingquizzes.QuestionObjectsGenerator;
 import br.com.hebaja.englishtrainingquizzes.R;
-import br.com.hebaja.englishtrainingquizzes.model.Option;
 import br.com.hebaja.englishtrainingquizzes.model.Question;
+import br.com.hebaja.englishtrainingquizzes.ui.dialog.QuitAppDialog;
 import br.com.hebaja.englishtrainingquizzes.ui.views.BuilderQuizActivityViews;
 
-import static br.com.hebaja.englishtrainingquizzes.ui.activity.Constants.APPBAR_TITLE;
-import static br.com.hebaja.englishtrainingquizzes.ui.activity.Constants.CHOSEN_OPTION_KEY;
-import static br.com.hebaja.englishtrainingquizzes.ui.activity.Constants.CHOSEN_OPTION_TRY_AGAIN_KEY;
-import static br.com.hebaja.englishtrainingquizzes.ui.activity.Constants.INVALID_NUMBER;
-import static br.com.hebaja.englishtrainingquizzes.ui.activity.Constants.STATE_POSITION;
-import static br.com.hebaja.englishtrainingquizzes.ui.activity.Constants.STATE_SCORE;
+import static br.com.hebaja.englishtrainingquizzes.Constants.APPBAR_TITLE;
+import static br.com.hebaja.englishtrainingquizzes.Constants.CHOSEN_LEVEL_KEY;
+import static br.com.hebaja.englishtrainingquizzes.Constants.CHOSEN_LEVEL_TRY_AGAIN_KEY;
+import static br.com.hebaja.englishtrainingquizzes.Constants.CHOSEN_OPTION_KEY;
+import static br.com.hebaja.englishtrainingquizzes.Constants.CHOSEN_OPTION_TRY_AGAIN_KEY;
+import static br.com.hebaja.englishtrainingquizzes.Constants.INVALID_NUMBER;
+import static br.com.hebaja.englishtrainingquizzes.Constants.STATE_POSITION;
+import static br.com.hebaja.englishtrainingquizzes.Constants.STATE_SCORE;
 
 public class QuizActivity extends AppCompatActivity {
 
     List<Question> questions = new ArrayList<>();
 
-    private int score = 0;
+    private int score = Integer.MIN_VALUE;
 
     private int position;
     private BuilderQuizActivityViews builderQuizActivityViews;
@@ -40,6 +42,7 @@ public class QuizActivity extends AppCompatActivity {
 
         Intent intent = getIntent();
         int chosenOptionMenuActivity;
+        int chosenLevelMenuActivity;
 
         if(intent.hasExtra(CHOSEN_OPTION_KEY)) {
             chosenOptionMenuActivity = intent.getIntExtra(CHOSEN_OPTION_KEY, INVALID_NUMBER);
@@ -47,13 +50,32 @@ public class QuizActivity extends AppCompatActivity {
             chosenOptionMenuActivity = intent.getIntExtra(CHOSEN_OPTION_TRY_AGAIN_KEY, INVALID_NUMBER);
         }
 
-        questions = new QuestionObjectsGenerator(chosenOptionMenuActivity, this).generateQuestionObjectsFromJsonFile();
+        if(intent.hasExtra(CHOSEN_LEVEL_KEY)) {
+            chosenLevelMenuActivity = intent.getIntExtra(CHOSEN_LEVEL_KEY, INVALID_NUMBER);
+        } else {
+            chosenLevelMenuActivity = intent.getIntExtra(CHOSEN_LEVEL_TRY_AGAIN_KEY, INVALID_NUMBER);
+        }
 
-        builderQuizActivityViews = new BuilderQuizActivityViews(questions, this, chosenOptionMenuActivity);
+        questions = new QuestionObjectsGenerator(chosenLevelMenuActivity, chosenOptionMenuActivity, this).generateQuestionObjectsFromJsonFile();
+
+        builderQuizActivityViews = new BuilderQuizActivityViews(questions, this, chosenOptionMenuActivity, chosenLevelMenuActivity);
         builderQuizActivityViews.initializeViews();
         builderQuizActivityViews.setOptionsButtons(getSupportFragmentManager());
         builderQuizActivityViews.updatePosition();
         builderQuizActivityViews.updateViewsQuestions();
+
+        configureBackPressedCallback();
+    }
+
+    private void configureBackPressedCallback() {
+        OnBackPressedCallback callback = new OnBackPressedCallback(true) {
+            @Override
+            public void handleOnBackPressed() {
+                QuitAppDialog quitAppDialog = new QuitAppDialog(QuizActivity.this);
+                quitAppDialog.show(getSupportFragmentManager(), "quit_app");
+            }
+        };
+        getOnBackPressedDispatcher().addCallback(this, callback);
     }
 
     @Override

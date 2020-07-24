@@ -12,12 +12,12 @@ public class OptionDAOTest {
 
     @Test
     public void should_ReturnListOfOptions() {
-        List<Option> listReturned = new OptionDAO().list();
+        List<Option> listReturned = new OptionDAO().easyList();
 
         String optionPositionZeroPrompt = listReturned.get(0).getPrompt();
-        String optionPositionNinePrompt = listReturned.get(9).getPrompt();
+        String optionPositionNinePrompt = listReturned.get(4).getPrompt();
 
-        assertEquals(optionPositionZeroPrompt, "Phrasal Verbs");
-        assertEquals(optionPositionNinePrompt, "Third Conditional");
+        assertEquals(optionPositionZeroPrompt, "Comparative and superlative");
+        assertEquals(optionPositionNinePrompt, "Reported speech");
     }
 }

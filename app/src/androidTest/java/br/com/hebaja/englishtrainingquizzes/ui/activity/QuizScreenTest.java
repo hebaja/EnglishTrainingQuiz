@@ -1,7 +1,6 @@
 package br.com.hebaja.englishtrainingquizzes.ui.activity;
 
 import android.content.Intent;
-import android.util.Log;
 
 import androidx.test.espresso.matcher.ViewMatchers;
 import androidx.test.rule.ActivityTestRule;
@@ -29,9 +28,10 @@ import static androidx.test.espresso.matcher.ViewMatchers.withEffectiveVisibilit
 import static androidx.test.espresso.matcher.ViewMatchers.withId;
 import static androidx.test.espresso.matcher.ViewMatchers.withTagValue;
 import static androidx.test.espresso.matcher.ViewMatchers.withText;
-import static br.com.hebaja.englishtrainingquizzes.ui.activity.Constants.CHOSEN_OPTION_KEY;
-import static br.com.hebaja.englishtrainingquizzes.ui.activity.Constants.CHOSEN_OPTION_TRY_AGAIN_KEY;
-import static br.com.hebaja.englishtrainingquizzes.ui.activity.Constants.SCORE_KEY;
+import static br.com.hebaja.englishtrainingquizzes.Constants.CHOSEN_LEVEL_KEY;
+import static br.com.hebaja.englishtrainingquizzes.Constants.CHOSEN_OPTION_KEY;
+import static br.com.hebaja.englishtrainingquizzes.Constants.CHOSEN_OPTION_TRY_AGAIN_KEY;
+import static br.com.hebaja.englishtrainingquizzes.Constants.SCORE_KEY;
 import static org.hamcrest.Matchers.allOf;
 import static org.hamcrest.Matchers.anyOf;
 import static org.hamcrest.Matchers.equalTo;
@@ -44,7 +44,9 @@ public class QuizScreenTest extends TestBase {
 
     @Before
     public void setup() {
-        Intent intent = new Intent().putExtra(CHOSEN_OPTION_KEY, 0);
+        Intent intent = new Intent();
+        intent.putExtra(CHOSEN_OPTION_KEY, 0);
+        intent.putExtra(CHOSEN_LEVEL_KEY, 0);
         quizActivity.launchActivity(intent);
         setIdButtonQuit(R.id.button_quit_quiz_activity);
     }
