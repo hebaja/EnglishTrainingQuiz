@@ -9,8 +9,10 @@
 
     <ImageView
         android:id="@+id/splash_screen_activity_imageview"
-        android:layout_width="600dp"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
         android:src="@drawable/english_training_quizzes_logo_transp_yellow"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"

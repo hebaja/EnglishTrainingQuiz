@@ -1,0 +1,132 @@
+[
+	{
+	"question":
+		{
+			"prompt":"\"I've left some food in the pot\", said Sue. todo ___ todo yytodo todo",
+			"optionA":"Sue said she had left some food in the pot.",
+			"optionB":"Sue said she left some food in the pot.",
+			"optionC":"Sue said she leaves some food in the pot.",
+			"rightOption":"a"
+		}
+	},
+	{
+	"question":
+		{
+			"prompt":"\"I'll ask Andrew to give me a lift\", said Anna. todo ___yy__ todo todo",
+			"optionA":"Anna said she asked Andrew to give her a lift.",
+			"optionB":"Anna said she would ask Andrew to give her a lift.",
+			"optionC":"Anna said she asks Andrew to give her a lift.",
+			"rightOption":"b"
+		}
+	},
+	{
+	"question":
+		{
+			"prompt":"\"I finish work early today\", said Anna. todo todo todoyy _____",
+			"optionA":"Mary said she finished work early today.",
+			"optionB":"Mary said she finished work early this day.",
+			"optionC":"Mary said she finished work early that day.",
+			"rightOption":"c"
+		}
+	},
+	{
+	"question":
+		{
+			"prompt":"\"I booked the tickets this morning\", said Claire. toyydo todo _____ todo",
+			"optionA":"Claire said she had booked the tickets that morning.",
+			"optionB":"Claire said she booked the tickets that morning.",
+			"optionC":"Claire said she did book the tickets that morning.",
+			"rightOption":"a"
+		}
+	},
+	{
+	"question":
+		{
+			"prompt":"\"I'll try to be there on time\", said Louisa. todo yy_____ todo todo",
+			"optionA":"Louisa said she tries to be there on time.",
+			"optionB":"Louisa said she would try to be there on time.",
+			"optionC":"Louisa said she tried to be there on time.",
+			"rightOption":"b"
+		}
+	},
+	{
+	"question":
+		{
+			"prompt":"\"The car has broken down\", said Steve.todo todo yy_____ todo todo",
+			"optionA":"Steve said the car has broken down.",
+			"optionB":"Steve said the car broke down.",
+			"optionC":"Steve said the car had broken down.",
+			"rightOption":"c"
+		}
+	},
+	{
+	"question":
+		{
+			"prompt":"\"I'll be at work till late tonight\", said Gillyy. todo _____ todo todo",
+			"optionA":"Gill said she would be at work late that night.",
+			"optionB":"Gill said she had been at work late that night.",
+			"optionC":"Gill said she was at work late that night.",
+			"rightOption":"a"
+		}
+	},
+	{
+	"question":
+		{
+			"prompt":"\"I don't eat fish\", said Corinne. todo todo yy_____ todo",
+			"optionA":"Corinne said she wouldn't eat fish.",
+			"optionB":"Corinne said she didn't eat fish.",
+			"optionC":"Corinne said she hadn't eaten fish.",
+			"rightOption":"b"
+		}
+	},
+	{
+	"question":
+		{
+			"prompt":"\"I broke the mirror\", said Miguel. todo todo yy _____ todo",
+			"optionA":"Miguel said he broke the mirror.",
+			"optionB":"Miguel said he breaks the mirror.",
+			"optionC":"Miguel said he had broken the mirror.",
+			"rightOption":"c"
+		}
+	},
+	{
+	"question":
+		{
+			"prompt":"\"I've passed my English exam\", said Carl. todo yy_____ todo todo",
+			"optionA":"Carl said he had passed his English exam.",
+			"optionB":"Carl said he would pass his English exam.",
+			"optionC":"Carl said he will pass his English exam.",
+			"rightOption":"a"
+		}
+	},
+	{
+	"question":
+		{
+			"prompt":"\"I am going to the cinema this evening\", said Kim. yytodo _____ todo todo",
+			"optionA":"Kim said she had gone to the cinema that evening.",
+			"optionB":"Kim said she was going to the cinema that evening.",
+			"optionC":"Kim said she would go to the cinema that evening.",
+			"rightOption":"b"
+		}
+	},
+	{
+	"question":
+		{
+			"prompt":"\"I'll pay the bill today\", said Kathy. todo todo todoyy todo",
+			"optionA":"Kathy said she would pay the bill today.",
+			"optionB":"Kathy said she would pay the bill this day.",
+			"optionC":"Kathy said she would pay the bill that day.",
+			"rightOption":"c"
+		}
+	},
+	{
+	"question":
+		{
+			"prompt":"\"I'll leave tomorrow\", said Hellen. todo tyyodo todo todo todo todo todo todo",
+			"optionA":"Hellen said she would leave the next day.",
+			"optionB":"Hellen said she would leave that day.",
+			"optionC":"Hellen said she would leave then.",
+			"rightOption":"a"
+		}
+	}
+]

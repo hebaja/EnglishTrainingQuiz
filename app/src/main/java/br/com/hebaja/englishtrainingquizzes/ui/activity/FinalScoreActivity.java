@@ -4,7 +4,6 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
@@ -13,12 +12,15 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import br.com.hebaja.englishtrainingquizzes.R;
-import br.com.hebaja.englishtrainingquizzes.ui.dialog.QuitAppDialog;
+import br.com.hebaja.englishtrainingquizzes.ui.dialog.ConfirmActionDialog;
 
 import static br.com.hebaja.englishtrainingquizzes.Constants.APPBAR_TITLE;
 import static br.com.hebaja.englishtrainingquizzes.Constants.CHOSEN_LEVEL_TRY_AGAIN_KEY;
 import static br.com.hebaja.englishtrainingquizzes.Constants.CHOSEN_OPTION_TRY_AGAIN_KEY;
 import static br.com.hebaja.englishtrainingquizzes.Constants.INVALID_NUMBER;
+import static br.com.hebaja.englishtrainingquizzes.Constants.QUIT_ANSWER_CONSTANT;
+import static br.com.hebaja.englishtrainingquizzes.Constants.CANCEL_ANSWER_CONSTANT;
+import static br.com.hebaja.englishtrainingquizzes.Constants.QUIT_DIALOG_QUESTION_CONSTANT;
 import static br.com.hebaja.englishtrainingquizzes.Constants.SCORE_KEY;
 
 public class FinalScoreActivity extends AppCompatActivity {
@@ -45,16 +47,15 @@ public class FinalScoreActivity extends AppCompatActivity {
         buttonQuit.setOnClickListener(view -> finish());
 
         buttonTryAgain.setOnClickListener(view -> {
-            Intent intent1 = new Intent(FinalScoreActivity.this, QuizActivity.class);
-            intent1.putExtra(CHOSEN_OPTION_TRY_AGAIN_KEY, mainActivityChosenOption);
-            intent1.putExtra(CHOSEN_LEVEL_TRY_AGAIN_KEY, mainActivityChosenLevel);
-            startActivity(intent1);
+            Intent tryAgainIntent = new Intent(FinalScoreActivity.this, QuizActivity.class);
+            tryAgainIntent.putExtra(CHOSEN_OPTION_TRY_AGAIN_KEY, mainActivityChosenOption);
+            tryAgainIntent.putExtra(CHOSEN_LEVEL_TRY_AGAIN_KEY, mainActivityChosenLevel);
+            startActivity(tryAgainIntent);
             finish();
         });
 
         buttonBackToMainMenu.setOnClickListener(view -> {
-            Intent intent12 = new Intent(FinalScoreActivity.this, MenuActivity.class);
-            startActivity(intent12);
+            startActivity(new Intent(FinalScoreActivity.this, MenuActivity.class));
             finish();
         });
 
@@ -65,8 +66,12 @@ public class FinalScoreActivity extends AppCompatActivity {
         OnBackPressedCallback callback = new OnBackPressedCallback(true) {
             @Override
             public void handleOnBackPressed() {
-                QuitAppDialog quitAppDialog = new QuitAppDialog(FinalScoreActivity.this);
-                quitAppDialog.show(getSupportFragmentManager(), "quit_app");
+                new ConfirmActionDialog(
+                        QUIT_DIALOG_QUESTION_CONSTANT,
+                        QUIT_ANSWER_CONSTANT,
+                        CANCEL_ANSWER_CONSTANT,
+                        FinalScoreActivity.this)
+                        .show(getSupportFragmentManager(), "quit_app");
             }
         };
         getOnBackPressedDispatcher().addCallback(this, callback);

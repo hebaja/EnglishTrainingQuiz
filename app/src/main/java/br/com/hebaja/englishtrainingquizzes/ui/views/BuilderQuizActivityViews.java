@@ -17,15 +17,20 @@ import java.util.List;
 import br.com.hebaja.englishtrainingquizzes.R;
 import br.com.hebaja.englishtrainingquizzes.model.Question;
 import br.com.hebaja.englishtrainingquizzes.ui.activity.FinalScoreActivity;
-import br.com.hebaja.englishtrainingquizzes.ui.dialog.QuitAppDialog;
+import br.com.hebaja.englishtrainingquizzes.ui.dialog.ConfirmActionDialog;
 
+import static br.com.hebaja.englishtrainingquizzes.Constants.CANCEL_ANSWER_CONSTANT;
 import static br.com.hebaja.englishtrainingquizzes.Constants.CHOSEN_LEVEL_TRY_AGAIN_KEY;
 import static br.com.hebaja.englishtrainingquizzes.Constants.CHOSEN_OPTION_TRY_AGAIN_KEY;
 import static br.com.hebaja.englishtrainingquizzes.Constants.FINAL_SCORE;
+import static br.com.hebaja.englishtrainingquizzes.Constants.GO_TO_MAIN_MENU_ANSWER_CONSTANT;
+import static br.com.hebaja.englishtrainingquizzes.Constants.GO_TO_MAIN_MENU_DIALOG_QUESTION_CONSTANT;
 import static br.com.hebaja.englishtrainingquizzes.Constants.NEXT_QUESTION;
 import static br.com.hebaja.englishtrainingquizzes.Constants.OPTION_POSITION_A;
 import static br.com.hebaja.englishtrainingquizzes.Constants.OPTION_POSITION_B;
 import static br.com.hebaja.englishtrainingquizzes.Constants.OPTION_POSITION_C;
+import static br.com.hebaja.englishtrainingquizzes.Constants.QUIT_ANSWER_CONSTANT;
+import static br.com.hebaja.englishtrainingquizzes.Constants.QUIT_DIALOG_QUESTION_CONSTANT;
 import static br.com.hebaja.englishtrainingquizzes.Constants.RIGHT_ANSWER;
 import static br.com.hebaja.englishtrainingquizzes.Constants.SCORE_KEY;
 import static br.com.hebaja.englishtrainingquizzes.Constants.WRONG_ANSWER;
@@ -41,6 +46,7 @@ public class BuilderQuizActivityViews {
     private Button buttonOptionA;
     private Button buttonOptionB;
     private Button buttonOptionC;
+    private Button buttonBackToMainMenu;
     private Button buttonQuit;
     private CardView buttonNext;
     private TextView buttonNextTextView;
@@ -80,6 +86,7 @@ public class BuilderQuizActivityViews {
         chosenOptionWarningView = ((Activity) context).findViewById(R.id.chosen_option_warning_view);
         chosenOptionWarningTextView = ((Activity) context).findViewById(R.id.chosen_option_warning_textview);
         buttonNextTextView = ((Activity) context).findViewById(R.id.next_clickable_cardview_textview);
+        buttonBackToMainMenu = ((Activity) context).findViewById(R.id.button_back_main_menu_quiz_activity);
     }
 
     public void setOptionsButtons(FragmentManager supportFragmentManager) {
@@ -90,9 +97,21 @@ public class BuilderQuizActivityViews {
 
         buttonOptionC.setOnClickListener(view -> configureButtonOption(optionPositionC));
 
+        buttonBackToMainMenu.setOnClickListener(view -> {
+            new ConfirmActionDialog(
+                    GO_TO_MAIN_MENU_DIALOG_QUESTION_CONSTANT,
+                    GO_TO_MAIN_MENU_ANSWER_CONSTANT,
+                    CANCEL_ANSWER_CONSTANT,
+                    (Activity) context)
+                    .show(supportFragmentManager, "go_to_main_menu");
+        });
+
         buttonQuit.setOnClickListener(view -> {
-            QuitAppDialog quitAppDialog = new QuitAppDialog((Activity) context);
-            quitAppDialog.show(supportFragmentManager, "quit_app");
+                    new ConfirmActionDialog(QUIT_DIALOG_QUESTION_CONSTANT,
+                    QUIT_ANSWER_CONSTANT,
+                    CANCEL_ANSWER_CONSTANT,
+                    (Activity) context)
+                    .show(supportFragmentManager, "quit_app");
         });
 
         buttonNext.setOnClickListener(view -> {
@@ -156,7 +175,7 @@ public class BuilderQuizActivityViews {
     }
 
     private void updateMainActivityOrGoToFinalActivity() {
-        if(questions.size() > position) {
+        if (questions.size() > position) {
             updateViewsQuestions();
             updatePosition();
         } else {
@@ -177,23 +196,23 @@ public class BuilderQuizActivityViews {
         updateScore(score);
     }
 
-    public void updatePosition () {
+    public void updatePosition() {
         rightAnswer = questions.get(position).getRightOption();
     }
 
-    private void goToFinalScoreActivity(){
+    private void goToFinalScoreActivity() {
         disableAllButtonsAndSetNextButtonTag();
         startFinalScoreActivity();
         ((Activity) context).finish();
     }
 
-    private void disableAllButtonsAndSetNextButtonTag(){
+    private void disableAllButtonsAndSetNextButtonTag() {
         buttonOptionA.setEnabled(false);
         buttonOptionB.setEnabled(false);
         buttonOptionC.setEnabled(false);
     }
 
-    private void enableAllButtons(){
+    private void enableAllButtons() {
         buttonOptionA.setEnabled(true);
         buttonOptionB.setEnabled(true);
         buttonOptionC.setEnabled(true);

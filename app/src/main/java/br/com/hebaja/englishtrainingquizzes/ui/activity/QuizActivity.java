@@ -13,15 +13,18 @@ import java.util.List;
 import br.com.hebaja.englishtrainingquizzes.QuestionObjectsGenerator;
 import br.com.hebaja.englishtrainingquizzes.R;
 import br.com.hebaja.englishtrainingquizzes.model.Question;
-import br.com.hebaja.englishtrainingquizzes.ui.dialog.QuitAppDialog;
+import br.com.hebaja.englishtrainingquizzes.ui.dialog.ConfirmActionDialog;
 import br.com.hebaja.englishtrainingquizzes.ui.views.BuilderQuizActivityViews;
 
 import static br.com.hebaja.englishtrainingquizzes.Constants.APPBAR_TITLE;
+import static br.com.hebaja.englishtrainingquizzes.Constants.CANCEL_ANSWER_CONSTANT;
 import static br.com.hebaja.englishtrainingquizzes.Constants.CHOSEN_LEVEL_KEY;
 import static br.com.hebaja.englishtrainingquizzes.Constants.CHOSEN_LEVEL_TRY_AGAIN_KEY;
 import static br.com.hebaja.englishtrainingquizzes.Constants.CHOSEN_OPTION_KEY;
 import static br.com.hebaja.englishtrainingquizzes.Constants.CHOSEN_OPTION_TRY_AGAIN_KEY;
 import static br.com.hebaja.englishtrainingquizzes.Constants.INVALID_NUMBER;
+import static br.com.hebaja.englishtrainingquizzes.Constants.QUIT_ANSWER_CONSTANT;
+import static br.com.hebaja.englishtrainingquizzes.Constants.QUIT_DIALOG_QUESTION_CONSTANT;
 import static br.com.hebaja.englishtrainingquizzes.Constants.STATE_POSITION;
 import static br.com.hebaja.englishtrainingquizzes.Constants.STATE_SCORE;
 
@@ -71,8 +74,12 @@ public class QuizActivity extends AppCompatActivity {
         OnBackPressedCallback callback = new OnBackPressedCallback(true) {
             @Override
             public void handleOnBackPressed() {
-                QuitAppDialog quitAppDialog = new QuitAppDialog(QuizActivity.this);
-                quitAppDialog.show(getSupportFragmentManager(), "quit_app");
+                new ConfirmActionDialog(
+                        QUIT_DIALOG_QUESTION_CONSTANT,
+                        QUIT_ANSWER_CONSTANT,
+                        CANCEL_ANSWER_CONSTANT,
+                        QuizActivity.this)
+                        .show(getSupportFragmentManager(), "quit_app");
             }
         };
         getOnBackPressedDispatcher().addCallback(this, callback);

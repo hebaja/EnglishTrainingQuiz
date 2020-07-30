@@ -29,4 +29,10 @@ public class Constants {
     public static final int MEDIUM_MODE = 1;
     public static final int HARD_MODE = 2;
 
+    public static final String QUIT_DIALOG_QUESTION_CONSTANT = "Do you really want to quit?";
+    public static final String GO_TO_MAIN_MENU_DIALOG_QUESTION_CONSTANT = "Do you really want to go back to main menu? Your current score will be lost.";
+    public static final String QUIT_ANSWER_CONSTANT = "Quit";
+    public static final String GO_TO_MAIN_MENU_ANSWER_CONSTANT = "Ok";
+    public static final String CANCEL_ANSWER_CONSTANT = "Cancel";
+
 }

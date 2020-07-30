@@ -11,10 +11,12 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="24dp"
+        android:layout_marginBottom="8dp"
         android:fontFamily="@font/allerta"
         android:text="@string/prompt_menu_activity"
-        android:textSize="18sp"
         android:textColor="@color/textColorPrimary"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toTopOf="@+id/menu_activity_container"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />

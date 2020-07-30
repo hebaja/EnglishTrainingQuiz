@@ -61,7 +61,7 @@ public class MenuScreenTest extends TestBase{
     @Test
     public void should_QuitApp_WhenQuitOptionIsTappedInQuitDialog() {
         tryToDisplayQuitDialog();
-        getQuitDialogOption().perform(click());
+        getDialogOption().perform(click());
         assertTrue(menuActivity.getActivity().isFinishing());
     }
 

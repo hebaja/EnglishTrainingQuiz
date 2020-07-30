@@ -49,6 +49,7 @@ public class QuizScreenTest extends TestBase {
         intent.putExtra(CHOSEN_LEVEL_KEY, 0);
         quizActivity.launchActivity(intent);
         setIdButtonQuit(R.id.button_quit_quiz_activity);
+        setIdButtonGoBackToMainMenu(R.id.button_back_main_menu_quiz_activity);
     }
 
     @Test
@@ -60,6 +61,7 @@ public class QuizScreenTest extends TestBase {
         onView(allOf(withId(R.id.button_option_c), isClickable())).check(matches(isDisplayed()));
         onView(withId(R.id.score)).check(matches(isDisplayed()));
         onView(withId(R.id.score_counter)).check(matches(isDisplayed()));
+        onView(allOf(withId(R.id.button_back_main_menu_quiz_activity), isClickable())).check(matches(isDisplayed()));
         onView(allOf(withId(R.id.button_quit_quiz_activity), isClickable())).check(matches(isDisplayed()));
         onView(withId(R.id.next_clickable_cardview)).check(matches(withEffectiveVisibility(ViewMatchers.Visibility.INVISIBLE)));
     }
@@ -70,10 +72,20 @@ public class QuizScreenTest extends TestBase {
     }
 
     @Test
+    public void should_DisplayGoBackToMainMenuDialog_WhenGoBackToMainMenuIsPressed() { tryToDisplayGoBackToMainMenuDialog();}
+
+    @Test
     public void should_QuitApp_WhenQuitOptionIsTappedInQuitDialog() {
         tryToDisplayQuitDialog();
-        getQuitDialogOption().perform(click());
+        getDialogOption().perform(click());
         assertTrue(quizActivity.getActivity().isFinishing());
+    }
+
+    @Test
+    public void should_GoToMainMenu_WhenOkOptionIsTappedInGoBackToMainMenuDialog() {
+        tryToDisplayGoBackToMainMenuDialog();
+        getDialogOption().perform(click());
+        onView(withId(R.id.id_prompt_menu)).check(matches(isDisplayed()));
     }
 
     @Test

@@ -19,7 +19,8 @@ public class OptionDAO {
             new Option("First conditional", "easy_first_conditional.json", order++),
             new Option("Present simple and continuous", "easy_present_simple_continuous.json", order++),
             new Option("Present simple and perfect", "easy_present_simple_perfect.json", order++),
-            new Option("Reported speech", "easy_reported_speech.json", order++)));
+            new Option("Reported speech", "easy_reported_speech.json", order++),
+            new Option("Reported speech test", "easy_reported_speech_test.json", order++)));
 
         return options;
     }

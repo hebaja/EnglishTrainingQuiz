@@ -4,13 +4,15 @@ import android.app.Activity;
 import android.os.Bundle;
 import android.widget.Button;
 
-import androidx.activity.OnBackPressedCallback;
-import androidx.activity.OnBackPressedDispatcher;
 import androidx.appcompat.app.AppCompatActivity;
 
 import br.com.hebaja.englishtrainingquizzes.R;
-import br.com.hebaja.englishtrainingquizzes.ui.dialog.QuitAppDialog;
+import br.com.hebaja.englishtrainingquizzes.ui.dialog.ConfirmActionDialog;
 import br.com.hebaja.englishtrainingquizzes.ui.fragment.OptionLevelFragment;
+
+import static br.com.hebaja.englishtrainingquizzes.Constants.CANCEL_ANSWER_CONSTANT;
+import static br.com.hebaja.englishtrainingquizzes.Constants.QUIT_ANSWER_CONSTANT;
+import static br.com.hebaja.englishtrainingquizzes.Constants.QUIT_DIALOG_QUESTION_CONSTANT;
 
 public class MenuActivity extends AppCompatActivity {
 
@@ -27,8 +29,11 @@ public class MenuActivity extends AppCompatActivity {
         Button buttonQuit = findViewById(R.id.button_quit_menu_activity);
 
         buttonQuit.setOnClickListener(view -> {
-            QuitAppDialog quitAppDialog = new QuitAppDialog(MenuActivity.this);
-            quitAppDialog.show(getSupportFragmentManager(), "quit_app");
+            new ConfirmActionDialog(QUIT_DIALOG_QUESTION_CONSTANT,
+                    QUIT_ANSWER_CONSTANT,
+                    CANCEL_ANSWER_CONSTANT,
+                    MenuActivity.this)
+                    .show(getSupportFragmentManager(), "quit_app");
         });
 
         getSupportFragmentManager()
