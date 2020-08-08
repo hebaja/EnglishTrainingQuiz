@@ -1,0 +1,272 @@
+[
+	{
+	"question":
+		{
+			"prompt":"Last year I ___ my holiday in Ireland.",
+			"optionA":"spent",
+			"optionB":"spended",
+			"optionC":"spented",
+			"rightOption":"a"
+		}
+	},
+	{
+	"question":
+		{
+			"prompt":"The party ___ great yesterday.",
+			"optionA":"is",
+			"optionB":"was",
+			"optionC":"were",
+			"rightOption":"b"
+		}
+	},
+	{
+	"question":
+		{
+			"prompt":"I ___ around by car with two friends.",
+			"optionA":"travelled",
+			"optionB":"travelt",
+			"optionC":"traveled",
+			"rightOption":"c"
+		}
+	},
+	{
+	"question":
+		{
+			"prompt":"In the evenings we ___ to a pub.",
+			"optionA":"went",
+			"optionB":"gone",
+			"optionC":"going",
+			"rightOption":"a"
+		}
+	},
+	{
+	"question":
+		{
+			"prompt":"One night we even ___ some Irish dances.",
+			"optionA":"learning",
+			"optionB":"learned",
+			"optionC":"learnet",
+			"rightOption":"b"
+		}
+	},
+	{
+	"question":
+		{
+			"prompt":"We ___ very lucky with the weather.",
+			"optionA":"am",
+			"optionB":"was",
+			"optionC":"were",
+			"rightOption":"c"
+		}
+	},
+	{
+	"question":
+		{
+			"prompt":"It ___ a lot last weekend.",
+			"optionA":"didn't rain",
+			"optionB":"didn't rained",
+			"optionC":"did rained",
+			"rightOption":"a"
+		}
+	},
+	{
+	"question":
+		{
+			"prompt":"But we ___ some beautiful rainbows.",
+			"optionA":"seed",
+			"optionB":"saw",
+			"optionC":"seen",
+			"rightOption":"b"
+		}
+	},
+	{
+	"question":
+		{
+			"prompt":"Where ___ your last holiday?",
+			"optionA":"do you spend",
+			"optionB":"does you spend",
+			"optionC":"did you spend",
+			"rightOption":"c"
+		}
+	},
+	{
+	"question":
+		{
+			"prompt":"Where ___ when you were young?",
+			"optionA":"did you live",
+			"optionB":"did you lived",
+			"optionC":"did you living",
+			"rightOption":"a"
+		}
+	},
+	{
+	"question":
+		{
+			"prompt":"She ___ French at university.",
+			"optionA":"did not studied",
+			"optionB":"didn't study",
+			"optionC":"didn't studied",
+			"rightOption":"b"
+		}
+	},
+	{
+	"question":
+		{
+			"prompt":"___ the Louvre in Paris?",
+			"optionA":"Did they visited",
+			"optionB":"Do they visited",
+			"optionC":"Did they visit",
+			"rightOption":"c"
+		}
+	},
+	{
+	"question":
+		{
+			"prompt":"She ___ TV yesterday.",
+			"optionA":"didn't watch",
+			"optionB":"did watched",
+			"optionC":"didn't watched",
+			"rightOption":"a"
+		}
+	},
+	{
+	"question":
+		{
+			"prompt":"We ___ a new car last weekend.",
+			"optionA":"buyed",
+			"optionB":"bought",
+			"optionC":"bough",
+			"rightOption":"b"
+		}
+	},
+	{
+	"question":
+		{
+			"prompt":"Where ___ before you came here?",
+			"optionA":"did you taught",
+			"optionB":"did you teached",
+			"optionC":"did you teach",
+			"rightOption":"c"
+		}
+	},
+	{
+	"question":
+		{
+			"prompt":"He ___ that he was right.",
+			"optionA":"didn't think",
+			"optionB":"didn't thought",
+			"optionC":"didn't thinked",
+			"rightOption":"a"
+		}
+	},
+	{
+	"question":
+		{
+			"prompt":"I ___ steak last night.",
+			"optionA":"cooket",
+			"optionB":"cooked",
+			"optionC":"cookeded",
+			"rightOption":"b"
+		}
+	},
+	{
+	"question":
+		{
+			"prompt":"___ 'War and Peace' at school?",
+			"optionA":"Do you readed",
+			"optionB":"Did you readed",
+			"optionC":"Did you read",
+			"rightOption":"c"
+		}
+	},
+	{
+	"question":
+		{
+			"prompt":"She ___ to her grandmother.",
+			"optionA":"didn't write",
+			"optionB":"does wrote",
+			"optionC":"does written",
+			"rightOption":"a"
+		}
+	},
+	{
+	"question":
+		{
+			"prompt":"We ___ a computer when I was a child.",
+			"optionA":"haved",
+			"optionB":"had",
+			"optionC":"have",
+			"rightOption":"b"
+		}
+	},
+	{
+	"question":
+		{
+			"prompt":"Where ___ last holiday?",
+			"optionA":"did you gone",
+			"optionB":"you went",
+			"optionC":"did you go",
+			"rightOption":"c"
+		}
+	},
+	{
+	"question":
+		{
+			"prompt":"I ___ ice cream when I was a child.",
+			"optionA":"loved",
+			"optionB":"loving",
+			"optionC":"did loved",
+			"rightOption":"a"
+		}
+	},
+	{
+	"question":
+		{
+			"prompt":"They ___ yesterday.",
+			"optionA":"did met",
+			"optionB":"didn't meet",
+			"optionC":"do met",
+			"rightOption":"b"
+		}
+	},
+	{
+	"question":
+		{
+			"prompt":"___ in the sea in Greece?",
+			"optionA":"Does she swam",
+			"optionB":"Do she swim",
+			"optionC":"Did she swim",
+			"rightOption":"c"
+		}
+	},
+	{
+	"question":
+		{
+			"prompt":"We ___ tennis yesterday because it was raining.",
+			"optionA":"didn't play",
+			"optionB":"did played",
+			"optionC":"do played",
+			"rightOption":"a"
+		}
+	},
+	{
+	"question":
+		{
+			"prompt":"He ___ to lift the box but he couldn't.",
+			"optionA":"tryed",
+			"optionB":"tried",
+			"optionC":"tryied",
+			"rightOption":"b"
+		}
+	},
+	{
+	"question":
+		{
+			"prompt":"What ___ for lunch?",
+			"optionA":"did you ate",
+			"optionB":"does you eat",
+			"optionC":"did you eat",
+			"rightOption":"c"
+		}
+	}
+]

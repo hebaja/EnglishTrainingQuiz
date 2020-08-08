@@ -44,7 +44,13 @@ public class FinalScoreActivity extends AppCompatActivity {
         Button buttonTryAgain = findViewById(R.id.final_score_activity_button_try_again);
         Button buttonBackToMainMenu = findViewById(R.id.final_score_activity_button_back_main_menu);
 
-        buttonQuit.setOnClickListener(view -> finish());
+        buttonQuit.setOnClickListener(view -> {
+                new ConfirmActionDialog(QUIT_DIALOG_QUESTION_CONSTANT,
+                        QUIT_ANSWER_CONSTANT,
+                        CANCEL_ANSWER_CONSTANT,
+                        FinalScoreActivity.this)
+                        .show(getSupportFragmentManager(), "quit_app");
+        });
 
         buttonTryAgain.setOnClickListener(view -> {
             Intent tryAgainIntent = new Intent(FinalScoreActivity.this, QuizActivity.class);

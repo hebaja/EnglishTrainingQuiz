@@ -1,0 +1,182 @@
+[
+	{
+	"question":
+		{
+			"prompt":"That's the very ___ offer after losing the book.",
+			"optionA":"least she could",
+			"optionB":"last she could",
+			"optionC":"leess she could",
+			"rightOption":"a"
+		}
+	},
+	{
+	"question":
+		{
+			"prompt":"___ as I hate to do this, we'll have to cancel the party",
+			"optionA":"more",
+			"optionB":"much",
+			"optionC":"such",
+			"rightOption":"b"
+		}
+	},
+	{
+	"question":
+		{
+			"prompt":"Above ___ her priority is to finish her degree course.",
+			"optionA":"any",
+			"optionB":"every",
+			"optionC":"all",
+			"rightOption":"c"
+		}
+	},
+	{
+	"question":
+		{
+			"prompt":"Paul doesn't have many friends, just a select ___.",
+			"optionA":"few",
+			"optionB":"little",
+			"optionC":"half",
+			"rightOption":"a"
+		}
+	},
+	{
+	"question":
+		{
+			"prompt":"___ way, they're going to close the deal.",
+			"optionA":"Both",
+			"optionB":"Either",
+			"optionC":"Each",
+			"rightOption":"b"
+		}
+	},
+	{
+	"question":
+		{
+			"prompt":"Polo is a sport that is associated with ___ rich and powerful.",
+			"optionA":"some",
+			"optionB":"a",
+			"optionC":"the",
+			"rightOption":"c"
+		}
+	},
+	{
+	"question":
+		{
+			"prompt":"There was ___ a time when I had to help him.",
+			"optionA":"many",
+			"optionB":"more than",
+			"optionC":"much",
+			"rightOption":"a"
+		}
+	},
+	{
+	"question":
+		{
+			"prompt":"I've had ___ of his complaints.",
+			"optionA":"every",
+			"optionB":"enough",
+			"optionC":"other",
+			"rightOption":"b"
+		}
+	},
+	{
+	"question":
+		{
+			"prompt":"We had many candidates, but ___ was good for the position.",
+			"optionA":"much of them",
+			"optionB":"neither of them",
+			"optionC":"none of them",
+			"rightOption":"c"
+		}
+	},
+	{
+	"question":
+		{
+			"prompt":"That country has two official languages, but ___ is English.",
+			"optionA":"neither of them",
+			"optionB":"none of them",
+			"optionC":"both of them",
+			"rightOption":"a"
+		}
+	},
+	{
+	"question":
+		{
+			"prompt":"They cost 2 dollars ___.",
+			"optionA":"either",
+			"optionB":"each",
+			"optionC":"every",
+			"rightOption":"b"
+		}
+	},
+	{
+	"question":
+		{
+			"prompt":"___ argument could move ___ man from this decision.",
+			"optionA":"Each ",
+			"optionB":" all",
+			"optionC":"No ",
+			"rightOption":" neither"
+		}
+	},
+	{
+	"question":
+		{
+			"prompt":"___ Peter ___ Michael often come here but ___ of them help us.",
+			"optionA":"Both ",
+			"optionB":" and ",
+			"optionC":" neither",
+			"rightOption":"Both "
+		}
+	},
+	{
+	"question":
+		{
+			"prompt":"He gave ___ of us advice about our present goals.",
+			"optionA":"every",
+			"optionB":"each",
+			"optionC":"much",
+			"rightOption":"b"
+		}
+	},
+	{
+	"question":
+		{
+			"prompt":"___ players played well; In fact they ___ played quite badly.",
+			"optionA":"neither of ",
+			"optionB":" both",
+			"optionC":"neither of the ",
+			"rightOption":" all"
+		}
+	},
+	{
+	"question":
+		{
+			"prompt":"There were ___ on the beach, so we weren't completely alone.",
+			"optionA":"a few",
+			"optionB":"fewer",
+			"optionC":"fewest",
+			"rightOption":"a"
+		}
+	},
+	{
+	"question":
+		{
+			"prompt":"___ the m were tired, because ___ the m had slept well.",
+			"optionA":"None of ",
+			"optionB":" either of",
+			"optionC":"Both of ",
+			"rightOption":" neither of"
+		}
+	},
+	{
+	"question":
+		{
+			"prompt":"We should have a check up with the dentist ___ six months.",
+			"optionA":"all",
+			"optionB":"each",
+			"optionC":"every",
+			"rightOption":"c"
+		}
+	}
+]

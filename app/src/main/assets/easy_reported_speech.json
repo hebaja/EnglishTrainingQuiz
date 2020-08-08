@@ -2,7 +2,7 @@
 	{
 	"question":
 		{
-			"prompt":"\"I've left some food in the pot\", said Sue.",
+			"prompt":""I've left some food in the pot", said Sue.",
 			"optionA":"Sue said she had left some food in the pot.",
 			"optionB":"Sue said she left some food in the pot.",
 			"optionC":"Sue said she leaves some food in the pot.",
@@ -12,7 +12,7 @@
 	{
 	"question":
 		{
-			"prompt":"\"I'll ask Andrew to give me a lift\", said Anna.",
+			"prompt":""I'll ask Andrew to give me a lift", said Anna.",
 			"optionA":"Anna said she asked Andrew to give her a lift.",
 			"optionB":"Anna said she would ask Andrew to give her a lift.",
 			"optionC":"Anna said she asks Andrew to give her a lift.",
@@ -22,7 +22,7 @@
 	{
 	"question":
 		{
-			"prompt":"\"I finish work early today\", said Anna.",
+			"prompt":""I finish work early today", said Anna.",
 			"optionA":"Mary said she finished work early today.",
 			"optionB":"Mary said she finished work early this day.",
 			"optionC":"Mary said she finished work early that day.",
@@ -32,7 +32,7 @@
 	{
 	"question":
 		{
-			"prompt":"\"I booked the tickets this morning\", said Claire.",
+			"prompt":""I booked the tickets this morning", said Claire.",
 			"optionA":"Claire said she had booked the tickets that morning.",
 			"optionB":"Claire said she booked the tickets that morning.",
 			"optionC":"Claire said she did book the tickets that morning.",
@@ -42,7 +42,7 @@
 	{
 	"question":
 		{
-			"prompt":"\"I'll try to be there on time\", said Louisa.",
+			"prompt":""I'll try to be there on time", said Louisa.",
 			"optionA":"Louisa said she tries to be there on time.",
 			"optionB":"Louisa said she would try to be there on time.",
 			"optionC":"Louisa said she tried to be there on time.",
@@ -52,7 +52,7 @@
 	{
 	"question":
 		{
-			"prompt":"\"The car has broken down\", said Steve.",
+			"prompt":""The car has broken down", said Steve.",
 			"optionA":"Steve said the car has broken down.",
 			"optionB":"Steve said the car broke down.",
 			"optionC":"Steve said the car had broken down.",
@@ -62,7 +62,7 @@
 	{
 	"question":
 		{
-			"prompt":"\"I'll be at work till late tonight\", said Gill.",
+			"prompt":""I'll be at work till late tonight", said Gill.",
 			"optionA":"Gill said she would be at work late that night.",
 			"optionB":"Gill said she had been at work late that night.",
 			"optionC":"Gill said she was at work late that night.",
@@ -72,7 +72,7 @@
 	{
 	"question":
 		{
-			"prompt":"\"I don't eat fish\", said Corinne.",
+			"prompt":""I don't eat fish", said Corinne.",
 			"optionA":"Corinne said she wouldn't eat fish.",
 			"optionB":"Corinne said she didn't eat fish.",
 			"optionC":"Corinne said she hadn't eaten fish.",
@@ -82,7 +82,7 @@
 	{
 	"question":
 		{
-			"prompt":"\"I broke the mirror\", said Miguel.",
+			"prompt":""I broke the mirror", said Miguel.",
 			"optionA":"Miguel said he broke the mirror.",
 			"optionB":"Miguel said he breaks the mirror.",
 			"optionC":"Miguel said he had broken the mirror.",
@@ -92,7 +92,7 @@
 	{
 	"question":
 		{
-			"prompt":"\"I've passed my English exam\", said Carl.",
+			"prompt":""I've passed my English exam", said Carl.",
 			"optionA":"Carl said he had passed his English exam.",
 			"optionB":"Carl said he would pass his English exam.",
 			"optionC":"Carl said he will pass his English exam.",
@@ -102,7 +102,7 @@
 	{
 	"question":
 		{
-			"prompt":"\"I am going to the cinema this evening\", said Kim.",
+			"prompt":""I am going to the cinema this evening", said Kim.",
 			"optionA":"Kim said she had gone to the cinema that evening.",
 			"optionB":"Kim said she was going to the cinema that evening.",
 			"optionC":"Kim said she would go to the cinema that evening.",
@@ -112,7 +112,7 @@
 	{
 	"question":
 		{
-			"prompt":"\"I'll pay the bill today\", said Kathy.",
+			"prompt":""I'll pay the bill today", said Kathy.",
 			"optionA":"Kathy said she would pay the bill today.",
 			"optionB":"Kathy said she would pay the bill this day.",
 			"optionC":"Kathy said she would pay the bill that day.",
@@ -122,7 +122,7 @@
 	{
 	"question":
 		{
-			"prompt":"\"I'll leave tomorrow\", said Hellen.",
+			"prompt":""I'll leave tomorrow", said Hellen.",
 			"optionA":"Hellen said she would leave the next day.",
 			"optionB":"Hellen said she would leave that day.",
 			"optionC":"Hellen said she would leave then.",

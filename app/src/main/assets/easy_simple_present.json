@@ -1,0 +1,242 @@
+[
+	{
+	"question":
+		{
+			"prompt":"They ___ us often.",
+			"optionA":"visit",
+			"optionB":"visits",
+			"optionC":"visites",
+			"rightOption":"a"
+		}
+	},
+	{
+	"question":
+		{
+			"prompt":"You ___ basketball once a week.",
+			"optionA":"playes",
+			"optionB":"play",
+			"optionC":"plays",
+			"rightOption":"b"
+		}
+	},
+	{
+	"question":
+		{
+			"prompt":"Tom ___ every day.",
+			"optionA":"workes",
+			"optionB":"work",
+			"optionC":"works",
+			"rightOption":"c"
+		}
+	},
+	{
+	"question":
+		{
+			"prompt":"He always ___ us funny stories.",
+			"optionA":"tells",
+			"optionB":"tell",
+			"optionC":"telles",
+			"rightOption":"a"
+		}
+	},
+	{
+	"question":
+		{
+			"prompt":"She never ___ homework!",
+			"optionA":"do",
+			"optionB":"does",
+			"optionC":"dos",
+			"rightOption":"b"
+		}
+	},
+	{
+	"question":
+		{
+			"prompt":"In this club people usually ___ a lot.",
+			"optionA":"dancing",
+			"optionB":"dances",
+			"optionC":"dance",
+			"rightOption":"c"
+		}
+	},
+	{
+	"question":
+		{
+			"prompt":"Linda ___ of her sister.",
+			"optionA":"takes care",
+			"optionB":"take care",
+			"optionC":"taked care",
+			"rightOption":"a"
+		}
+	},
+	{
+	"question":
+		{
+			"prompt":"I ___ cookies twice a month.",
+			"optionA":"buys",
+			"optionB":"buy",
+			"optionC":"buyes",
+			"rightOption":"b"
+		}
+	},
+	{
+	"question":
+		{
+			"prompt":"He ___ to the movies once a month.",
+			"optionA":"gos",
+			"optionB":"go",
+			"optionC":"goes",
+			"rightOption":"c"
+		}
+	},
+	{
+	"question":
+		{
+			"prompt":"Rebecca ___ coffee.",
+			"optionA":"doesn't drink",
+			"optionB":"don't drinks",
+			"optionC":"doesn't drinks",
+			"rightOption":"a"
+		}
+	},
+	{
+	"question":
+		{
+			"prompt":"We ___ jeans.",
+			"optionA":"don't wears",
+			"optionB":"don't wear",
+			"optionC":"doesn't wear",
+			"rightOption":"b"
+		}
+	},
+	{
+	"question":
+		{
+			"prompt":"These boys ___ golf.",
+			"optionA":"doesn't play",
+			"optionB":"don't plays",
+			"optionC":"don't play",
+			"rightOption":"c"
+		}
+	},
+	{
+	"question":
+		{
+			"prompt":"I ___ Italian.",
+			"optionA":"don't teach",
+			"optionB":"don't teaches",
+			"optionC":"doesn't teach",
+			"rightOption":"a"
+		}
+	},
+	{
+	"question":
+		{
+			"prompt":"Your brother ___ smile.",
+			"optionA":"do not",
+			"optionB":"does not",
+			"optionC":"don't",
+			"rightOption":"b"
+		}
+	},
+	{
+	"question":
+		{
+			"prompt":"This car ___ run fast.",
+			"optionA":"do",
+			"optionB":"doesn't not",
+			"optionC":"doesn't",
+			"rightOption":"c"
+		}
+	},
+	{
+	"question":
+		{
+			"prompt":"Linda and I ___ work today.",
+			"optionA":"don't",
+			"optionB":"doesn't",
+			"optionC":"does not",
+			"rightOption":"a"
+		}
+	},
+	{
+	"question":
+		{
+			"prompt":"___ I sing well?",
+			"optionA":"Am",
+			"optionB":"Do",
+			"optionC":"Does",
+			"rightOption":"b"
+		}
+	},
+	{
+	"question":
+		{
+			"prompt":"___ you play football?",
+			"optionA":"Are",
+			"optionB":"Do",
+			"optionC":"Does",
+			"rightOption":"c"
+		}
+	},
+	{
+	"question":
+		{
+			"prompt":"___ he read books?",
+			"optionA":"Does",
+			"optionB":"Do",
+			"optionC":"Is",
+			"rightOption":"a"
+		}
+	},
+	{
+	"question":
+		{
+			"prompt":"___ she speak English?",
+			"optionA":"Do",
+			"optionB":"Does",
+			"optionC":"Is",
+			"rightOption":"b"
+		}
+	},
+	{
+	"question":
+		{
+			"prompt":"___ it look good?",
+			"optionA":"Is",
+			"optionB":"Do",
+			"optionC":"Does",
+			"rightOption":"c"
+		}
+	},
+	{
+	"question":
+		{
+			"prompt":"___ they go to school?",
+			"optionA":"Do",
+			"optionB":"Does",
+			"optionC":"Are",
+			"rightOption":"a"
+		}
+	},
+	{
+	"question":
+		{
+			"prompt":"___ your teacher live in London?",
+			"optionA":"Do",
+			"optionB":"Does",
+			"optionC":"Am",
+			"rightOption":"b"
+		}
+	},
+	{
+	"question":
+		{
+			"prompt":"___ dogs like cats?",
+			"optionA":"They",
+			"optionB":"Does",
+			"optionC":"Do",
+			"rightOption":"c"
+		}
+	}
+]

@@ -1,0 +1,182 @@
+[
+	{
+	"question":
+		{
+			"prompt":"She looked nervous, ___ her lips.",
+			"optionA":"moistening",
+			"optionB":"moisturing",
+			"optionC":"moisturizing",
+			"rightOption":"a"
+		}
+	},
+	{
+	"question":
+		{
+			"prompt":"This new water cooler is to ___ the drinking water.",
+			"optionA":"purificy",
+			"optionB":"purify",
+			"optionC":"purity",
+			"rightOption":"b"
+		}
+	},
+	{
+	"question":
+		{
+			"prompt":"The directive has the aim of ___ work practices",
+			"optionA":"harmonysize",
+			"optionB":"harmonying",
+			"optionC":"harmonising",
+			"rightOption":"c"
+		}
+	},
+	{
+	"question":
+		{
+			"prompt":"She was taking drugs, her eye pupils were so ___.",
+			"optionA":"enlarged",
+			"optionB":"inlarged",
+			"optionC":"enlarging",
+			"rightOption":"a"
+		}
+	},
+	{
+	"question":
+		{
+			"prompt":"Several world-renowned ___ addressed the conference.",
+			"optionA":"historicians",
+			"optionB":"historians",
+			"optionC":"historyans",
+			"rightOption":"b"
+		}
+	},
+	{
+	"question":
+		{
+			"prompt":"The patient had several ___ of the brain.",
+			"optionA":"unnormalities",
+			"optionB":"inormilities",
+			"optionC":"abnormalities",
+			"rightOption":"c"
+		}
+	},
+	{
+	"question":
+		{
+			"prompt":"She struggled along with an ___ of clothes.",
+			"optionA":"armful",
+			"optionB":"armfull",
+			"optionC":"armfuly",
+			"rightOption":"a"
+		}
+	},
+	{
+	"question":
+		{
+			"prompt":"The computer system requires several ___ checks.",
+			"optionA":"maintainance",
+			"optionB":"maintenance",
+			"optionC":"maintanance",
+			"rightOption":"b"
+		}
+	},
+	{
+	"question":
+		{
+			"prompt":"He was longing for the ___ of his father.",
+			"optionA":"approvity",
+			"optionB":"approving",
+			"optionC":"approval",
+			"rightOption":"c"
+		}
+	},
+	{
+	"question":
+		{
+			"prompt":"She frowned at Jackson ___.",
+			"optionA":"apologetically",
+			"optionB":"apologetic",
+			"optionC":"apologying",
+			"rightOption":"a"
+		}
+	},
+	{
+	"question":
+		{
+			"prompt":"It truly is an epic tale, ___ one of the best",
+			"optionA":"aguing",
+			"optionB":"arguably",
+			"optionC":"arguable",
+			"rightOption":"b"
+		}
+	},
+	{
+	"question":
+		{
+			"prompt":"They are revised by statutory ___ committees.",
+			"optionA":"assessed",
+			"optionB":"assessing",
+			"optionC":"assessment",
+			"rightOption":"c"
+		}
+	},
+	{
+	"question":
+		{
+			"prompt":"They weren't expecting for the ___ of the troops.",
+			"optionA":"withdrawal",
+			"optionB":"withdrawn",
+			"optionC":"withdrawing",
+			"rightOption":"a"
+		}
+	},
+	{
+	"question":
+		{
+			"prompt":"I'm pushing you to ___ your perspective.",
+			"optionA":"broadening",
+			"optionB":"broaden",
+			"optionC":"broadth",
+			"rightOption":"b"
+		}
+	},
+	{
+	"question":
+		{
+			"prompt":"we aim for the ___ of the whole community.",
+			"optionA":"sustanance",
+			"optionB":"sustainance",
+			"optionC":"sustenance",
+			"rightOption":"c"
+		}
+	},
+	{
+	"question":
+		{
+			"prompt":"Putting out wildfires is a very  job.",
+			"optionA":"perilous",
+			"optionB":"imperil",
+			"optionC":"perily",
+			"rightOption":"a"
+		}
+	},
+	{
+	"question":
+		{
+			"prompt":"I think he behaved ___ towards you.",
+			"optionA":"disgrace",
+			"optionB":"disgracefully",
+			"optionC":"disgraceful",
+			"rightOption":"b"
+		}
+	},
+	{
+	"question":
+		{
+			"prompt":"The decision does seem a little ___.",
+			"optionA":"heartbreak",
+			"optionB":"dishearten",
+			"optionC":"heartless",
+			"rightOption":"c"
+		}
+	}
+]

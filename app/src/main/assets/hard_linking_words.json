@@ -1,0 +1,142 @@
+[
+	{
+	"question":
+		{
+			"prompt":"I am a vegetarian, ___ my whole family eats meat.",
+			"optionA":"whereas",
+			"optionB":"where",
+			"optionC":"as",
+			"rightOption":"a"
+		}
+	},
+	{
+	"question":
+		{
+			"prompt":"You can post that letter ___ you're going past the post office.",
+			"optionA":"yet",
+			"optionB":"since",
+			"optionC":"though",
+			"rightOption":"b"
+		}
+	},
+	{
+	"question":
+		{
+			"prompt":"I'll be there, ___ I may be late.",
+			"optionA":"even",
+			"optionB":"while",
+			"optionC":"although",
+			"rightOption":"c"
+		}
+	},
+	{
+	"question":
+		{
+			"prompt":"Even ___ they played badly they still won quite easily.",
+			"optionA":"though",
+			"optionB":"so",
+			"optionC":"if",
+			"rightOption":"a"
+		}
+	},
+	{
+	"question":
+		{
+			"prompt":"He looks qualified for the job. ___ he's fluent in Spanish.",
+			"optionA":"What's extra",
+			"optionB":"What's more",
+			"optionC":"What's add",
+			"rightOption":"b"
+		}
+	},
+	{
+	"question":
+		{
+			"prompt":"I don't want to go and ___, I haven't been invited.",
+			"optionA":"in any situation",
+			"optionB":"in any matter",
+			"optionC":"in any case",
+			"rightOption":"c"
+		}
+	},
+	{
+	"question":
+		{
+			"prompt":"He was very tired; ___ he went on walking.",
+			"optionA":"nevertheless",
+			"optionB":"despite",
+			"optionC":"although",
+			"rightOption":"a"
+		}
+	},
+	{
+	"question":
+		{
+			"prompt":"___ the rain, we still went to the park.",
+			"optionA":"Thus",
+			"optionB":"Despite",
+			"optionC":"Nevertheless",
+			"rightOption":"b"
+		}
+	},
+	{
+	"question":
+		{
+			"prompt":"The mirror was curved, ___ it made objects look farther",
+			"optionA":"still",
+			"optionB":"since",
+			"optionC":"thus",
+			"rightOption":"c"
+		}
+	},
+	{
+	"question":
+		{
+			"prompt":"Texting while driving is dangerous, ___, it is also illegal. ",
+			"optionA":"and furthermore",
+			"optionB":"and since",
+			"optionC":"and though",
+			"rightOption":"a"
+		}
+	},
+	{
+	"question":
+		{
+			"prompt":"His face is serious but ___ very friendly.",
+			"optionA":"because",
+			"optionB":"nonetheless",
+			"optionC":"despite",
+			"rightOption":"b"
+		}
+	},
+	{
+	"question":
+		{
+			"prompt":"John bought the watch, ___ the fact that it was expensive.",
+			"optionA":"whereas",
+			"optionB":"however",
+			"optionC":"despite",
+			"rightOption":"c"
+		}
+	},
+	{
+	"question":
+		{
+			"prompt":"He's an acclaimed painter who is ___ a sculptor.",
+			"optionA":"likewise",
+			"optionB":"like",
+			"optionC":"likely",
+			"rightOption":"a"
+		}
+	},
+	{
+	"question":
+		{
+			"prompt":"It was early, ___ we were all ready for bed after our long hike.",
+			"optionA":"while",
+			"optionB":"yet",
+			"optionC":"still",
+			"rightOption":"b"
+		}
+	}
+]
