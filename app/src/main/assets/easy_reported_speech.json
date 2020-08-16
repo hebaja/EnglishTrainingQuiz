@@ -1,6 +1,6 @@
 [
 	{
-	"question":
+	"task":
 		{
 			"prompt":""I've left some food in the pot", said Sue.",
 			"optionA":"Sue said she had left some food in the pot.",
@@ -10,7 +10,7 @@
 		}
 	},
 	{
-	"question":
+	"task":
 		{
 			"prompt":""I'll ask Andrew to give me a lift", said Anna.",
 			"optionA":"Anna said she asked Andrew to give her a lift.",
@@ -20,7 +20,7 @@
 		}
 	},
 	{
-	"question":
+	"task":
 		{
 			"prompt":""I finish work early today", said Anna.",
 			"optionA":"Mary said she finished work early today.",
@@ -30,7 +30,7 @@
 		}
 	},
 	{
-	"question":
+	"task":
 		{
 			"prompt":""I booked the tickets this morning", said Claire.",
 			"optionA":"Claire said she had booked the tickets that morning.",
@@ -40,7 +40,7 @@
 		}
 	},
 	{
-	"question":
+	"task":
 		{
 			"prompt":""I'll try to be there on time", said Louisa.",
 			"optionA":"Louisa said she tries to be there on time.",
@@ -50,7 +50,7 @@
 		}
 	},
 	{
-	"question":
+	"task":
 		{
 			"prompt":""The car has broken down", said Steve.",
 			"optionA":"Steve said the car has broken down.",
@@ -60,7 +60,7 @@
 		}
 	},
 	{
-	"question":
+	"task":
 		{
 			"prompt":""I'll be at work till late tonight", said Gill.",
 			"optionA":"Gill said she would be at work late that night.",
@@ -70,7 +70,7 @@
 		}
 	},
 	{
-	"question":
+	"task":
 		{
 			"prompt":""I don't eat fish", said Corinne.",
 			"optionA":"Corinne said she wouldn't eat fish.",
@@ -80,7 +80,7 @@
 		}
 	},
 	{
-	"question":
+	"task":
 		{
 			"prompt":""I broke the mirror", said Miguel.",
 			"optionA":"Miguel said he broke the mirror.",
@@ -90,7 +90,7 @@
 		}
 	},
 	{
-	"question":
+	"task":
 		{
 			"prompt":""I've passed my English exam", said Carl.",
 			"optionA":"Carl said he had passed his English exam.",
@@ -100,7 +100,7 @@
 		}
 	},
 	{
-	"question":
+	"task":
 		{
 			"prompt":""I am going to the cinema this evening", said Kim.",
 			"optionA":"Kim said she had gone to the cinema that evening.",
@@ -110,7 +110,7 @@
 		}
 	},
 	{
-	"question":
+	"task":
 		{
 			"prompt":""I'll pay the bill today", said Kathy.",
 			"optionA":"Kathy said she would pay the bill today.",
@@ -120,7 +120,7 @@
 		}
 	},
 	{
-	"question":
+	"task":
 		{
 			"prompt":""I'll leave tomorrow", said Hellen.",
 			"optionA":"Hellen said she would leave the next day.",

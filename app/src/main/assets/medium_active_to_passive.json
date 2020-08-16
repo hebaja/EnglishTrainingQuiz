@@ -1,6 +1,6 @@
 [
   {
-    "question":
+    "task":
     {
       "prompt": "People of all ages do crossword puzzles.",
       "optionA": "crossword puzzles are done by People of all ages.",
@@ -10,7 +10,7 @@
     }
   },
   {
-    "question":
+    "task":
     {
       "prompt": "Leonardo Da vinci painted Monalisa.",
       "optionA": "Monalisa was paint by Leonardo Da vinci .",
@@ -20,7 +20,7 @@
     }
   },
   {
-    "question":
+    "task":
     {
       "prompt": "Everyone will use Internet.",
       "optionA": "Internet will use Everyone.",
@@ -30,7 +30,7 @@
     }
   },
   {
-    "question":
+    "task":
     {
       "prompt": "People are restoring many buildings downtown.",
       "optionA": "many buildings downtown are being restored.",
@@ -40,7 +40,7 @@
     }
   },
   {
-    "question":
+    "task":
     {
       "prompt": "The president has taken evasive actions.",
       "optionA": "evasive actions have been taken by the president.",
@@ -50,7 +50,7 @@
     }
   },
   {
-    "question":
+    "task":
     {
       "prompt": "A volcano destroyed Pompeii.",
       "optionA": "Pompeii is destroyed by a volcano.",
@@ -60,7 +60,7 @@
     }
   },
   {
-    "question":
+    "task":
     {
       "prompt": "Madonna sings 'Vogue'.",
       "optionA": "'Vogue' is sing by Madonna.",
@@ -70,7 +70,7 @@
     }
   },
   {
-    "question":
+    "task":
     {
       "prompt": "People cut several trees everyday.",
       "optionA": "Several trees are cut everyday.",
@@ -80,7 +80,7 @@
     }
   },
   {
-    "question":
+    "task":
     {
       "prompt": "William Bonner hosts a news program.",
       "optionA": "A news program is hosted by William Bonner.",
@@ -90,7 +90,7 @@
     }
   },
   {
-    "question":
+    "task":
     {
       "prompt": "Spielberg will cast Will Smith.",
       "optionA": "Will Smith will be casted by Spielberg.",
@@ -100,7 +100,7 @@
     }
   },
   {
-    "question":
+    "task":
     {
       "prompt": "She ___ me to start studying Spanish.",
       "optionA": "encouraged",
@@ -110,7 +110,7 @@
     }
   },
   {
-    "question":
+    "task":
     {
       "prompt": "King has been writing a new novel.",
       "optionA": "A new novel has been written by King.",
@@ -120,7 +120,7 @@
     }
   },
   {
-    "question":
+    "task":
     {
       "prompt": "She had never broken a promise.",
       "optionA": "A promisse has never been braked by her.",
@@ -130,7 +130,7 @@
     }
   },
   {
-    "question":
+    "task":
     {
       "prompt": "Paul insisted ___ for dinner.",
       "optionA": "to paying",
@@ -140,7 +140,7 @@
     }
   },
   {
-    "question":
+    "task":
     {
       "prompt": "They will have forgotten it.",
       "optionA": "It will have been forgotten.",
@@ -150,7 +150,7 @@
     }
   },
   {
-    "question":
+    "task":
     {
       "prompt": "A taxi driver drove us into town.",
       "optionA": "We were drove into town by a taxi driver.",
@@ -160,7 +160,7 @@
     }
   },
   {
-    "question":
+    "task":
     {
       "prompt": "They didn't sell many programmes.",
       "optionA": "Very few programs were sold.",
@@ -170,7 +170,7 @@
     }
   },
   {
-    "question":
+    "task":
     {
       "prompt": "'Well done for scoring twice, Mark', said the coach.",
       "optionA": "Mark was praised for scored twice.",
@@ -180,7 +180,7 @@
     }
   },
   {
-    "question":
+    "task":
     {
       "prompt": "People say that shop is very good",
       "optionA": "That shop is supposed to be very good.",
@@ -190,7 +190,7 @@
     }
   },
   {
-    "question":
+    "task":
     {
       "prompt": "My boss told me of his decision yesterday.",
       "optionA": "I will inform his decision yesterday.",

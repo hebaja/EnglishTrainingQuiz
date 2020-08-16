@@ -1,6 +1,6 @@
 [
 	{
-	"question":
+	"task":
 		{
 			"prompt":"Hello. My name ___ John.",
 			"optionA":"is",
@@ -10,7 +10,7 @@
 		}
 	},
 	{
-	"question":
+	"task":
 		{
 			"prompt":"Which city ___ you from?",
 			"optionA":"is",
@@ -20,7 +20,7 @@
 		}
 	},
 	{
-	"question":
+	"task":
 		{
 			"prompt":"Hi. ___ you American?",
 			"optionA":"Am",
@@ -30,7 +30,7 @@
 		}
 	},
 	{
-	"question":
+	"task":
 		{
 			"prompt":"Peter ___ the tallest boy in class.",
 			"optionA":"is",
@@ -40,7 +40,7 @@
 		}
 	},
 	{
-	"question":
+	"task":
 		{
 			"prompt":"What time ___ it?",
 			"optionA":"am",
@@ -50,7 +50,7 @@
 		}
 	},
 	{
-	"question":
+	"task":
 		{
 			"prompt":"I ___ Italian.",
 			"optionA":"be",
@@ -60,7 +60,7 @@
 		}
 	},
 	{
-	"question":
+	"task":
 		{
 			"prompt":"When will the party ___?",
 			"optionA":"be",
@@ -70,7 +70,7 @@
 		}
 	},
 	{
-	"question":
+	"task":
 		{
 			"prompt":"What ___ New York like?",
 			"optionA":"are",
@@ -80,7 +80,7 @@
 		}
 	},
 	{
-	"question":
+	"task":
 		{
 			"prompt":"Sean and Anna ___ 20 years old.",
 			"optionA":"be",
@@ -90,7 +90,7 @@
 		}
 	},
 	{
-	"question":
+	"task":
 		{
 			"prompt":"I am going to ___ there.",
 			"optionA":"be",
@@ -100,7 +100,7 @@
 		}
 	},
 	{
-	"question":
+	"task":
 		{
 			"prompt":"I hope there ___ no snow tomorrow.",
 			"optionA":"be",
@@ -110,7 +110,7 @@
 		}
 	},
 	{
-	"question":
+	"task":
 		{
 			"prompt":"There ___ many stores in this little village.",
 			"optionA":"be",
@@ -120,7 +120,7 @@
 		}
 	},
 	{
-	"question":
+	"task":
 		{
 			"prompt":"___ there a market in this town?",
 			"optionA":"is",
@@ -130,7 +130,7 @@
 		}
 	},
 	{
-	"question":
+	"task":
 		{
 			"prompt":"___ there flowers in the park?",
 			"optionA":"is",
@@ -140,7 +140,7 @@
 		}
 	},
 	{
-	"question":
+	"task":
 		{
 			"prompt":"There will ___ a party tomorrow.",
 			"optionA":"are",

@@ -1,6 +1,6 @@
 [
    {
-      "question":
+      "task":
         {
           "prompt": "I need to concentrate ___ my homework.",
           "optionA": "a) at",
@@ -10,7 +10,7 @@
          }
    },
    {
-      "question":
+      "task":
         {
           "prompt": "He's really bad ___ cooking.",
           "optionA": "a) at",
@@ -20,7 +20,7 @@
        }
    },
    {
-      "question":
+      "task":
         {
           "prompt": "I've always had difficulty ___ math.",
           "optionA": "a) against",
@@ -30,7 +30,7 @@
        }
    },
    {
-         "question":
+         "task":
         {
           "prompt": "Mark applied ___ a scholarship.",
           "optionA": "a) for",
@@ -40,7 +40,7 @@
        }
    },
    {
-         "question":
+         "task":
         {
           "prompt": "I'm incapable ___ playing sports.",
           "optionA": "a) to",
@@ -50,7 +50,7 @@
        }
    },
    {
-          "question":
+          "task":
         {
           "prompt": "They have to work ___ this project.",
           "optionA": "a) at",
@@ -60,7 +60,7 @@
        }
    },
    {
-         "question":
+         "task":
         {
           "prompt": "I need a moment to recover ___ the shock.",
           "optionA": "a) from",
@@ -70,7 +70,7 @@
        }
    },
    {
-         "question":
+         "task":
         {
           "prompt": "These sneakers are not suitable ___ jogging.",
           "optionA": "a) at",
@@ -80,7 +80,7 @@
        }
    },
    {
-           "question":
+           "task":
         {
           "prompt": "This book had a profound influence ___ me.",
           "optionA": "a) at",
@@ -90,7 +90,7 @@
        }
    },
    {
-         "question":
+         "task":
         {
           "prompt": "I've always struggled ___ Physics at school.",
           "optionA": "a) with",
@@ -100,7 +100,7 @@
        }
    },
    {
-         "question":
+         "task":
         {
           "prompt": "She asked ___ the condition of the house.",
           "optionA": "a) about",
@@ -110,7 +110,7 @@
        }
    },
    {
-         "question":
+         "task":
         {
           "prompt": "I'm certain ___ it.",
           "optionA": "a) at",
@@ -120,7 +120,7 @@
        }
    },
    {
-         "question":
+         "task":
         {
           "prompt": "The hotel has the advantage ___ being cheap.",
           "optionA": "a) at",
@@ -130,7 +130,7 @@
        }
    },
    {
-         "question":
+         "task":
         {
           "prompt": "This town is specialized ___ receiving tourists.",
           "optionA": "a) in",
@@ -140,7 +140,7 @@
        }
    },
    {
-         "question":
+         "task":
         {
           "prompt": "The event was crowded ___ young people.",
           "optionA": "a) in",
@@ -150,7 +150,7 @@
        }
    },
    {
-           "question":
+           "task":
         {
           "prompt": "They deserve the credit ___ planning the trip.",
           "optionA": "a) with",
@@ -160,7 +160,7 @@
        }
    },
    {
-           "question":
+           "task":
         {
           "prompt": "She just glanced ___ the newspaper.",
           "optionA": "a) at",
@@ -170,7 +170,7 @@
        }
    },
    {
-           "question":
+           "task":
         {
           "prompt": "We were furious ___ the hotel manager.",
           "optionA": "a) with",
@@ -180,7 +180,7 @@
        }
    },
    {
-           "question":
+           "task":
         {
           "prompt": "Everyone was surprised ___ the low prices.",
           "optionA": "a) at",
@@ -190,7 +190,7 @@
        }
    },
    {
-           "question":
+           "task":
         {
           "prompt": "I trust ___ your ability.",
           "optionA": "a) at",

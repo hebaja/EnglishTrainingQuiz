@@ -1,6 +1,6 @@
 [
   {
-    "question":
+    "task":
     {
       "prompt": "The dog went for him.",
       "optionA": "a) The dog barked at him.",
@@ -10,7 +10,7 @@
     }
   },
   {
-    "question":
+    "task":
     {
       "prompt": "I feel for you.",
       "optionA": "a) I am fond of you.",
@@ -20,7 +20,7 @@
     }
   },
   {
-    "question":
+    "task":
     {
       "prompt": "She got over her illness.",
       "optionA": "a) She learned from her ilness.",
@@ -30,7 +30,7 @@
     }
   },
   {
-  "question":
+  "task":
   {
      "prompt": "The police looked into it.",
      "optionA": "a) The police didn't care about it.",
@@ -40,7 +40,7 @@
   }
 },
 {
-   "question":
+   "task":
    {
      "prompt": "She came up with the solution.",
      "optionA": "a) She refused the solution.",
@@ -50,7 +50,7 @@
    }
  },
  {
-    "question":
+    "task":
     {
       "prompt": "It was easy to find out the answer.",
       "optionA": "a) It was easy to forget the answer.",
@@ -60,7 +60,7 @@
     }
   },
   {
-    "question":
+    "task":
     {
       "prompt": "When are we setting up the next meeting?",
       "optionA": "a) When are we recording the next meeting?",
@@ -70,7 +70,7 @@
     }
    },
 	{
-	"question":
+	"task":
 		{
 			"prompt":"You'll be able ___ that book out of the library.",
 			"optionA":"to take",
@@ -80,7 +80,7 @@
 		}
 	},
 	{
-	"question":
+	"task":
 		{
 			"prompt":"We have ___ ahead if we want the party to be a success.",
 			"optionA":"to go",
@@ -90,7 +90,7 @@
 		}
 	},
 	{
-	"question":
+	"task":
 		{
 			"prompt":"She didn't say goodbye before ___ off. She must be upset.",
 			"optionA":"she switched",
@@ -100,7 +100,7 @@
 		}
 	},
 	{
-	"question":
+	"task":
 		{
 			"prompt":"He decided ___ it down, althouhg it was a good job offer.",
 			"optionA":"to turn",
@@ -110,7 +110,7 @@
 		}
 	},
 	{
-	"question":
+	"task":
 		{
 			"prompt":"When I saw his awful haircut I burst ___ laughing.",
 			"optionA":"into",
@@ -120,7 +120,7 @@
 		}
 	},
 	{
-	"question":
+	"task":
 		{
 			"prompt":"As time ___ we do more damage to the environment.",
 			"optionA":"goes beyond",
@@ -130,7 +130,7 @@
 		}
 	},
 	{
-	"question":
+	"task":
 		{
 			"prompt":"She has decided to take ___ a new hobby.",
 			"optionA":"up",
@@ -140,7 +140,7 @@
 		}
 	},
 	{
-	"question":
+	"task":
 		{
 			"prompt":"Could you repeat? I couldn't ___ what you said.",
 			"optionA":"make up",

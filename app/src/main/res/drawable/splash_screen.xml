@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android"
+    android:opacity="opaque">
+
+    <item android:drawable="@color/lightColorPrimary" />
+
+    <item>
+        <bitmap android:src="@drawable/english_training_quizzes_logo_transp_yellow"
+            android:gravity="center" />
+    </item>
+
+
+
+</layer-list>

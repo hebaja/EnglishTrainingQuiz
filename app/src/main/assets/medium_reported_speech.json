@@ -1,6 +1,6 @@
 [
   {
-    "question":
+    "task":
     {
       "prompt": "She ___ him about the train strike.",
       "optionA": "warned",
@@ -10,7 +10,7 @@
     }
   },
   {
-    "question":
+    "task":
     {
       "prompt": "Helen ___ having lost my keys.",
       "optionA": "discussed",
@@ -20,7 +20,7 @@
     }
   },
   {
-    "question":
+    "task":
     {
       "prompt": "The lawyer ___ that I should contact him.",
       "optionA": "offered",
@@ -30,7 +30,7 @@
     }
   },
   {
-    "question":
+    "task":
     {
       "prompt": "My mother ___ to write the letter for me.",
       "optionA": "agreed",
@@ -40,7 +40,7 @@
     }
   },
   {
-    "question":
+    "task":
     {
       "prompt": "Carla suggested ___ you.",
       "optionA": "that I text",
@@ -50,7 +50,7 @@
     }
   },
   {
-    "question":
+    "task":
     {
       "prompt": "Several people ___ on what good company she was.",
       "optionA": "warned",
@@ -60,7 +60,7 @@
     }
   },
   {
-    "question":
+    "task":
     {
       "prompt": "Emily ___ for being late",
       "optionA": "confessed",
@@ -70,7 +70,7 @@
     }
   },
   {
-    "question":
+    "task":
     {
       "prompt": "Stella ___ us to meet her at the museum.",
       "optionA": "reminded",
@@ -80,7 +80,7 @@
     }
   },
   {
-    "question":
+    "task":
     {
       "prompt": "Jake ___ giving up his studies.",
       "optionA": "regretted",
@@ -90,7 +90,7 @@
     }
   },
   {
-    "question":
+    "task":
     {
       "prompt": "They ___ me for losing the match.",
       "optionA": "told",
@@ -100,7 +100,7 @@
     }
   },
   {
-    "question":
+    "task":
     {
       "prompt": "She ___ me to start studying Spanish.",
       "optionA": "encouraged",
@@ -110,7 +110,7 @@
     }
   },
   {
-    "question":
+    "task":
     {
       "prompt": "My friends congratulated ___.",
       "optionA": "me on my new car",
@@ -120,7 +120,7 @@
     }
   },
   {
-    "question":
+    "task":
     {
       "prompt": "My dad denied ___ those horrible curtains?",
       "optionA": "to buy",
@@ -130,7 +130,7 @@
     }
   },
   {
-    "question":
+    "task":
     {
       "prompt": "Paul insisted ___ for dinner.",
       "optionA": "to paying",
@@ -140,7 +140,7 @@
     }
   },
   {
-    "question":
+    "task":
     {
       "prompt": "My mom ___ her old car.",
       "optionA": "offered me",
@@ -150,7 +150,7 @@
     }
   },
   {
-    "question":
+    "task":
     {
       "prompt": "Mary ___ some chairs.",
       "optionA": "asked me to pick up",
@@ -160,7 +160,7 @@
     }
   },
   {
-    "question":
+    "task":
     {
       "prompt": "He ___ this song.",
       "optionA": "said he liked",
@@ -170,7 +170,7 @@
     }
   },
   {
-    "question":
+    "task":
     {
       "prompt": "She ___ Italian.",
       "optionA": "confessed not to speak",
@@ -180,7 +180,7 @@
     }
   },
   {
-    "question":
+    "task":
     {
       "prompt": "She told the boys ___ on the grass",
       "optionA": "not to play",
@@ -190,7 +190,7 @@
     }
   },
   {
-    "question":
+    "task":
     {
       "prompt": "She _____ a job.",
       "optionA": "told to find",

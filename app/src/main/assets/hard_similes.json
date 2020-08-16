@@ -1,6 +1,6 @@
 [
 	{
-	"question":
+	"task":
 		{
 			"prompt":"You guys are going to stand out like ___ thumb.",
 			"optionA":"a sore",
@@ -10,7 +10,7 @@
 		}
 	},
 	{
-	"question":
+	"task":
 		{
 			"prompt":"My joke about the alcoholic went down like a lead ___.",
 			"optionA":"ball",
@@ -20,7 +20,7 @@
 		}
 	},
 	{
-	"question":
+	"task":
 		{
 			"prompt":"His father always smoked like a ___.",
 			"optionA":"candle",
@@ -30,7 +30,7 @@
 		}
 	},
 	{
-	"question":
+	"task":
 		{
 			"prompt":"Our teacher at school used to have eyes like ____.",
 			"optionA":"a hawk",
@@ -40,7 +40,7 @@
 		}
 	},
 	{
-	"question":
+	"task":
 		{
 			"prompt":"The country is safe as ___ for visitors.",
 			"optionA":"flats",
@@ -50,7 +50,7 @@
 		}
 	},
 	{
-	"question":
+	"task":
 		{
 			"prompt":"Physically John is as ___ as nails.",
 			"optionA":"strong",
@@ -60,7 +60,7 @@
 		}
 	},
 	{
-	"question":
+	"task":
 		{
 			"prompt":"The film was as ___ as dishwater and we decided to leave.",
 			"optionA":"dull",
@@ -70,7 +70,7 @@
 		}
 	},
 	{
-	"question":
+	"task":
 		{
 			"prompt":"We'll need to make sure the car is as ___ as a whistle",
 			"optionA":"shiny",
@@ -80,7 +80,7 @@
 		}
 	},
 	{
-	"question":
+	"task":
 		{
 			"prompt":"Today I can't. I'm as busy as ___.",
 			"optionA":"a bird",
@@ -90,7 +90,7 @@
 		}
 	},
 	{
-	"question":
+	"task":
 		{
 			"prompt":"If you go to the gym everyday. You'll be as strong as ___.",
 			"optionA":"an ox",
@@ -100,7 +100,7 @@
 		}
 	},
 	{
-	"question":
+	"task":
 		{
 			"prompt":"That was a hard class. His explanation was as clear ___.",
 			"optionA":"as clay",
@@ -110,7 +110,7 @@
 		}
 	},
 	{
-	"question":
+	"task":
 		{
 			"prompt":"For me, watching a soccer match is like watching grass ___.",
 			"optionA":"go",
@@ -120,7 +120,7 @@
 		}
 	},
 	{
-	"question":
+	"task":
 		{
 			"prompt":"Don't just sit there like a bump on a ___.",
 			"optionA":"log",
@@ -130,7 +130,7 @@
 		}
 	},
 	{
-	"question":
+	"task":
 		{
 			"prompt":"She is tall and thin as a ___.",
 			"optionA":"fake",
@@ -140,7 +140,7 @@
 		}
 	},
 	{
-	"question":
+	"task":
 		{
 			"prompt":"She walked in as cool ___, as if nothing had happened.",
 			"optionA":"as lettuce",

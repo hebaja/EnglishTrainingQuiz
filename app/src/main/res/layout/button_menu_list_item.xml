@@ -4,11 +4,10 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:layout_marginStart="10dp"
-    android:layout_marginTop="24dp"
     android:layout_marginEnd="10dp"
     android:background="@drawable/orange_round_button"
     android:fontFamily="sans-serif-medium"
     android:textAlignment="center"
     android:textSize="14sp"
-    tools:text="@sample/options.json/options/prompt">
+    tools:text="@sample/subjects.json/options/prompt">
 </Button>

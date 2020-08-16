@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <TextView
+        android:id="@+id/main_activity_question_prompt"
+        android:layout_width="match_parent"
+        android:layout_height="46dp"
+        android:gravity="center"
+        android:textAlignment="center"
+        android:fontFamily="@font/allerta"
+        android:textColor="@color/textColorPrimary"
+        android:textSize="14sp"
+        android:autoSizeTextType="uniform"
+        android:autoSizeMaxTextSize="16sp"
+        android:autoSizeStepGranularity="2sp"
+        tools:text="@string/menu_level_prompt" />
+</FrameLayout>

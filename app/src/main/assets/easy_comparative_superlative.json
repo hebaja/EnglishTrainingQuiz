@@ -1,6 +1,6 @@
 [
 	{
-	"question":
+	"task":
 		{
 			"prompt":"The shops are a lot ___ than usual.",
 			"optionA":"quieter",
@@ -10,7 +10,7 @@
 		}
 	},
 	{
-	"question":
+	"task":
 		{
 			"prompt":"I feel much ___ since I started exercising.",
 			"optionA":"fiter",
@@ -20,7 +20,7 @@
 		}
 	},
 	{
-	"question":
+	"task":
 		{
 			"prompt":"The girl ___ than she seemed in her photo.",
 			"optionA":"more pretty",
@@ -30,7 +30,7 @@
 		}
 	},
 	{
-	"question":
+	"task":
 		{
 			"prompt":"The town on Sunday ___.",
 			"optionA":"less crowded",
@@ -40,7 +40,7 @@
 		}
 	},
 	{
-	"question":
+	"task":
 		{
 			"prompt":"I think this sofa is ___ than the other.",
 			"optionA":"comfortabler",
@@ -50,7 +50,7 @@
 		}
 	},
 	{
-	"question":
+	"task":
 		{
 			"prompt":"The Eiffel Tower is ___ site in France.",
 			"optionA":"the more popular",
@@ -60,7 +60,7 @@
 		}
 	},
 	{
-	"question":
+	"task":
 		{
 			"prompt":"She is a ___ Musican than her friend.",
 			"optionA":"better",
@@ -70,7 +70,7 @@
 		}
 	},
 	{
-	"question":
+	"task":
 		{
 			"prompt":"What is ___ river in the world?",
 			"optionA":"the longer",
@@ -80,7 +80,7 @@
 		}
 	},
 	{
-	"question":
+	"task":
 		{
 			"prompt":"Which gloves are ___ ?",
 			"optionA":"the cheap",
@@ -90,7 +90,7 @@
 		}
 	},
 	{
-	"question":
+	"task":
 		{
 			"prompt":"My friend is much ___ than I am",
 			"optionA":"taller",
@@ -100,7 +100,7 @@
 		}
 	},
 	{
-	"question":
+	"task":
 		{
 			"prompt":"Who is ___ politician in the Parliment?",
 			"optionA":"the badest",
@@ -110,7 +110,7 @@
 		}
 	},
 	{
-	"question":
+	"task":
 		{
 			"prompt":"What is ___ painting in this Gallery?",
 			"optionA":"the more beautiful",
@@ -120,7 +120,7 @@
 		}
 	},
 	{
-	"question":
+	"task":
 		{
 			"prompt":"My car is ___ than yours.",
 			"optionA":"less expensive",
@@ -130,7 +130,7 @@
 		}
 	},
 	{
-	"question":
+	"task":
 		{
 			"prompt":"It was ___ thing.",
 			"optionA":"the less surprising",
@@ -140,7 +140,7 @@
 		}
 	},
 	{
-	"question":
+	"task":
 		{
 			"prompt":"It's not ___  it was yesterday.",
 			"optionA":"as hot than",
@@ -150,7 +150,7 @@
 		}
 	},
 	{
-	"question":
+	"task":
 		{
 			"prompt":"He wasn't ___ I thought he would be.",
 			"optionA":"as tall as",
@@ -160,7 +160,7 @@
 		}
 	},
 	{
-	"question":
+	"task":
 		{
 			"prompt":"3) The children were ___ gold.",
 			"optionA":"more good than",
@@ -170,7 +170,7 @@
 		}
 	},
 	{
-	"question":
+	"task":
 		{
 			"prompt":"The tickets were twice ___  before.",
 			"optionA":"as expensive like",
@@ -180,7 +180,7 @@
 		}
 	},
 	{
-	"question":
+	"task":
 		{
 			"prompt":"We climbed ___ up the hill.",
 			"optionA":"further",
@@ -190,7 +190,7 @@
 		}
 	},
 	{
-	"question":
+	"task":
 		{
 			"prompt":"What is the ___ planet from the sun?",
 			"optionA":"farest",

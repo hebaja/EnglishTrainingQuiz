@@ -1,6 +1,6 @@
 [
 	{
-	"question":
+	"task":
 		{
 			"prompt":"I started my English course 3 weeks ago.",
 			"optionA":"I have been on this English course for three weeks.",
@@ -10,7 +10,7 @@
 		}
 	},
 	{
-	"question":
+	"task":
 		{
 			"prompt":"I haven't seen John since Friday.",
 			"optionA":"The last time I have seen John was Friday.",
@@ -20,7 +20,7 @@
 		}
 	},
 	{
-	"question":
+	"task":
 		{
 			"prompt":"The last time Claire went on holiday was five years ago.",
 			"optionA":"Claire hasn't been on holiday for five years.",
@@ -30,7 +30,7 @@
 		}
 	},
 	{
-	"question":
+	"task":
 		{
 			"prompt":"Marie has been married for seven months.",
 			"optionA":"Marie got married seven months ago.",
@@ -40,7 +40,7 @@
 		}
 	},
 	{
-	"question":
+	"task":
 		{
 			"prompt":"Do you know what score you got in the test?",
 			"optionA":"Have you have the result of your test?",
@@ -50,7 +50,7 @@
 		}
 	},
 	{
-	"question":
+	"task":
 		{
 			"prompt":"I watched one film this morning and one this afternoon.",
 			"optionA":"I watched 2 films so far today.",
@@ -60,7 +60,7 @@
 		}
 	},
 	{
-	"question":
+	"task":
 		{
 			"prompt":"I ___ you for a long time.",
 			"optionA":"haven't seen",
@@ -70,7 +70,7 @@
 		}
 	},
 	{
-	"question":
+	"task":
 		{
 			"prompt":"Jane ___ her car two weeks ago.",
 			"optionA":"has bought",
@@ -80,7 +80,7 @@
 		}
 	},
 	{
-	"question":
+	"task":
 		{
 			"prompt":"We ___ in England last summer.",
 			"optionA":"did stayed",
@@ -90,7 +90,7 @@
 		}
 	},
 	{
-	"question":
+	"task":
 		{
 			"prompt":"We ___ here since five o’clock.",
 			"optionA":"have been",
@@ -100,7 +100,7 @@
 		}
 	},
 	{
-	"question":
+	"task":
 		{
 			"prompt":"This is the first time she ___ a car.",
 			"optionA":"didn't drive",
@@ -110,7 +110,7 @@
 		}
 	},
 	{
-	"question":
+	"task":
 		{
 			"prompt":"John ___ to Paris two days ago.",
 			"optionA":"has gone",
@@ -120,7 +120,7 @@
 		}
 	},
 	{
-	"question":
+	"task":
 		{
 			"prompt":"I ___ finished my letter yet.",
 			"optionA":"haven't",
@@ -130,7 +130,7 @@
 		}
 	},
 	{
-	"question":
+	"task":
 		{
 			"prompt":"I ___ home late last night.",
 			"optionA":"have arrived",
@@ -140,7 +140,7 @@
 		}
 	},
 	{
-	"question":
+	"task":
 		{
 			"prompt":"This is the easiest quiz I ___ in my life.",
 			"optionA":"didn't take",

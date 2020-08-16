@@ -1,7 +1,6 @@
 <resources>
-
     <!-- Base application theme. -->
-    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar" id="id">
         <!-- Customize your theme here. -->
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">@color/darkColorPrimary</item>
@@ -12,5 +11,4 @@
     <style name="AppCompat.FullScreen">
         <item name="android:windowFullscreen">true</item>
     </style>
-
 </resources>

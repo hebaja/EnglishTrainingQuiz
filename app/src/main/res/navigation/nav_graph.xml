@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/menuLevels">
+
+    <fragment
+        android:id="@+id/menuLevels"
+        android:name="br.com.hebaja.englishtrainingquizzes.ui.fragment.MenuLevelsFragment"
+        android:label="Menu"
+        tools:layout="@layout/menu_levels">
+        <action
+            android:id="@+id/action_menuLevels_to_menuSubjects"
+            app:destination="@id/menuSubjects"
+            app:enterAnim="@anim/from_right"
+            app:exitAnim="@anim/to_left"
+            app:popEnterAnim="@anim/from_left"
+            app:popExitAnim="@anim/to_right"
+            app:popUpToInclusive="false" />
+    </fragment>
+    <fragment
+        android:id="@+id/menuSubjects"
+        android:name="br.com.hebaja.englishtrainingquizzes.ui.fragment.MenuSubjectsFragment"
+        android:label="Menu"
+        tools:layout="@layout/menu_subjects">
+        <argument
+            android:name="key"
+            app:argType="integer" />
+        <action
+            android:id="@+id/action_menuSubjects_to_quiz"
+            app:destination="@id/quiz"
+            app:enterAnim="@anim/from_right"
+            app:exitAnim="@anim/to_left"
+            app:popUpTo="@id/menuLevels"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/quiz"
+        android:name="br.com.hebaja.englishtrainingquizzes.ui.fragment.QuizFragment"
+        android:label="English Training Quizzes"
+        tools:layout="@layout/quiz">
+        <argument
+            android:name="chosen_option"
+            app:argType="integer" />
+        <argument
+            android:name="chosen_level"
+            app:argType="integer" />
+        <action
+            android:id="@+id/action_quiz_to_finalScore"
+            app:destination="@id/finalScore"
+            app:enterAnim="@anim/from_right"
+            app:exitAnim="@anim/to_left" />
+    </fragment>
+    <fragment
+        android:id="@+id/finalScore"
+        android:name="br.com.hebaja.englishtrainingquizzes.ui.fragment.FinalScoreFragment"
+        android:label="Final Score"
+        tools:layout="@layout/final_score">
+        <argument
+            android:name="score"
+            app:argType="integer" />
+        <argument
+            android:name="chosenLevel"
+            app:argType="integer" />
+        <argument
+            android:name="chosenOption"
+            app:argType="integer" />
+        <action
+            android:id="@+id/action_finalScore_to_quiz"
+            app:destination="@id/quiz"
+            app:enterAnim="@anim/from_left"
+            app:exitAnim="@anim/to_right" />
+        <action
+            android:id="@+id/action_finalScore_to_feedback"
+            app:destination="@id/feedback"
+            app:enterAnim="@anim/from_right"
+            app:exitAnim="@anim/to_left"
+            app:popEnterAnim="@anim/from_left"
+            app:popExitAnim="@anim/to_right" />
+        <action
+            android:id="@+id/action_finalScore_to_aboutPage"
+            app:destination="@id/aboutPage"
+            app:enterAnim="@anim/from_right"
+            app:exitAnim="@anim/to_left"
+            app:popEnterAnim="@anim/from_left"
+            app:popExitAnim="@anim/to_right" />
+    </fragment>
+    <action
+        android:id="@+id/action_global_menuLevels"
+        app:destination="@id/menuLevels"
+        app:enterAnim="@anim/from_left"
+        app:exitAnim="@anim/to_right"
+        app:launchSingleTop="false"
+        app:popEnterAnim="@anim/from_left"
+        app:popExitAnim="@anim/to_right"
+        app:popUpTo="@id/nav_graph"
+        app:popUpToInclusive="true" />
+    <fragment
+        android:id="@+id/feedback"
+        android:name="br.com.hebaja.englishtrainingquizzes.ui.fragment.FeedbackFragment"
+        android:label="Feedback"
+        tools:layout="@layout/feedback"/>
+    <fragment
+        android:id="@+id/aboutPage"
+        android:name="br.com.hebaja.englishtrainingquizzes.ui.fragment.AboutPageFragment"
+        android:label="About"
+        tools:layout="@layout/about_page"/>
+</navigation>

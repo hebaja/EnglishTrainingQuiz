@@ -1,6 +1,6 @@
 [
 	{
-	"question":
+	"task":
 		{
 			"prompt":"Last year I ___ my holiday in Ireland.",
 			"optionA":"spent",
@@ -10,7 +10,7 @@
 		}
 	},
 	{
-	"question":
+	"task":
 		{
 			"prompt":"The party ___ great yesterday.",
 			"optionA":"is",
@@ -20,7 +20,7 @@
 		}
 	},
 	{
-	"question":
+	"task":
 		{
 			"prompt":"I ___ around by car with two friends.",
 			"optionA":"travelled",
@@ -30,7 +30,7 @@
 		}
 	},
 	{
-	"question":
+	"task":
 		{
 			"prompt":"In the evenings we ___ to a pub.",
 			"optionA":"went",
@@ -40,7 +40,7 @@
 		}
 	},
 	{
-	"question":
+	"task":
 		{
 			"prompt":"One night we even ___ some Irish dances.",
 			"optionA":"learning",
@@ -50,7 +50,7 @@
 		}
 	},
 	{
-	"question":
+	"task":
 		{
 			"prompt":"We ___ very lucky with the weather.",
 			"optionA":"am",
@@ -60,7 +60,7 @@
 		}
 	},
 	{
-	"question":
+	"task":
 		{
 			"prompt":"It ___ a lot last weekend.",
 			"optionA":"didn't rain",
@@ -70,7 +70,7 @@
 		}
 	},
 	{
-	"question":
+	"task":
 		{
 			"prompt":"But we ___ some beautiful rainbows.",
 			"optionA":"seed",
@@ -80,7 +80,7 @@
 		}
 	},
 	{
-	"question":
+	"task":
 		{
 			"prompt":"Where ___ your last holiday?",
 			"optionA":"do you spend",
@@ -90,7 +90,7 @@
 		}
 	},
 	{
-	"question":
+	"task":
 		{
 			"prompt":"Where ___ when you were young?",
 			"optionA":"did you live",
@@ -100,7 +100,7 @@
 		}
 	},
 	{
-	"question":
+	"task":
 		{
 			"prompt":"She ___ French at university.",
 			"optionA":"did not studied",
@@ -110,7 +110,7 @@
 		}
 	},
 	{
-	"question":
+	"task":
 		{
 			"prompt":"___ the Louvre in Paris?",
 			"optionA":"Did they visited",
@@ -120,7 +120,7 @@
 		}
 	},
 	{
-	"question":
+	"task":
 		{
 			"prompt":"She ___ TV yesterday.",
 			"optionA":"didn't watch",
@@ -130,7 +130,7 @@
 		}
 	},
 	{
-	"question":
+	"task":
 		{
 			"prompt":"We ___ a new car last weekend.",
 			"optionA":"buyed",
@@ -140,7 +140,7 @@
 		}
 	},
 	{
-	"question":
+	"task":
 		{
 			"prompt":"Where ___ before you came here?",
 			"optionA":"did you taught",
@@ -150,7 +150,7 @@
 		}
 	},
 	{
-	"question":
+	"task":
 		{
 			"prompt":"He ___ that he was right.",
 			"optionA":"didn't think",
@@ -160,7 +160,7 @@
 		}
 	},
 	{
-	"question":
+	"task":
 		{
 			"prompt":"I ___ steak last night.",
 			"optionA":"cooket",
@@ -170,7 +170,7 @@
 		}
 	},
 	{
-	"question":
+	"task":
 		{
 			"prompt":"___ 'War and Peace' at school?",
 			"optionA":"Do you readed",
@@ -180,7 +180,7 @@
 		}
 	},
 	{
-	"question":
+	"task":
 		{
 			"prompt":"She ___ to her grandmother.",
 			"optionA":"didn't write",
@@ -190,7 +190,7 @@
 		}
 	},
 	{
-	"question":
+	"task":
 		{
 			"prompt":"We ___ a computer when I was a child.",
 			"optionA":"haved",
@@ -200,7 +200,7 @@
 		}
 	},
 	{
-	"question":
+	"task":
 		{
 			"prompt":"Where ___ last holiday?",
 			"optionA":"did you gone",
@@ -210,7 +210,7 @@
 		}
 	},
 	{
-	"question":
+	"task":
 		{
 			"prompt":"I ___ ice cream when I was a child.",
 			"optionA":"loved",
@@ -220,7 +220,7 @@
 		}
 	},
 	{
-	"question":
+	"task":
 		{
 			"prompt":"They ___ yesterday.",
 			"optionA":"did met",
@@ -230,7 +230,7 @@
 		}
 	},
 	{
-	"question":
+	"task":
 		{
 			"prompt":"___ in the sea in Greece?",
 			"optionA":"Does she swam",
@@ -240,7 +240,7 @@
 		}
 	},
 	{
-	"question":
+	"task":
 		{
 			"prompt":"We ___ tennis yesterday because it was raining.",
 			"optionA":"didn't play",
@@ -250,7 +250,7 @@
 		}
 	},
 	{
-	"question":
+	"task":
 		{
 			"prompt":"He ___ to lift the box but he couldn't.",
 			"optionA":"tryed",
@@ -260,7 +260,7 @@
 		}
 	},
 	{
-	"question":
+	"task":
 		{
 			"prompt":"What ___ for lunch?",
 			"optionA":"did you ate",

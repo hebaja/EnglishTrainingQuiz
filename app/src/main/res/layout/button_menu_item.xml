@@ -15,7 +15,7 @@
         android:layout_height="match_parent">
 
         <TextView
-            android:id="@+id/chosen_option_warning_textview"
+            android:id="@+id/quiz_chosen_option_warning_textview"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textColor="@color/textColorPrimary"
@@ -24,7 +24,7 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            tools:text="@sample/options.json/options/prompt" />
+            tools:text="@sample/subjects.json/options/prompt" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 

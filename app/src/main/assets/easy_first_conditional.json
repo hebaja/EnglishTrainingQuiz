@@ -1,6 +1,6 @@
 [
 	{
-	"question":
+	"task":
 		{
 			"prompt":"If you ____ greasy food, you will become fat.",
 			"optionA":"eat",
@@ -10,7 +10,7 @@
 		}
 	},
 	{
-	"question":
+	"task":
 		{
 			"prompt":"If your sister goes to Paris, she ____ a good time.",
 			"optionA":"has",
@@ -20,7 +20,7 @@
 		}
 	},
 	{
-	"question":
+	"task":
 		{
 			"prompt":"If he ____ that, he will be sorry.",
 			"optionA":"do",
@@ -30,7 +30,7 @@
 		}
 	},
 	{
-	"question":
+	"task":
 		{
 			"prompt":"If I leave now, I ____ in New York by 8:00 PM.",
 			"optionA":"will arrive",
@@ -40,7 +40,7 @@
 		}
 	},
 	{
-	"question":
+	"task":
 		{
 			"prompt":"You ____ on your test if you don't study.",
 			"optionA":"won't do well",
@@ -50,7 +50,7 @@
 		}
 	},
 	{
-	"question":
+	"task":
 		{
 			"prompt":"They won't know the truth if you ____ them.",
 			"optionA":"won't tell",
@@ -60,7 +60,7 @@
 		}
 	},
 	{
-	"question":
+	"task":
 		{
 			"prompt":"If I bake a cake, ____ have some?",
 			"optionA":"you will",
@@ -70,7 +70,7 @@
 		}
 	},
 	{
-	"question":
+	"task":
 		{
 			"prompt":"If he ____ you, will you answer the phone?",
 			"optionA":"will call",
@@ -80,7 +80,7 @@
 		}
 	},
 	{
-	"question":
+	"task":
 		{
 			"prompt":"If you don't go to the party, I ____ very upset.",
 			"optionA":"am",
@@ -90,7 +90,7 @@
 		}
 	},
 	{
-	"question":
+	"task":
 		{
 			"prompt":"If you get a haircut, you ____ much better.",
 			"optionA":"will look",
@@ -100,7 +100,7 @@
 		}
 	},
 	{
-	"question":
+	"task":
 		{
 			"prompt":"If the children noisy, I ____ them to be quiet.",
 			"optionA":"will tell",
@@ -110,7 +110,7 @@
 		}
 	},
 	{
-	"question":
+	"task":
 		{
 			"prompt":"We ____ if they offer us a free meal.",
 			"optionA":"don't say no",
@@ -120,7 +120,7 @@
 		}
 	},
 	{
-	"question":
+	"task":
 		{
 			"prompt":"The bird ____ any closer if you keep making noise.",
 			"optionA":"fly",
@@ -130,7 +130,7 @@
 		}
 	},
 	{
-	"question":
+	"task":
 		{
 			"prompt":"If they fix my car, I ____ to Arizona.",
 			"optionA":"drive",
@@ -140,7 +140,7 @@
 		}
 	},
 	{
-	"question":
+	"task":
 		{
 			"prompt":"You will break it if ____ banging it against the floor.",
 			"optionA":"you keep",
@@ -150,7 +150,7 @@
 		}
 	},
 	{
-	"question":
+	"task":
 		{
 			"prompt":"If I ____ him adopt the kitten, he will be very sad.",
 			"optionA":"won't let",
@@ -160,7 +160,7 @@
 		}
 	},
 	{
-	"question":
+	"task":
 		{
 			"prompt":"If I give you a letter, ____ mail it for me?",
 			"optionA":"do you",
@@ -170,7 +170,7 @@
 		}
 	},
 	{
-	"question":
+	"task":
 		{
 			"prompt":"Will you fix the door if I ____ the right tools?",
 			"optionA":"get",
@@ -180,7 +180,7 @@
 		}
 	},
 	{
-	"question":
+	"task":
 		{
 			"prompt":"If the weather doesn't get cooler, I ____ an air conditioner.",
 			"optionA":"don't buy",
@@ -190,7 +190,7 @@
 		}
 	},
 	{
-	"question":
+	"task":
 		{
 			"prompt":"I will wash the dishes if you ________ the bathroom.",
 			"optionA":"will clean",

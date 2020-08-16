@@ -1,6 +1,6 @@
 [
 	{
-	"question":
+	"task":
 		{
 			"prompt":"That's the very ___ offer after losing the book.",
 			"optionA":"least she could",
@@ -10,7 +10,7 @@
 		}
 	},
 	{
-	"question":
+	"task":
 		{
 			"prompt":"___ as I hate to do this, we'll have to cancel the party",
 			"optionA":"more",
@@ -20,7 +20,7 @@
 		}
 	},
 	{
-	"question":
+	"task":
 		{
 			"prompt":"Above ___ her priority is to finish her degree course.",
 			"optionA":"any",
@@ -30,7 +30,7 @@
 		}
 	},
 	{
-	"question":
+	"task":
 		{
 			"prompt":"Paul doesn't have many friends, just a select ___.",
 			"optionA":"few",
@@ -40,7 +40,7 @@
 		}
 	},
 	{
-	"question":
+	"task":
 		{
 			"prompt":"___ way, they're going to close the deal.",
 			"optionA":"Both",
@@ -50,7 +50,7 @@
 		}
 	},
 	{
-	"question":
+	"task":
 		{
 			"prompt":"Polo is a sport that is associated with ___ rich and powerful.",
 			"optionA":"some",
@@ -60,7 +60,7 @@
 		}
 	},
 	{
-	"question":
+	"task":
 		{
 			"prompt":"There was ___ a time when I had to help him.",
 			"optionA":"many",
@@ -70,7 +70,7 @@
 		}
 	},
 	{
-	"question":
+	"task":
 		{
 			"prompt":"I've had ___ of his complaints.",
 			"optionA":"every",
@@ -80,7 +80,7 @@
 		}
 	},
 	{
-	"question":
+	"task":
 		{
 			"prompt":"We had many candidates, but ___ was good for the position.",
 			"optionA":"much of them",
@@ -90,7 +90,7 @@
 		}
 	},
 	{
-	"question":
+	"task":
 		{
 			"prompt":"That country has two official languages, but ___ is English.",
 			"optionA":"neither of them",
@@ -100,7 +100,7 @@
 		}
 	},
 	{
-	"question":
+	"task":
 		{
 			"prompt":"They cost 2 dollars ___.",
 			"optionA":"either",
@@ -110,27 +110,27 @@
 		}
 	},
 	{
-	"question":
+	"task":
 		{
 			"prompt":"___ argument could move ___ man from this decision.",
-			"optionA":"Each ",
-			"optionB":" all",
-			"optionC":"No ",
-			"rightOption":" neither"
+			"optionA":"Each / all",
+			"optionB":"No / neither",
+			"optionC":"No / either ",
+			"rightOption":"c"
 		}
 	},
 	{
-	"question":
+	"task":
 		{
 			"prompt":"___ Peter ___ Michael often come here but ___ of them help us.",
-			"optionA":"Both ",
-			"optionB":" and ",
-			"optionC":" neither",
-			"rightOption":"Both "
+			"optionA":"Both / and / neither ",
+			"optionB":"Both / and / either",
+			"optionC":"Neither / nor / both",
+			"rightOption":"a"
 		}
 	},
 	{
-	"question":
+	"task":
 		{
 			"prompt":"He gave ___ of us advice about our present goals.",
 			"optionA":"every",
@@ -140,17 +140,17 @@
 		}
 	},
 	{
-	"question":
+	"task":
 		{
 			"prompt":"___ players played well; In fact they ___ played quite badly.",
-			"optionA":"neither of ",
-			"optionB":" both",
-			"optionC":"neither of the ",
-			"rightOption":" all"
+			"optionA":"neither of / both",
+			"optionB":"neither of the / all",
+			"optionC":"none of the / all",
+			"rightOption":"c"
 		}
 	},
 	{
-	"question":
+	"task":
 		{
 			"prompt":"There were ___ on the beach, so we weren't completely alone.",
 			"optionA":"a few",
@@ -160,17 +160,17 @@
 		}
 	},
 	{
-	"question":
+	"task":
 		{
-			"prompt":"___ the m were tired, because ___ the m had slept well.",
-			"optionA":"None of ",
-			"optionB":" either of",
-			"optionC":"Both of ",
-			"rightOption":" neither of"
+			"prompt":"___ them were tired, because ___ them had slept well.",
+			"optionA":"None of / either of",
+			"optionB":"Both of / neither of",
+			"optionC":"Either of / none of",
+			"rightOption":"b"
 		}
 	},
 	{
-	"question":
+	"task":
 		{
 			"prompt":"We should have a check up with the dentist ___ six months.",
 			"optionA":"all",
