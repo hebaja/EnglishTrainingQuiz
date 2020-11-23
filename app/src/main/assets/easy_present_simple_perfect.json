@@ -23,9 +23,9 @@
 	"task":
 		{
 			"prompt":"The last time Claire went on holiday was five years ago.",
-			"optionA":"Claire hasn't been on holiday for five years.",
+			"optionA":"Claire haven't been on holiday for five years.",
 			"optionB":"Claire wasn't on holiday for five years.",
-			"optionC":"Claire haven't been on holiday for five years.",
+			"optionC":"Claire hasn't been on holiday for five years.",
 			"rightOption":"c"
 		}
 	},

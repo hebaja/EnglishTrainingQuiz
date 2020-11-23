@@ -29,7 +29,7 @@ public class AboutScreenTest {
     }
 
     @Test
-    public void shouldDisplayViews_whenAboutFragmentIsLaunched(){
-        onView(withId(R.id.about_page_prompt)).check(matches(isDisplayed()));
+    public void shouldLoadAboutPageContainer_whenAboutPageFragmentIsLaunched() {
+        onView(withId(R.id.about_page_parent)).check(matches(isDisplayed()));
     }
 }

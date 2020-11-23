@@ -39,17 +39,20 @@ public class DestinationChangedListener {
             switch (destination.getId()) {
                 case R.id.menuLevels:
                 case R.id.quiz:
+                case R.id.menuSubjects:
                     configureTitleAndBackCallback(destination, true);
+                    configureNavigationVisibilityFinalScore(fromBottom);
                     break;
                 case R.id.finalScore:
                     configureNavigationVisibilityFinalScore(fromBottom);
                     configureTitleAndBackCallback(destination, true);
                     break;
-                case R.id.menuSubjects:
-                    configureTitleAndBackCallback(destination, false);
-                    break;
+//                case R.id.menuSubjects:
+//                    configureTitleAndBackCallback(destination, false);
+//                    break;
                 case R.id.feedback:
                 case R.id.aboutPage:
+                case R.id.averages:
                     configureTitleAndBackCallback(destination, false);
                     buttonQuit.setVisibility(INVISIBLE);
                     buttonQuit.startAnimation(toBottom);

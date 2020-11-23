@@ -52,7 +52,7 @@
 	{
 	"task":
 		{
-			"prompt":"6) I ___ a good book at the moment.",
+			"prompt":"I ___ a good book at the moment.",
 			"optionA":"read",
 			"optionB":"reads",
 			"optionC":"am reading",

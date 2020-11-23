@@ -49,7 +49,7 @@ public class FeedbackFragment extends Fragment {
     @Override
     public void onCreateOptionsMenu(@NonNull Menu menu, @NonNull MenuInflater inflater) {
         super.onCreateOptionsMenu(menu, inflater);
-        inflater.inflate(R.menu.send_feedback, menu);
+        inflater.inflate(R.menu.menu_options_send_feedback, menu);
     }
 
     @Override

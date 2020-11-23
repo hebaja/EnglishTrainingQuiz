@@ -72,7 +72,7 @@
 	{
 	"task":
 		{
-			"prompt":"We'll need to make sure the car is as ___ as a whistle",
+			"prompt":"We'll need to make sure the car is as ___ as a whistle.",
 			"optionA":"shiny",
 			"optionB":"clean",
 			"optionC":"bright",

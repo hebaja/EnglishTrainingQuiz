@@ -2,6 +2,8 @@ package br.com.hebaja.englishtrainingquizzes.ui.fragment;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;
+import android.view.Menu;
+import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
@@ -11,9 +13,12 @@ import android.widget.Toast;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
+import androidx.navigation.NavController;
+import androidx.navigation.Navigation;
 
 import java.util.List;
 
+import br.com.hebaja.englishtrainingquizzes.OptionsMenuConfigure;
 import br.com.hebaja.englishtrainingquizzes.R;
 import br.com.hebaja.englishtrainingquizzes.daos.SubjectDAO;
 import br.com.hebaja.englishtrainingquizzes.model.Subject;
@@ -27,10 +32,12 @@ public class MenuSubjectsFragment extends Fragment {
 
     private List<Subject> subjects;
     private Integer levelKey;
+    private NavController controller;
 
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        setHasOptionsMenu(true);
 
         assert getArguments() != null;
         this.levelKey = MenuSubjectsFragmentArgs.fromBundle(getArguments()).getKey();
@@ -62,11 +69,20 @@ public class MenuSubjectsFragment extends Fragment {
         super.onViewCreated(view, savedInstanceState);
         ListView subjectsList = view.findViewById(R.id.list_buttons_subjects_list_view);
         subjectsList.setAdapter(new SubjectsListAdapter(subjects, levelKey, getContext()));
+        controller = Navigation.findNavController(view);
+    }
+
+    @Override
+    public void onCreateOptionsMenu(@NonNull Menu menu, @NonNull MenuInflater inflater) {
+        super.onCreateOptionsMenu(menu, inflater);
+        inflater.inflate(R.menu.main_options_menu, menu);
     }
 
     @Override
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
-        Toast.makeText(getContext(), "clicado", Toast.LENGTH_SHORT).show();
+        OptionsMenuConfigure optionsMenuConfigure = new OptionsMenuConfigure(item, controller);
+        optionsMenuConfigure.configureOptionsMenuItems();
+
         return super.onOptionsItemSelected(item);
     }
 }

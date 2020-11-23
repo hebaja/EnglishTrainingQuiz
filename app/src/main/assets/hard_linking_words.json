@@ -82,7 +82,7 @@
 	{
 	"task":
 		{
-			"prompt":"The mirror was curved, ___ it made objects look farther",
+			"prompt":"The mirror was curved, ___ it made objects look farther.",
 			"optionA":"still",
 			"optionB":"since",
 			"optionC":"thus",

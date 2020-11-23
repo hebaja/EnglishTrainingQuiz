@@ -1,42 +1,49 @@
 package br.com.hebaja.englishtrainingquizzes.ui.views;
 
-import android.os.Build;
 import android.view.View;
 import android.widget.Button;
-import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AlertDialog;
-import androidx.cardview.widget.CardView;
 import androidx.fragment.app.FragmentActivity;
+import androidx.lifecycle.LifecycleOwner;
+import androidx.lifecycle.ViewModelProvider;
 import androidx.navigation.NavController;
 import androidx.navigation.Navigation;
 
 import java.util.List;
 
 import br.com.hebaja.englishtrainingquizzes.R;
+import br.com.hebaja.englishtrainingquizzes.model.ButtonNext;
 import br.com.hebaja.englishtrainingquizzes.model.Task;
+import br.com.hebaja.englishtrainingquizzes.model.WarningView;
 import br.com.hebaja.englishtrainingquizzes.ui.dialog.AppDialog;
 import br.com.hebaja.englishtrainingquizzes.ui.fragment.QuizFragmentDirections;
+import br.com.hebaja.englishtrainingquizzes.ui.viewmodel.ButtonNextViewModel;
+import br.com.hebaja.englishtrainingquizzes.ui.viewmodel.PositionViewModel;
+import br.com.hebaja.englishtrainingquizzes.ui.viewmodel.ScoreViewModel;
+import br.com.hebaja.englishtrainingquizzes.ui.viewmodel.WarningViewModel;
 
+import static br.com.hebaja.englishtrainingquizzes.Constants.ADD_NO_POINT;
+import static br.com.hebaja.englishtrainingquizzes.Constants.ADD_ONE_POINT;
 import static br.com.hebaja.englishtrainingquizzes.Constants.CANCEL_ANSWER_CONSTANT;
-import static br.com.hebaja.englishtrainingquizzes.Constants.FINAL_SCORE;
+import static br.com.hebaja.englishtrainingquizzes.Constants.GET_POSITION;
 import static br.com.hebaja.englishtrainingquizzes.Constants.GO_TO_MAIN_MENU_ANSWER_CONSTANT;
 import static br.com.hebaja.englishtrainingquizzes.Constants.GO_TO_MAIN_MENU_DIALOG_QUESTION_CONSTANT;
-import static br.com.hebaja.englishtrainingquizzes.Constants.NEXT_QUESTION;
 import static br.com.hebaja.englishtrainingquizzes.Constants.OPTION_POSITION_A;
 import static br.com.hebaja.englishtrainingquizzes.Constants.OPTION_POSITION_B;
 import static br.com.hebaja.englishtrainingquizzes.Constants.OPTION_POSITION_C;
 import static br.com.hebaja.englishtrainingquizzes.Constants.RIGHT_ANSWER;
+import static br.com.hebaja.englishtrainingquizzes.Constants.UPDATE_POSITION;
 import static br.com.hebaja.englishtrainingquizzes.Constants.WRONG_ANSWER;
 import static br.com.hebaja.englishtrainingquizzes.ui.fragment.QuizFragmentDirections.actionQuizToFinalScore;
 
 public class BuilderQuizFragmentViews {
 
     private final List<Task> tasks;
-
     private final FragmentActivity mainActivity;
+    private final LifecycleOwner viewLifecycleOwner;
 
     private TextView textViewQuestion;
     private TextView scoreView;
@@ -44,11 +51,10 @@ public class BuilderQuizFragmentViews {
     private Button buttonOptionB;
     private Button buttonOptionC;
     private Button buttonBackToMainMenu;
-    private CardView buttonNext;
-    private TextView buttonNextTextView;
-    private View chosenOptionWarning;
-    private ImageView chosenOptionWarningView;
-    private TextView chosenOptionWarningTextView;
+
+    private ButtonNext buttonNext = new ButtonNext();
+
+    private WarningView chosenOptionWarning = new WarningView();
 
     private String optionPositionA;
     private String optionPositionB;
@@ -60,9 +66,10 @@ public class BuilderQuizFragmentViews {
 
     private int position;
 
-    public BuilderQuizFragmentViews(List<Task> tasks, FragmentActivity activity) {
+    public BuilderQuizFragmentViews(List<Task> tasks, FragmentActivity activity, LifecycleOwner viewLifecycleOwner) {
         this.tasks = tasks;
         this.mainActivity = activity;
+        this.viewLifecycleOwner = viewLifecycleOwner;
     }
 
     public void initializeViews(@NonNull View view) {
@@ -71,15 +78,43 @@ public class BuilderQuizFragmentViews {
         buttonOptionA = view.findViewById(R.id.quiz_button_option_a);
         buttonOptionB = view.findViewById(R.id.quiz_button_option_b);
         buttonOptionC = view.findViewById(R.id.quiz_button_option_c);
-        buttonNext = view.findViewById(R.id.quiz_next_clickable_cardview);
-        chosenOptionWarning = view.findViewById(R.id.quiz_chosen_option_warning);
-        chosenOptionWarningView = view.findViewById(R.id.quiz_chosen_option_warning_view);
-        chosenOptionWarningTextView = view.findViewById(R.id.quiz_chosen_option_warning_textview);
-        buttonNextTextView = view.findViewById(R.id.quiz_next_clickable_cardview_textview);
         buttonBackToMainMenu = view.findViewById(R.id.quiz_button_back_to_menu);
+
+        buttonNext.setCardView(view.findViewById(R.id.quiz_next_clickable_cardview));
+        buttonNext.setTextView(view.findViewById(R.id.quiz_next_clickable_cardview_textview));
+
+        chosenOptionWarning.setCardView(view.findViewById(R.id.quiz_chosen_option_warning));
+        chosenOptionWarning.setImageView(view.findViewById(R.id.quiz_chosen_option_warning_view));
+        chosenOptionWarning.setTextView(view.findViewById(R.id.quiz_chosen_option_warning_textview));
+
+        fetchScore(ADD_NO_POINT);
+        fetchPosition(GET_POSITION);
+
+        ButtonNextViewModel buttonNextViewModel = new ViewModelProvider(mainActivity).get(ButtonNextViewModel.class);
+        buttonNextViewModel.getState().observe(viewLifecycleOwner, buttonNextState -> {
+            if (!(buttonNextState == null)) {
+                buttonNext.getCardView().setVisibility(buttonNextState.getCardView().getVisibility());
+                buttonNext.getTextView().setText(buttonNextState.getTextView().getText());
+            }
+        });
+
+        WarningViewModel warningViewModel = new ViewModelProvider(mainActivity).get(WarningViewModel.class);
+        warningViewModel.getState().observe(viewLifecycleOwner, chosenOptionWarningState -> {
+            if(!(chosenOptionWarningState == null)) {
+                chosenOptionWarning.getImageView().setImageResource(chosenOptionWarningState.getImageRes());
+                chosenOptionWarning.getImageView().setTag(chosenOptionWarningState.getImageView().getTag());
+                chosenOptionWarning.getTextView().setText(chosenOptionWarningState.getTextView().getText());
+                chosenOptionWarning.getCardView().setVisibility(chosenOptionWarningState.getCardView().getVisibility());
+                chosenOptionWarning.getTextView().setTextColor(chosenOptionWarningState.getTextView().getCurrentTextColor());
+            }
+        });
+
+        if(buttonNext.getCardView().isShown() && chosenOptionWarning.getCardView().isShown()) {
+            disableAllButtons();
+        }
     }
 
-    public void setButtons(View view, int chosenLevel) {
+    public void setButtons(View view, int chosenLevel, int chosenSubject) {
         buttonOptionA.setOnClickListener(v -> configureButtonOption(optionPositionA));
         buttonOptionB.setOnClickListener(v -> configureButtonOption(optionPositionB));
         buttonOptionC.setOnClickListener(v -> configureButtonOption(optionPositionC));
@@ -89,14 +124,22 @@ public class BuilderQuizFragmentViews {
             alertDialog.show();
         });
 
-        buttonNext.setOnClickListener(v -> {
-            updateQuizFragmentOrGoToFinalActivity(view, chosenLevel, chosenLevel);
+        buttonNext.getCardView().setOnClickListener(v -> {
+            fetchPosition(UPDATE_POSITION);
+            updateQuizFragmentOrGoToFinalScoreFragment(view, chosenLevel, chosenSubject);
             enableAllButtons();
-            buttonNext.setVisibility(View.INVISIBLE);
-            chosenOptionWarning.setVisibility(View.INVISIBLE);
+
+            ButtonNextViewModel buttonNextViewModel = new ViewModelProvider(mainActivity).get(ButtonNextViewModel.class);
+            buttonNextViewModel.setVisibilityState(buttonNext).observe(viewLifecycleOwner, buttonNextState -> {
+                buttonNext = buttonNextState;
+            });
+
+            WarningViewModel warningViewModel = new ViewModelProvider(mainActivity).get(WarningViewModel.class);
+            warningViewModel.setVisibilityState(chosenOptionWarning).observe(viewLifecycleOwner, chosenOptionWarningState -> {
+                chosenOptionWarning = chosenOptionWarningState;
+            });
         });
     }
-
 
     private void configureButtonOption(String chosenOptionButton) {
         if (chosenOptionButton.equals(rightAnswer)) {
@@ -104,59 +147,63 @@ public class BuilderQuizFragmentViews {
         } else {
             doWhenChosenOptionIsWrong();
         }
-        configureNextButton(buttonNext, buttonNextTextView);
+        configureNextButton();
     }
 
-    private void configureNextButton(CardView buttonNext, TextView buttonNextTextView) {
-        buttonNext.setTag(R.drawable.next_circle_outline);
-        if (position < 10) {
-            buttonNextTextView.setText(NEXT_QUESTION);
-        } else {
-            buttonNextTextView.setText(FINAL_SCORE);
-        }
+    private void configureNextButton() {
+
+        ButtonNextViewModel buttonNextViewModel = new ViewModelProvider(mainActivity).get(ButtonNextViewModel.class);
+        buttonNextViewModel.setState(buttonNext, position).observe(viewLifecycleOwner, buttonNextState -> {
+            buttonNext = buttonNextState;
+        });
     }
 
     private void doWhenChosenOptionIsCorrect() {
-        score++;
-        position++;
+        fetchScore(ADD_ONE_POINT);
         updateScore(score);
-        buttonNext.setVisibility(View.VISIBLE);
-        disableAllButtonsAndSetNextButtonTag();
-        chosenOptionWarningView.setImageResource(R.drawable.right_answer_circle_outline);
-        chosenOptionWarningView.setTag(R.drawable.right_answer_circle_outline);
-        chosenOptionWarningTextView.setText(RIGHT_ANSWER);
-        setColorOfTextView(R.color.colorGreenRightAnswer);
-        chosenOptionWarning.setVisibility(View.VISIBLE);
+        buttonNext.getCardView().setVisibility(View.VISIBLE);
+        disableAllButtons();
+        fetchOptionsWarningView(R.drawable.right_answer_circle_outline, R.drawable.right_answer_circle_outline, RIGHT_ANSWER, R.color.colorGreenRightAnswer);
     }
 
     private void doWhenChosenOptionIsWrong() {
-        position++;
-        buttonNext.setVisibility(View.VISIBLE);
-        disableAllButtonsAndSetNextButtonTag();
-        chosenOptionWarningView.setImageResource(R.drawable.wrong_answer_circle_outline);
-        chosenOptionWarningView.setTag(R.drawable.wrong_answer_circle_outline);
-        chosenOptionWarningTextView.setText(WRONG_ANSWER);
-        setColorOfTextView(R.color.colorRedWrongAnswer);
-        chosenOptionWarning.setVisibility(View.VISIBLE);
+        fetchScore(ADD_NO_POINT);
+        buttonNext.getCardView().setVisibility(View.VISIBLE);
+        disableAllButtons();
+        fetchOptionsWarningView(R.drawable.wrong_answer_circle_outline, R.drawable.wrong_answer_circle_outline, WRONG_ANSWER, R.color.colorRedWrongAnswer);
     }
 
-    private void setColorOfTextView(int color) {
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
-            chosenOptionWarningTextView.setTextColor(mainActivity.getColor(color));
-        }
+    private void fetchOptionsWarningView(int imageRes, int tag, String answer, int color) {
+        WarningViewModel warningViewModel = new ViewModelProvider(mainActivity).get(WarningViewModel.class);
+        warningViewModel.setState(chosenOptionWarning, imageRes, tag, answer, color).observe(viewLifecycleOwner, chosenOptionWarningState -> {
+            chosenOptionWarning = chosenOptionWarningState;
+        });
+    }
+
+    private void fetchScore(int response) {
+        ScoreViewModel scoreViewModel = new ViewModelProvider(mainActivity).get(ScoreViewModel.class);
+        scoreViewModel.request(response).observe(viewLifecycleOwner, scoreState -> {
+            this.score = scoreState;
+        });
+    }
+
+    private void fetchPosition(int response) {
+        PositionViewModel positionViewModel = new ViewModelProvider(mainActivity).get(PositionViewModel.class);
+        positionViewModel.getPosition(response).observe(viewLifecycleOwner, positionState -> {
+            this.position = positionState;
+        });
     }
 
     private void updateScore(int score) {
         scoreView.setText(String.valueOf(score));
     }
 
-    private void updateQuizFragmentOrGoToFinalActivity(View view, int chosenLevel, int chosenOption) {
+    private void updateQuizFragmentOrGoToFinalScoreFragment(View view, int chosenLevel, int chosenSubject) {
         if (tasks.size() > position) {
             updateTaskViews();
             updatePosition();
-        }
-        else {
-            goToFinalScoreFragment(view, chosenLevel, chosenOption);
+        } else {
+            goToFinalScoreFragment(view, chosenLevel, chosenSubject);
         }
     }
 
@@ -178,13 +225,33 @@ public class BuilderQuizFragmentViews {
     }
 
     private void goToFinalScoreFragment(View view, int chosenLevel, int chosenSubject) {
-        disableAllButtonsAndSetNextButtonTag();
+        disableAllButtons();
         NavController controller = Navigation.findNavController(view);
         QuizFragmentDirections.ActionQuizToFinalScore directions = actionQuizToFinalScore(score, chosenLevel, chosenSubject);
         controller.navigate(directions);
+        resetViewStates();
     }
 
-    private void disableAllButtonsAndSetNextButtonTag() {
+    private void resetViewStates() {
+        resetScoreState();
+        resetPositionState();
+    }
+
+    private void resetPositionState() {
+        PositionViewModel positionViewModel = new ViewModelProvider(mainActivity).get(PositionViewModel.class);
+        positionViewModel.reset().observe(viewLifecycleOwner, positionState -> {
+            position = positionState;
+        });
+    }
+
+    private void resetScoreState() {
+        ScoreViewModel scoreViewModel = new ViewModelProvider(mainActivity).get(ScoreViewModel.class);
+        scoreViewModel.reset().observe(viewLifecycleOwner, scoreState -> {
+            score = scoreState;
+        });
+    }
+
+    private void disableAllButtons() {
         buttonOptionA.setEnabled(false);
         buttonOptionB.setEnabled(false);
         buttonOptionC.setEnabled(false);

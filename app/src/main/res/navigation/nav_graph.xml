@@ -71,20 +71,6 @@
             app:destination="@id/quiz"
             app:enterAnim="@anim/from_left"
             app:exitAnim="@anim/to_right" />
-        <action
-            android:id="@+id/action_finalScore_to_feedback"
-            app:destination="@id/feedback"
-            app:enterAnim="@anim/from_right"
-            app:exitAnim="@anim/to_left"
-            app:popEnterAnim="@anim/from_left"
-            app:popExitAnim="@anim/to_right" />
-        <action
-            android:id="@+id/action_finalScore_to_aboutPage"
-            app:destination="@id/aboutPage"
-            app:enterAnim="@anim/from_right"
-            app:exitAnim="@anim/to_left"
-            app:popEnterAnim="@anim/from_left"
-            app:popExitAnim="@anim/to_right" />
     </fragment>
     <action
         android:id="@+id/action_global_menuLevels"
@@ -106,4 +92,44 @@
         android:name="br.com.hebaja.englishtrainingquizzes.ui.fragment.AboutPageFragment"
         android:label="About"
         tools:layout="@layout/about_page"/>
+    <fragment
+        android:id="@+id/averages"
+        android:name="br.com.hebaja.englishtrainingquizzes.ui.fragment.AveragesFragment"
+        android:label="Averages"
+        tools:layout="@layout/averages_page"/>
+    <fragment
+        android:id="@+id/login"
+        android:label="Login"
+        android:name="br.com.hebaja.englishtrainingquizzes.ui.fragment.LoginFragment"
+        tools:layout="@layout/login">
+        <action
+            android:id="@+id/action_login_to_menuLevels"
+            app:destination="@id/menuLevels"
+            app:enterAnim="@anim/from_right"
+            app:exitAnim="@anim/to_left"
+            app:popEnterAnim="@anim/from_left"
+            app:popExitAnim="@anim/to_right"
+            app:popUpToInclusive="false" />
+    </fragment>
+    <action
+        android:id="@+id/action_global_feedback"
+        app:destination="@id/feedback"
+        app:enterAnim="@anim/from_right"
+        app:exitAnim="@anim/to_left"
+        app:popEnterAnim="@anim/from_left"
+        app:popExitAnim="@anim/to_right" />
+    <action
+        android:id="@+id/action_global_aboutPage"
+        app:destination="@id/aboutPage"
+        app:enterAnim="@anim/from_right"
+        app:exitAnim="@anim/to_left"
+        app:popEnterAnim="@anim/from_left"
+        app:popExitAnim="@anim/to_right" />
+    <action
+        android:id="@+id/action_global_averages"
+        app:destination="@id/averages"
+        app:enterAnim="@anim/from_right"
+        app:exitAnim="@anim/to_left"
+        app:popEnterAnim="@anim/from_left"
+        app:popExitAnim="@anim/to_right" />
 </navigation>

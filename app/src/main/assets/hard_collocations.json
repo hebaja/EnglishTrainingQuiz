@@ -62,7 +62,7 @@
 	{
 	"task":
 		{
-			"prompt":"I'd been in ___ with toothache all weekend",
+			"prompt":"I'd been in ___ with toothache all weekend.",
 			"optionA":"excruciating pain",
 			"optionB":"agonizing pain",
 			"optionC":"maddening pain",
@@ -72,7 +72,7 @@
 	{
 	"task":
 		{
-			"prompt":"I was ___ his incompetence to my manager",
+			"prompt":"I was ___ his incompetence to my manager.",
 			"optionA":"highly tempted to report",
 			"optionB":"sorely tempted to report",
 			"optionC":"greatly tempted to report",

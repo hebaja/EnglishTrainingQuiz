@@ -2,12 +2,15 @@ package br.com.hebaja.englishtrainingquizzes.ui.activity;
 
 import android.os.Build;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 
 import androidx.activity.OnBackPressedCallback;
+import androidx.annotation.NonNull;
 import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.fragment.app.Fragment;
 import androidx.navigation.NavController;
 import androidx.navigation.Navigation;
 
@@ -36,8 +39,13 @@ public class MainActivity extends AppCompatActivity {
         Button buttonQuit = findViewById(R.id.main_activity_button_quit);
         buttonQuit.setOnClickListener(view -> configureQuitDialog());
 
-        DestinationChangedListener destinationChangedListener = new DestinationChangedListener(navController, backPressedCallback, buttonQuit, this);
+        DestinationChangedListener destinationChangedListener = new DestinationChangedListener(
+                navController,
+                backPressedCallback,
+                buttonQuit,
+                this);
         destinationChangedListener.configureDestinationChangedListener();
+
     }
 
     private void configureBackPressedCallback() {
@@ -54,4 +62,5 @@ public class MainActivity extends AppCompatActivity {
         View view = findViewById(R.id.main_activity_parent).getRootView();
         new AppDialog(this, view, QUIT_DIALOG_QUESTION_CONSTANT, QUIT_ANSWER_CONSTANT, CANCEL_ANSWER_CONSTANT).buildDialog().show();
     }
+
 }

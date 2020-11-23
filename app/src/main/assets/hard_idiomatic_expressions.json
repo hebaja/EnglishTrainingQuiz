@@ -82,7 +82,7 @@
 	{
 	"task":
 		{
-			"prompt":"finishing in time was ___ but we did it.",
+			"prompt":"Finishing in time was ___ but we did it.",
 			"optionA":"a long order",
 			"optionB":"a big order",
 			"optionC":"a tall order",
@@ -92,7 +92,7 @@
 	{
 	"task":
 		{
-			"prompt":"The way kids behave in this school is ___",
+			"prompt":"The way kids behave in this school is ___.",
 			"optionA":"beyond the pale",
 			"optionB":"beyond the bleached",
 			"optionC":"beyond the white",

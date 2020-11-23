@@ -1,0 +1,34 @@
+{
+  averages: [
+    {
+      subject: "Comparative and superlative",
+      level: "EASY",
+      average: "5.5"
+    },
+    {
+      subject: "Active and passive voices",
+      level: "MEDIUM",
+      average: "8.5"
+    },
+    {
+      subject: "Similes",
+      level: "HARD",
+      average: "4.0"
+    },
+    {
+      subject: "Phrasal verbs",
+      level: "MEDIUM",
+      average: "9.2"
+    },
+    {
+      subject: "Verb to be",
+      level: "EASY",
+      average: "9.0"
+    },
+    {
+      subject: "Linking words",
+      level: "HARD",
+      average: "6.3"
+    }
+  ]
+}

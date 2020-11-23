@@ -14,7 +14,7 @@
         android:fontFamily="@font/allerta"
         android:text="@string/menu_subjects_prompt"
         android:textColor="@color/textColorPrimary"
-        android:textSize="18sp"
+        android:textSize="22sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />

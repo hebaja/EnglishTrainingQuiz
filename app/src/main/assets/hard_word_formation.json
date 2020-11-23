@@ -22,7 +22,7 @@
 	{
 	"task":
 		{
-			"prompt":"The directive has the aim of ___ work practices",
+			"prompt":"The directive has the aim of ___ work practices.",
 			"optionA":"harmonysize",
 			"optionB":"harmonying",
 			"optionC":"harmonising",
@@ -102,8 +102,8 @@
 	{
 	"task":
 		{
-			"prompt":"It truly is an epic tale, ___ one of the best",
-			"optionA":"aguing",
+			"prompt":"It truly is an epic tale, ___ one of the best.",
+			"optionA":"arguing",
 			"optionB":"arguably",
 			"optionC":"arguable",
 			"rightOption":"b"
@@ -152,7 +152,7 @@
 	{
 	"task":
 		{
-			"prompt":"Putting out wildfires is a very  job.",
+			"prompt":"Putting out wildfires is a very ___ job.",
 			"optionA":"perilous",
 			"optionB":"imperil",
 			"optionC":"perily",

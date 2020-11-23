@@ -62,7 +62,7 @@
   {
     "task":
     {
-      "prompt": "Excuse me. ___ I answer the phone",
+      "prompt": "Excuse me. ___ I answer the phone.",
       "optionA": "Will",
       "optionB": "Would",
       "optionC": "May",
@@ -82,7 +82,7 @@
   {
     "task":
     {
-      "prompt": "It's late. This child ___ be in bed",
+      "prompt": "It's late. This child ___ be in bed.",
       "optionA": "ought to",
       "optionB": "could",
       "optionC": "will",
@@ -182,7 +182,7 @@
   {
     "task":
     {
-      "prompt": "Everybody ___ eat less junk food",
+      "prompt": "Everybody ___ eat less junk food.",
       "optionA": "should",
       "optionB": "can",
       "optionC": "might",

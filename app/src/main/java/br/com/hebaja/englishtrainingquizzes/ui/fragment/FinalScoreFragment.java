@@ -13,12 +13,11 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
-import androidx.lifecycle.LifecycleOwner;
-import androidx.lifecycle.Observer;
 import androidx.navigation.NavController;
 import androidx.navigation.NavDirections;
 import androidx.navigation.Navigation;
 
+import br.com.hebaja.englishtrainingquizzes.OptionsMenuConfigure;
 import br.com.hebaja.englishtrainingquizzes.R;
 
 import static br.com.hebaja.englishtrainingquizzes.ui.fragment.FinalScoreFragmentDirections.*;
@@ -69,20 +68,33 @@ public class FinalScoreFragment extends Fragment {
     @Override
     public void onCreateOptionsMenu(@NonNull Menu menu, @NonNull MenuInflater inflater) {
         super.onCreateOptionsMenu(menu, inflater);
-        inflater.inflate(R.menu.final_score_access_feedback, menu);
+        inflater.inflate(R.menu.main_options_menu, menu);
     }
 
     @Override
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
-        NavDirections directions;
-        if(item.getItemId() == R.id.menu_final_score_feedback) {
-            directions = actionFinalScoreToFeedback();
-            controller.navigate(directions);
-        }
-        if(item.getItemId() == R.id.menu_final_score_about) {
-            directions = FinalScoreFragmentDirections.actionFinalScoreToAboutPage();
-            controller.navigate(directions);
-        }
+
+        OptionsMenuConfigure optionsMenuConfigure = new OptionsMenuConfigure(item, controller);
+        optionsMenuConfigure.configureOptionsMenuItems();
+
         return super.onOptionsItemSelected(item);
     }
+
+//    private void configureOptionsMenuItems(@NonNull MenuItem item) {
+//        NavDirections directions;
+//
+//        if(item.getItemId() == R.id.menu_final_score_feedback) {
+//            directions = actionFinalScoreToFeedback();
+//            controller.navigate(directions);
+//        }
+//        if(item.getItemId() == R.id.menu_final_score_about) {
+//            directions = FinalScoreFragmentDirections.actionFinalScoreToAboutPage();
+//            controller.navigate(directions);
+//        }
+//        if(item.getItemId() == R.id.menu_averages) {
+//            directions = actionFinalScoreToAverages();
+//            controller.navigate(directions);
+//
+//        }
+//    }
 }

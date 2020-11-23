@@ -3,9 +3,9 @@
       "task":
         {
           "prompt": "I need to concentrate ___ my homework.",
-          "optionA": "a) at",
-          "optionB": "b) on",
-          "optionC": "c) of",
+          "optionA": "at",
+          "optionB": "on",
+          "optionC": "of",
           "rightOption": "b"
          }
    },
@@ -13,9 +13,9 @@
       "task":
         {
           "prompt": "He's really bad ___ cooking.",
-          "optionA": "a) at",
-          "optionB": "b) for",
-          "optionC": "c) with",
+          "optionA": "at",
+          "optionB": "for",
+          "optionC": "with",
           "rightOption": "a"
        }
    },
@@ -23,9 +23,9 @@
       "task":
         {
           "prompt": "I've always had difficulty ___ math.",
-          "optionA": "a) against",
-          "optionB": "b) from",
-          "optionC": "c) with",
+          "optionA": "against",
+          "optionB": "from",
+          "optionC": "with",
           "rightOption": "c"
        }
    },
@@ -33,9 +33,9 @@
          "task":
         {
           "prompt": "Mark applied ___ a scholarship.",
-          "optionA": "a) for",
-          "optionB": "b) on",
-          "optionC": "c) to",
+          "optionA": "for",
+          "optionB": "on",
+          "optionC": "to",
           "rightOption": "a"
        }
    },
@@ -43,9 +43,9 @@
          "task":
         {
           "prompt": "I'm incapable ___ playing sports.",
-          "optionA": "a) to",
-          "optionB": "b) about",
-          "optionC": "c) of",
+          "optionA": "to",
+          "optionB": "about",
+          "optionC": "of",
           "rightOption": "c"
        }
    },
@@ -53,9 +53,9 @@
           "task":
         {
           "prompt": "They have to work ___ this project.",
-          "optionA": "a) at",
-          "optionB": "b) on",
-          "optionC": "c) with",
+          "optionA": "at",
+          "optionB": "on",
+          "optionC": "with",
           "rightOption": "b"
        }
    },
@@ -63,9 +63,9 @@
          "task":
         {
           "prompt": "I need a moment to recover ___ the shock.",
-          "optionA": "a) from",
-          "optionB": "b) about",
-          "optionC": "c) against",
+          "optionA": "from",
+          "optionB": "about",
+          "optionC": "against",
           "rightOption": "a"
        }
    },
@@ -73,9 +73,9 @@
          "task":
         {
           "prompt": "These sneakers are not suitable ___ jogging.",
-          "optionA": "a) at",
-          "optionB": "b) for",
-          "optionC": "c) of",
+          "optionA": "at",
+          "optionB": "for",
+          "optionC": "of",
           "rightOption": "b"
        }
    },
@@ -83,9 +83,9 @@
            "task":
         {
           "prompt": "This book had a profound influence ___ me.",
-          "optionA": "a) at",
-          "optionB": "b) for",
-          "optionC": "c) on",
+          "optionA": "at",
+          "optionB": "for",
+          "optionC": "on",
           "rightOption": "c"
        }
    },
@@ -93,9 +93,9 @@
          "task":
         {
           "prompt": "I've always struggled ___ Physics at school.",
-          "optionA": "a) with",
-          "optionB": "b) on",
-          "optionC": "c) about",
+          "optionA": "with",
+          "optionB": "on",
+          "optionC": "about",
           "rightOption": "a"
        }
    },
@@ -103,9 +103,9 @@
          "task":
         {
           "prompt": "She asked ___ the condition of the house.",
-          "optionA": "a) about",
-          "optionB": "b) on",
-          "optionC": "c) in",
+          "optionA": "about",
+          "optionB": "on",
+          "optionC": "in",
           "rightOption": "a"
        }
    },
@@ -113,9 +113,9 @@
          "task":
         {
           "prompt": "I'm certain ___ it.",
-          "optionA": "a) at",
-          "optionB": "b) about",
-          "optionC": "c) in",
+          "optionA": "at",
+          "optionB": "about",
+          "optionC": "in",
           "rightOption": "b"
        }
    },
@@ -123,9 +123,9 @@
          "task":
         {
           "prompt": "The hotel has the advantage ___ being cheap.",
-          "optionA": "a) at",
-          "optionB": "b) on",
-          "optionC": "c) of",
+          "optionA": "at",
+          "optionB": "on",
+          "optionC": "of",
           "rightOption": "c"
        }
    },
@@ -133,9 +133,9 @@
          "task":
         {
           "prompt": "This town is specialized ___ receiving tourists.",
-          "optionA": "a) in",
-          "optionB": "b) on",
-          "optionC": "c) about",
+          "optionA": "in",
+          "optionB": "on",
+          "optionC": "about",
           "rightOption": "a"
        }
    },
@@ -143,9 +143,9 @@
          "task":
         {
           "prompt": "The event was crowded ___ young people.",
-          "optionA": "a) in",
-          "optionB": "b) on",
-          "optionC": "c) with",
+          "optionA": "in",
+          "optionB": "on",
+          "optionC": "with",
           "rightOption": "c"
        }
    },
@@ -153,9 +153,9 @@
            "task":
         {
           "prompt": "They deserve the credit ___ planning the trip.",
-          "optionA": "a) with",
-          "optionB": "b) for",
-          "optionC": "c) of",
+          "optionA": "with",
+          "optionB": "for",
+          "optionC": "of",
           "rightOption": "b"
        }
    },
@@ -163,9 +163,9 @@
            "task":
         {
           "prompt": "She just glanced ___ the newspaper.",
-          "optionA": "a) at",
-          "optionB": "b) on",
-          "optionC": "c) of",
+          "optionA": "at",
+          "optionB": "on",
+          "optionC": "of",
           "rightOption": "a"
        }
    },
@@ -173,9 +173,9 @@
            "task":
         {
           "prompt": "We were furious ___ the hotel manager.",
-          "optionA": "a) with",
-          "optionB": "b) against",
-          "optionC": "c) about",
+          "optionA": "with",
+          "optionB": "against",
+          "optionC": "about",
           "rightOption": "a"
        }
    },
@@ -183,9 +183,9 @@
            "task":
         {
           "prompt": "Everyone was surprised ___ the low prices.",
-          "optionA": "a) at",
-          "optionB": "b) in",
-          "optionC": "c) of",
+          "optionA": "at",
+          "optionB": "in",
+          "optionC": "of",
           "rightOption": "a"
        }
    },
@@ -193,9 +193,9 @@
            "task":
         {
           "prompt": "I trust ___ your ability.",
-          "optionA": "a) at",
-          "optionB": "b) on",
-          "optionC": "c) in",
+          "optionA": "at",
+          "optionB": "on",
+          "optionC": "in",
           "rightOption": "c"
        }
    }

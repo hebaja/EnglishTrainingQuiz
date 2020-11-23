@@ -3,9 +3,9 @@
     "task":
     {
       "prompt": "She hadn't bargained for this.",
-      "optionA": "a) She hadn't expected this.",
-      "optionB": "b) She hadn't bought this.",
-      "optionC": "c) She hadn't profited from this.",
+      "optionA": "She hadn't expected this.",
+      "optionB": "She hadn't bought this.",
+      "optionC": "She hadn't profited from this.",
       "rightOption": "a"
     }
   },
@@ -13,9 +13,9 @@
     "task":
     {
       "prompt": "It suddenly dawned on her.",
-      "optionA": "a) She suddenly turned the lights on.",
-      "optionB": "b) She suddenly realised.",
-      "optionC": "c) She was suddenly seen.",
+      "optionA": "She suddenly turned the lights on.",
+      "optionB": "She suddenly realised.",
+      "optionC": "She was suddenly seen.",
       "rightOption": "b"
     }
   },
@@ -23,9 +23,9 @@
     "task":
     {
       "prompt": "They talked it over.",
-      "optionA": "a) They discussed it.",
-      "optionB": "b) They talked a lot.",
-      "optionC": "c) They gossiped.",
+      "optionA": "They discussed it.",
+      "optionB": "They talked a lot.",
+      "optionC": "They gossiped.",
       "rightOption": "a"
     }
   },
@@ -33,9 +33,9 @@
     "task":
     {
       "prompt": "She did up her laces.",
-      "optionA": "a) She tied her laces.",
-      "optionB": "b) She painted her laces.",
-      "optionC": "c) She sewed her laces.",
+      "optionA": "She tied her laces.",
+      "optionB": "She painted her laces.",
+      "optionC": "She sewed her laces.",
       "rightOption": "a"
     }
   },
@@ -43,9 +43,9 @@
     "task":
     {
       "prompt": "He called on her.",
-      "optionA": "a) He telephoned her.",
-      "optionB": "b) He visited her.",
-      "optionC": "c) He blamed her.",
+      "optionA": "He telephoned her.",
+      "optionB": "He visited her.",
+      "optionC": "He blamed her.",
       "rightOption": "b"
     }
   },
@@ -53,9 +53,9 @@
     "task":
     {
       "prompt": "She made for the living room.",
-      "optionA": "a) She went towards the living room.",
-      "optionB": "b) She paid to build the living room.",
-      "optionC": "c) She decorated the living room.",
+      "optionA": "She went towards the living room.",
+      "optionB": "She paid to build the living room.",
+      "optionC": "She decorated the living room.",
       "rightOption": "a"
     }
   },
@@ -63,9 +63,9 @@
     "task":
     {
       "prompt": "He launched into a long speech.",
-      "optionA": "a) He improvised a long speech.",
-      "optionB": "b) He got lost in his long speech.",
-      "optionC": "c) He began a long speech.",
+      "optionA": "He improvised a long speech.",
+      "optionB": "He got lost in his long speech.",
+      "optionC": "He began a long speech.",
       "rightOption": "c"
     }
   },
@@ -73,9 +73,9 @@
     "task":
     {
       "prompt": "He takes after his mother.",
-      "optionA": "a) He has the same profession as his mother.",
-      "optionB": "b) He looks like his mother.",
-      "optionC": "c) He is like his mother.",
+      "optionA": "He has the same profession as his mother.",
+      "optionB": "He looks like his mother.",
+      "optionC": "He is like his mother.",
       "rightOption": "c"
     }
   },
@@ -83,9 +83,9 @@
     "task":
     {
       "prompt": "He pointed out the mall would be closed.",
-      "optionA": "a) He informed the mall would be closed.",
-      "optionB": "a) He forgot the mall would be closed.",
-      "optionC": "a) He remembered the mall would be closed.",
+      "optionA": "He informed the mall would be closed.",
+      "optionB": "He forgot the mall would be closed.",
+      "optionC": "He remembered the mall would be closed.",
       "rightOption": "a"
     }
   },
@@ -93,9 +93,9 @@
     "task":
     {
       "prompt": "Who's going to take on the new client?",
-      "optionA": "a) Who's going to be responsible for the new client?",
-      "optionB": "b) Who's going to bring the new client?",
-      "optionC": "c) Who's going to talk to the new client?",
+      "optionA": "Who's going to be responsible for the new client?",
+      "optionB": "Who's going to bring the new client?",
+      "optionC": "Who's going to talk to the new client?",
       "rightOption": "a"
     }
   },
@@ -103,9 +103,9 @@
     "task":
     {
       "prompt": "He will not back down on his decision.",
-      "optionA": "a) He will not change his mind about his decision.",
-      "optionB": "b) He will not think about his decision.",
-      "optionC": "c) He won't ellaborate his decision.",
+      "optionA": "He will not change his mind about his decision.",
+      "optionB": "He will not think about his decision.",
+      "optionC": "He won't ellaborate his decision.",
       "rightOption": "a"
     }
   },
@@ -113,9 +113,9 @@
     "task":
     {
       "prompt": "Book in at the reception.",
-      "optionA": "a) Take your book at the reception",
-      "optionB": "b) Pay for the book at the reception",
-      "optionC": "c) Register at the reception",
+      "optionA": "Take your book at the reception",
+      "optionB": "Pay for the book at the reception",
+      "optionC": "Register at the reception",
       "rightOption": "c"
     }
   },
@@ -232,9 +232,9 @@
     "task":
     {
       "prompt": "I can't piece together the truth about it.",
-      "optionA": "a) I can't discover the truth about it.",
-      "optionB": "b) I can't hide the truth about it.",
-      "optionC": "c) I can't deny the truth about it.",
+      "optionA": "I can't discover the truth about it.",
+      "optionB": "I can't hide the truth about it.",
+      "optionC": "I can't deny the truth about it.",
       "rightOption": "a"
     }
   }

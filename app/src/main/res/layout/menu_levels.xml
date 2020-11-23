@@ -13,7 +13,7 @@
         android:fontFamily="@font/allerta"
         android:text="@string/menu_level_prompt"
         android:textColor="@color/textColorPrimary"
-        android:textSize="18sp"
+        android:textSize="22sp"
         app:layout_constraintBottom_toTopOf="@+id/button_level_a1_a2"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

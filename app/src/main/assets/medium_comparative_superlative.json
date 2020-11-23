@@ -102,7 +102,7 @@
   {
     "task":
     {
-      "prompt": "This year's designer clothes ___ they did last year",
+      "prompt": "This year's designer clothes ___ they did last year.",
       "optionA": "have sold slightly less well than",
       "optionB": "have sold slightly most well than",
       "optionC": "have sold slightly least well than",
@@ -132,7 +132,7 @@
   {
     "task":
     {
-      "prompt": "The more people worry about banks, .",
+      "prompt": "The more people worry about banks, ___.",
       "optionA": "the most they use cash",
       "optionB": "they use cash more",
       "optionC": "the more they use cash",
@@ -142,7 +142,7 @@
   {
     "task":
     {
-      "prompt": "Making ends meet is getting ___ difficult",
+      "prompt": "Making ends meet is getting ___ difficult.",
       "optionA": "more and more",
       "optionB": "the most",
       "optionC": "most than",
@@ -162,7 +162,7 @@
   {
     "task":
     {
-      "prompt": "The course ___ I'd expected.",
+      "prompt": "The course was ___ I'd expected.",
       "optionA": "as difficult than",
       "optionB": "less difficult as",
       "optionC": "more difficult than",

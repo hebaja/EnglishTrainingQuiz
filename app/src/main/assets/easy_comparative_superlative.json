@@ -5,7 +5,7 @@
 			"prompt":"The shops are a lot ___ than usual.",
 			"optionA":"quieter",
 			"optionB":"more quiet",
-			"optionC":"quietter",
+			"optionC":"more quiet",
 			"rightOption":"a"
 		}
 	},
@@ -22,7 +22,7 @@
 	{
 	"task":
 		{
-			"prompt":"The girl ___ than she seemed in her photo.",
+			"prompt":"The girl is ___ than she seemed in her photo.",
 			"optionA":"more pretty",
 			"optionB":"most pretty",
 			"optionC":"prettier",
@@ -32,7 +32,7 @@
 	{
 	"task":
 		{
-			"prompt":"The town on Sunday ___.",
+			"prompt":"The town on Sunday is ___.",
 			"optionA":"less crowded",
 			"optionB":"least crowded",
 			"optionC":"crowdeder",
@@ -62,7 +62,7 @@
 	{
 	"task":
 		{
-			"prompt":"She is a ___ Musican than her friend.",
+			"prompt":"She is a ___ musican than her friend.",
 			"optionA":"better",
 			"optionB":"gooder",
 			"optionC":"best",
@@ -92,7 +92,7 @@
 	{
 	"task":
 		{
-			"prompt":"My friend is much ___ than I am",
+			"prompt":"My friend is much ___ than I am.",
 			"optionA":"taller",
 			"optionB":"most tall",
 			"optionC":"the tallest",
@@ -162,7 +162,7 @@
 	{
 	"task":
 		{
-			"prompt":"3) The children were ___ gold.",
+			"prompt":"The children were ___ gold.",
 			"optionA":"more good than",
 			"optionB":"as good as",
 			"optionC":"less better than",
