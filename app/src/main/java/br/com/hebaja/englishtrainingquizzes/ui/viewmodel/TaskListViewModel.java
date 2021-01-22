@@ -24,13 +24,9 @@ public class TaskListViewModel extends AndroidViewModel {
     public LiveData<List<Task>> getTasks(int chosenLevel, int chosenSubject) {
         if(tasksLiveData == null) {
             tasksLiveData = new MutableLiveData<>();
-
             List<Task> tasks = new TaskObjectsGenerator(chosenLevel, chosenSubject, getApplication()).generateTaskObjectsFromJsonFile();
-
             tasksLiveData.setValue(tasks);
         }
-
         return tasksLiveData;
     }
-
 }

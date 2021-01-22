@@ -122,7 +122,7 @@
 	{
 	"task":
 		{
-			"prompt":"Are starting to ___ about the wedding?",
+			"prompt":"Are you starting to ___ about the wedding?",
 			"optionA":"have cold feet",
 			"optionB":"have cool feet",
 			"optionC":"have frozen feet",

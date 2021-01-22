@@ -33,7 +33,7 @@ public class AppDialog {
     private final String question;
     private final String confirm;
     private final String cancel;
-    private View view;
+    private final View view;
 
     public AppDialog(Activity activity, View view, String question, String confirm, String cancel) {
         this.mainActivity = activity;
@@ -80,4 +80,3 @@ public class AppDialog {
         return builder.create();
     }
 }
-

@@ -1,10 +1,9 @@
-package br.com.hebaja.englishtrainingquizzes.ui.views;
+package br.com.hebaja.englishtrainingquizzes.ui;
 
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
-import androidx.annotation.NonNull;
 import androidx.appcompat.app.AlertDialog;
 import androidx.fragment.app.FragmentActivity;
 import androidx.lifecycle.LifecycleOwner;
@@ -12,18 +11,36 @@ import androidx.lifecycle.ViewModelProvider;
 import androidx.navigation.NavController;
 import androidx.navigation.Navigation;
 
+import com.facebook.Profile;
+import com.google.android.gms.auth.api.signin.GoogleSignIn;
+import com.google.android.gms.auth.api.signin.GoogleSignInAccount;
+import com.google.android.material.snackbar.Snackbar;
+
+import org.jetbrains.annotations.NotNull;
+
 import java.util.List;
 
 import br.com.hebaja.englishtrainingquizzes.R;
+import br.com.hebaja.englishtrainingquizzes.enums.LevelType;
 import br.com.hebaja.englishtrainingquizzes.model.ButtonNext;
+import br.com.hebaja.englishtrainingquizzes.model.Exercise;
 import br.com.hebaja.englishtrainingquizzes.model.Task;
+import br.com.hebaja.englishtrainingquizzes.model.User;
 import br.com.hebaja.englishtrainingquizzes.model.WarningView;
+import br.com.hebaja.englishtrainingquizzes.retrofit.BaseRetrofit;
+import br.com.hebaja.englishtrainingquizzes.retrofit.service.SaveExerciseService;
 import br.com.hebaja.englishtrainingquizzes.ui.dialog.AppDialog;
 import br.com.hebaja.englishtrainingquizzes.ui.fragment.QuizFragmentDirections;
 import br.com.hebaja.englishtrainingquizzes.ui.viewmodel.ButtonNextViewModel;
+import br.com.hebaja.englishtrainingquizzes.ui.viewmodel.EmailRegisterViewModel;
 import br.com.hebaja.englishtrainingquizzes.ui.viewmodel.PositionViewModel;
 import br.com.hebaja.englishtrainingquizzes.ui.viewmodel.ScoreViewModel;
+import br.com.hebaja.englishtrainingquizzes.ui.viewmodel.UserViewModel;
 import br.com.hebaja.englishtrainingquizzes.ui.viewmodel.WarningViewModel;
+import retrofit2.Call;
+import retrofit2.Callback;
+import retrofit2.Response;
+import retrofit2.internal.EverythingIsNonNull;
 
 import static br.com.hebaja.englishtrainingquizzes.Constants.ADD_NO_POINT;
 import static br.com.hebaja.englishtrainingquizzes.Constants.ADD_ONE_POINT;
@@ -41,9 +58,13 @@ import static br.com.hebaja.englishtrainingquizzes.ui.fragment.QuizFragmentDirec
 
 public class BuilderQuizFragmentViews {
 
+    public static final String EXERCISE_SAVED_MESSAGE = "Your exercise was successfully saved.";
+    public static final String EXERCISE_SAVE_ERROR_MESSAGE = "There was a problem. Your exercise couldn't be saved.";
+    private final View view;
     private final List<Task> tasks;
     private final FragmentActivity mainActivity;
     private final LifecycleOwner viewLifecycleOwner;
+    private User storedUser;
 
     private TextView textViewQuestion;
     private TextView scoreView;
@@ -63,41 +84,45 @@ public class BuilderQuizFragmentViews {
     private String rightAnswer;
 
     private int score = 0;
-
     private int position;
+    private final LevelType level;
+    private final String subject;
 
-    public BuilderQuizFragmentViews(List<Task> tasks, FragmentActivity activity, LifecycleOwner viewLifecycleOwner) {
+    public BuilderQuizFragmentViews(View view, List<Task> tasks,
+                                    FragmentActivity activity,
+                                    LifecycleOwner viewLifecycleOwner,
+                                    LevelType level,
+                                    String subject) {
+        this.view = view;
         this.tasks = tasks;
         this.mainActivity = activity;
         this.viewLifecycleOwner = viewLifecycleOwner;
+        this.level = level;
+        this.subject = subject;
     }
 
-    public void initializeViews(@NonNull View view) {
+    public void initializeViews() {
         textViewQuestion = view.findViewById(R.id.quiz_question_prompt);
         scoreView = view.findViewById(R.id.quiz_score_counter);
         buttonOptionA = view.findViewById(R.id.quiz_button_option_a);
         buttonOptionB = view.findViewById(R.id.quiz_button_option_b);
         buttonOptionC = view.findViewById(R.id.quiz_button_option_c);
         buttonBackToMainMenu = view.findViewById(R.id.quiz_button_back_to_menu);
-
         buttonNext.setCardView(view.findViewById(R.id.quiz_next_clickable_cardview));
         buttonNext.setTextView(view.findViewById(R.id.quiz_next_clickable_cardview_textview));
-
         chosenOptionWarning.setCardView(view.findViewById(R.id.quiz_chosen_option_warning));
         chosenOptionWarning.setImageView(view.findViewById(R.id.quiz_chosen_option_warning_view));
         chosenOptionWarning.setTextView(view.findViewById(R.id.quiz_chosen_option_warning_textview));
-
         fetchScore(ADD_NO_POINT);
         fetchPosition(GET_POSITION);
+        configureButtonNextViewModel();
+        configureWarningViewModel();
+        if(buttonNext.getCardView().isShown() && chosenOptionWarning.getCardView().isShown()) {
+            disableAllButtons();
+        }
+    }
 
-        ButtonNextViewModel buttonNextViewModel = new ViewModelProvider(mainActivity).get(ButtonNextViewModel.class);
-        buttonNextViewModel.getState().observe(viewLifecycleOwner, buttonNextState -> {
-            if (!(buttonNextState == null)) {
-                buttonNext.getCardView().setVisibility(buttonNextState.getCardView().getVisibility());
-                buttonNext.getTextView().setText(buttonNextState.getTextView().getText());
-            }
-        });
-
+    private void configureWarningViewModel() {
         WarningViewModel warningViewModel = new ViewModelProvider(mainActivity).get(WarningViewModel.class);
         warningViewModel.getState().observe(viewLifecycleOwner, chosenOptionWarningState -> {
             if(!(chosenOptionWarningState == null)) {
@@ -108,13 +133,19 @@ public class BuilderQuizFragmentViews {
                 chosenOptionWarning.getTextView().setTextColor(chosenOptionWarningState.getTextView().getCurrentTextColor());
             }
         });
-
-        if(buttonNext.getCardView().isShown() && chosenOptionWarning.getCardView().isShown()) {
-            disableAllButtons();
-        }
     }
 
-    public void setButtons(View view, int chosenLevel, int chosenSubject) {
+    private void configureButtonNextViewModel() {
+        ButtonNextViewModel buttonNextViewModel = new ViewModelProvider(mainActivity).get(ButtonNextViewModel.class);
+        buttonNextViewModel.getState().observe(viewLifecycleOwner, buttonNextState -> {
+            if (!(buttonNextState == null)) {
+                buttonNext.getCardView().setVisibility(buttonNextState.getCardView().getVisibility());
+                buttonNext.getTextView().setText(buttonNextState.getTextView().getText());
+            }
+        });
+    }
+
+    public void setButtons(int chosenLevel, int chosenSubject) {
         buttonOptionA.setOnClickListener(v -> configureButtonOption(optionPositionA));
         buttonOptionB.setOnClickListener(v -> configureButtonOption(optionPositionB));
         buttonOptionC.setOnClickListener(v -> configureButtonOption(optionPositionC));
@@ -151,7 +182,6 @@ public class BuilderQuizFragmentViews {
     }
 
     private void configureNextButton() {
-
         ButtonNextViewModel buttonNextViewModel = new ViewModelProvider(mainActivity).get(ButtonNextViewModel.class);
         buttonNextViewModel.setState(buttonNext, position).observe(viewLifecycleOwner, buttonNextState -> {
             buttonNext = buttonNextState;
@@ -182,16 +212,12 @@ public class BuilderQuizFragmentViews {
 
     private void fetchScore(int response) {
         ScoreViewModel scoreViewModel = new ViewModelProvider(mainActivity).get(ScoreViewModel.class);
-        scoreViewModel.request(response).observe(viewLifecycleOwner, scoreState -> {
-            this.score = scoreState;
-        });
+        scoreViewModel.request(response).observe(viewLifecycleOwner, scoreState -> this.score = scoreState);
     }
 
     private void fetchPosition(int response) {
         PositionViewModel positionViewModel = new ViewModelProvider(mainActivity).get(PositionViewModel.class);
-        positionViewModel.getPosition(response).observe(viewLifecycleOwner, positionState -> {
-            this.position = positionState;
-        });
+        positionViewModel.getPosition(response).observe(viewLifecycleOwner, positionState -> this.position = positionState);
     }
 
     private void updateScore(int score) {
@@ -229,7 +255,64 @@ public class BuilderQuizFragmentViews {
         NavController controller = Navigation.findNavController(view);
         QuizFragmentDirections.ActionQuizToFinalScore directions = actionQuizToFinalScore(score, chosenLevel, chosenSubject);
         controller.navigate(directions);
+
+        User user = fetchCurrentUser();
+        Exercise exercise = new Exercise(user, subject, level, score);
+        saveOnApi(exercise);
         resetViewStates();
+    }
+
+    @NotNull
+    private User fetchCurrentUser() {
+        GoogleSignInAccount currentGoogleAccount = GoogleSignIn.getLastSignedInAccount(mainActivity);
+        Profile currentFacebookProfile = Profile.getCurrentProfile();
+        UserViewModel userViewModel = new ViewModelProvider(mainActivity).get(UserViewModel.class);
+        userViewModel.getUserLiveData().observe(viewLifecycleOwner, user -> {
+            if(user != null) {
+                this.storedUser = user;
+            }
+        });
+        User user = new User();
+        setUser(currentGoogleAccount, currentFacebookProfile, user);
+        return user;
+    }
+
+    private void setUser(GoogleSignInAccount currentGoogleAccount, Profile currentFacebookProfile, User user) {
+        if(currentGoogleAccount != null) {
+            user.setUsername(currentGoogleAccount.getGivenName());
+            user.setEmail(currentGoogleAccount.getEmail());
+        } else if (currentFacebookProfile != null) {
+            user.setUsername(currentFacebookProfile.getFirstName());
+            user.setUid(currentFacebookProfile.getId());
+        } else if (storedUser != null) {
+            user.setUsername(storedUser.getUsername());
+            user.setEmail(storedUser.getEmail());
+        }
+    }
+
+    private void saveOnApi(Exercise exercise) {
+        SaveExerciseService service = new BaseRetrofit().getSaveExerciseService();
+        Call<Exercise> call = service.register(exercise);
+        call.enqueue(new Callback<Exercise>() {
+            @Override
+            @EverythingIsNonNull
+            public void onResponse(Call<Exercise> call, Response<Exercise> response) {
+                if(response.isSuccessful()) {
+                    Exercise exerciseSaved = response.body();
+                    if(exerciseSaved != null) {
+                        Snackbar.make(view, EXERCISE_SAVED_MESSAGE, Snackbar.LENGTH_SHORT).show();
+                    }
+                } else {
+                    Snackbar.make(view, EXERCISE_SAVE_ERROR_MESSAGE, Snackbar.LENGTH_LONG).show();
+                }
+            }
+
+            @Override
+            @EverythingIsNonNull
+            public void onFailure(Call<Exercise> call, Throwable t) {
+                Snackbar.make(view, EXERCISE_SAVE_ERROR_MESSAGE, Snackbar.LENGTH_LONG).show();
+            }
+        });
     }
 
     private void resetViewStates() {

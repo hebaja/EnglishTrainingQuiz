@@ -14,6 +14,7 @@ import java.util.Collections;
 import java.util.List;
 
 import br.com.hebaja.englishtrainingquizzes.daos.SubjectDAO;
+import br.com.hebaja.englishtrainingquizzes.enums.LevelType;
 import br.com.hebaja.englishtrainingquizzes.model.Subject;
 import br.com.hebaja.englishtrainingquizzes.model.Task;
 
@@ -31,6 +32,7 @@ public class TaskObjectsGenerator {
     private final int chosenSubject;
     private final Context context;
     private final int levelKey;
+    private LevelType level;
 
     public TaskObjectsGenerator(int levelKey, int chosenSubject, Context context) {
         this.chosenSubject = chosenSubject;
@@ -42,12 +44,15 @@ public class TaskObjectsGenerator {
         switch (levelKey) {
             case EASY_MODE:
                 subjectsList = new SubjectDAO().easyList();
+                level = LevelType.EASY;
                 break;
             case MEDIUM_MODE:
                 subjectsList = new SubjectDAO().mediumList();
+                level = LevelType.MEDIUM;
                 break;
             case HARD_MODE:
                 subjectsList = new SubjectDAO().hardList();
+                level = LevelType.HARD;
                 break;
         }
 
@@ -98,5 +103,13 @@ public class TaskObjectsGenerator {
             }
         }
         return inputStream;
+    }
+
+    public LevelType getLevel() {
+        return level;
+    }
+
+    public String getSubject() {
+        return subjectsList.get(chosenSubject).getPrompt();
     }
 }

@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "92591554945",
+    "project_id": "englishtrainingquizzes-63b66",
+    "storage_bucket": "englishtrainingquizzes-63b66.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:92591554945:android:78c909013dcd0be86ba880",
+        "android_client_info": {
+          "package_name": "br.com.hebaja.englishtrainingquizzes"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "92591554945-etrrmsd5cbfptfsjums91kbkgm2k58p4.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "br.com.hebaja.englishtrainingquizzes",
+            "certificate_hash": "9efdcf17be735bdc6fcfa83d36842d22a17ddee8"
+          }
+        },
+        {
+          "client_id": "92591554945-5kg21uubvnae5dv15fcrm6kr35pim6o2.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAV8Ni5ZjHXuLpSP4hwx7DJi86i_xyoRF4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "92591554945-5kg21uubvnae5dv15fcrm6kr35pim6o2.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,36 +1,33 @@
 package br.com.hebaja.englishtrainingquizzes.ui.fragment;
 
 import android.os.Bundle;
+import android.util.Log;
 import android.view.LayoutInflater;
-import android.view.Menu;
-import android.view.MenuInflater;
-import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
-import androidx.fragment.app.Fragment;
+import androidx.lifecycle.ViewModelProvider;
 import androidx.navigation.NavController;
 import androidx.navigation.Navigation;
 
-import br.com.hebaja.englishtrainingquizzes.OptionsMenuConfigure;
 import br.com.hebaja.englishtrainingquizzes.R;
+import br.com.hebaja.englishtrainingquizzes.ui.viewmodel.EmailRegisterViewModel;
+import br.com.hebaja.englishtrainingquizzes.ui.viewmodel.UserViewModel;
 
 import static br.com.hebaja.englishtrainingquizzes.Constants.EASY_MODE;
 import static br.com.hebaja.englishtrainingquizzes.Constants.HARD_MODE;
 import static br.com.hebaja.englishtrainingquizzes.Constants.MEDIUM_MODE;
-import static br.com.hebaja.englishtrainingquizzes.ui.fragment.MenuLevelsFragmentDirections.*;
+import static br.com.hebaja.englishtrainingquizzes.ui.fragment.MenuLevelsFragmentDirections.ActionMenuLevelsToMenuSubjects;
+import static br.com.hebaja.englishtrainingquizzes.ui.fragment.MenuLevelsFragmentDirections.actionMenuLevelsToMenuSubjects;
 
-public class MenuLevelsFragment extends Fragment {
-
-    private NavController controller;
+public class MenuLevelsFragment extends BaseFragment {
 
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setHasOptionsMenu(true);
     }
 
     @Nullable
@@ -43,8 +40,6 @@ public class MenuLevelsFragment extends Fragment {
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
 
-        controller = Navigation.findNavController(view);
-
         Button button1 = view.findViewById(R.id.button_level_a1_a2);
         Button button2 = view.findViewById(R.id.button_level_b1_b2);
         Button button3 = view.findViewById(R.id.button_level_c1_c2);
@@ -52,20 +47,6 @@ public class MenuLevelsFragment extends Fragment {
         button1.setOnClickListener(v -> goToMenuSubjectsFragment(view, EASY_MODE));
         button2.setOnClickListener(v -> goToMenuSubjectsFragment(view, MEDIUM_MODE));
         button3.setOnClickListener(v -> goToMenuSubjectsFragment(view, HARD_MODE));
-    }
-
-    @Override
-    public void onCreateOptionsMenu(@NonNull Menu menu, @NonNull MenuInflater inflater) {
-        super.onCreateOptionsMenu(menu, inflater);
-        inflater.inflate(R.menu.main_options_menu, menu);
-    }
-
-    @Override
-    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
-        OptionsMenuConfigure optionsMenuConfigure = new OptionsMenuConfigure(item, controller);
-        optionsMenuConfigure.configureOptionsMenuItems();
-
-        return super.onOptionsItemSelected(item);
     }
 
     private void goToMenuSubjectsFragment(View view, int levelKey) {

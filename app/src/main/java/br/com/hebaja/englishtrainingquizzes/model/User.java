@@ -1,14 +1,54 @@
 package br.com.hebaja.englishtrainingquizzes.model;
 
-import java.util.List;
-
 public class User {
 
+    private Long id;
+    private String uid;
     private String username;
     private String email;
     private String password;
-    private Boolean enabled;
-    private Authority authority;
+//    private String password;
+//    private Boolean enabled;
+//    private Authority authority;
+
+    public User() {}
+
+    public User(String email) {
+        this.email = email;
+    }
+//
+//    public User(String username, String email, String password) {
+//        this.username = username;
+//        this.email = email;
+//        this.password = password;
+//    }
+
+    public User(Long id, String uid, String username, String email) {
+        this.id = id;
+        this.uid = uid;
+        this.username = username;
+        this.email = email;
+    }
+
+
+    public User(String uid, String username, String email) {
+        this.uid = uid;
+        this.username = username;
+        this.email = email;
+    }
+
+    public User(String username, String email) {
+        this.username = username;
+        this.email = email;
+    }
+
+
+
+    public Long getId() { return id;}
+
+    public String getUid() {
+        return uid;
+    }
 
     public String getUsername() {
         return username;
@@ -18,12 +58,16 @@ public class User {
         return email;
     }
 
-    public String getPassword() {
-        return password;
-    }
+//    public String getPassword() {
+//        return password;
+//    }
 
-    public List<Exercise> getExercises() {
-        return exercises;
+//    public List<Exercise> getExercises() {
+//        return exercises;
+//    }
+
+    public void setUid(String uid) {
+        this.uid = uid;
     }
 
     public void setUsername(String username) {
@@ -38,12 +82,20 @@ public class User {
         this.password = password;
     }
 
-    public void setExercises(List<Exercise> exercises) {
-        this.exercises = exercises;
+    public String getPassword() {
+        return password;
     }
 
-    private boolean isNew = true;
+//    public void setPassword(String password) {
+//        this.password = password;
+//    }
 
-    private List<Exercise> exercises;
+//    public void setExercises(List<Exercise> exercises) {
+//        this.exercises = exercises;
+//    }
+
+//    private boolean isNew = true;
+//
+//    private List<Exercise> exercises;
 
 }

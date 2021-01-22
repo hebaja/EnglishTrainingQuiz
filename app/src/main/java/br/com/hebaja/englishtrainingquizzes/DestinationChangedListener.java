@@ -36,27 +36,26 @@ public class DestinationChangedListener {
         final Animation fromBottom = AnimationUtils.loadAnimation(mainActivity, R.anim.from_bottom);
 
         navController.addOnDestinationChangedListener((controller, destination, arguments) -> {
-            switch (destination.getId()) {
-                case R.id.menuLevels:
-                case R.id.quiz:
-                case R.id.menuSubjects:
-                    configureTitleAndBackCallback(destination, true);
-                    configureNavigationVisibilityFinalScore(fromBottom);
-                    break;
-                case R.id.finalScore:
-                    configureNavigationVisibilityFinalScore(fromBottom);
-                    configureTitleAndBackCallback(destination, true);
-                    break;
-//                case R.id.menuSubjects:
-//                    configureTitleAndBackCallback(destination, false);
-//                    break;
-                case R.id.feedback:
-                case R.id.aboutPage:
-                case R.id.averages:
-                    configureTitleAndBackCallback(destination, false);
-                    buttonQuit.setVisibility(INVISIBLE);
-                    buttonQuit.startAnimation(toBottom);
-                    break;
+            int id = destination.getId();
+            if(id == R.id.menuSubjects) {
+                configureTitleAndBackCallback(destination, false);
+                configureNavigationVisibilityFinalScore(fromBottom);
+            }
+            if(id == R.id.menuLevels || id == R.id.quiz) {
+                configureTitleAndBackCallback(destination, true);
+                configureNavigationVisibilityFinalScore(fromBottom);
+            }
+            if(id == R.id.finalScore) {
+                configureNavigationVisibilityFinalScore(fromBottom);
+                configureTitleAndBackCallback(destination, true);
+            }
+            if(id == R.id.login) {
+                buttonQuit.setVisibility(INVISIBLE);
+            }
+            if(id == R.id.feedback || id == R.id.aboutPage || id == R.id.averages) {
+                configureTitleAndBackCallback(destination, false);
+                buttonQuit.setVisibility(INVISIBLE);
+                buttonQuit.startAnimation(toBottom);
             }
         });
     }

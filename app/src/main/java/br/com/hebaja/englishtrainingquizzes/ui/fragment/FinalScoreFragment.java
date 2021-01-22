@@ -73,28 +73,8 @@ public class FinalScoreFragment extends Fragment {
 
     @Override
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
-
-        OptionsMenuConfigure optionsMenuConfigure = new OptionsMenuConfigure(item, controller);
-        optionsMenuConfigure.configureOptionsMenuItems();
-
+        OptionsMenuConfigure optionsMenuConfigure = new OptionsMenuConfigure(item, controller, getContext());
+        optionsMenuConfigure.configureOptionsMenuItems(getActivity());
         return super.onOptionsItemSelected(item);
     }
-
-//    private void configureOptionsMenuItems(@NonNull MenuItem item) {
-//        NavDirections directions;
-//
-//        if(item.getItemId() == R.id.menu_final_score_feedback) {
-//            directions = actionFinalScoreToFeedback();
-//            controller.navigate(directions);
-//        }
-//        if(item.getItemId() == R.id.menu_final_score_about) {
-//            directions = FinalScoreFragmentDirections.actionFinalScoreToAboutPage();
-//            controller.navigate(directions);
-//        }
-//        if(item.getItemId() == R.id.menu_averages) {
-//            directions = actionFinalScoreToAverages();
-//            controller.navigate(directions);
-//
-//        }
-//    }
 }

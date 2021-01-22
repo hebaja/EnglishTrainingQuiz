@@ -19,6 +19,7 @@ import static br.com.hebaja.englishtrainingquizzes.Constants.ABOUT_PAGE_APP_DESC
 
 public class AboutPageFragment extends Fragment {
 
+    public static final String APP_NAME = "English Training Quizzes";
 
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {
@@ -26,7 +27,7 @@ public class AboutPageFragment extends Fragment {
         LibsSupportFragment fragment = new LibsBuilder()
                 .withFields(R.string.class.getFields())
                 .withActivityTitle(String.valueOf(Libs.ActivityStyle.LIGHT_DARK_TOOLBAR))
-                .withAboutAppName("English Traininig Quizzes")
+                .withAboutAppName(APP_NAME)
                 .withAboutVersionShownName(true)
                 .withAboutVersionShownCode(true)
                 .withAboutDescription(ABOUT_PAGE_APP_DESCRIPTION)

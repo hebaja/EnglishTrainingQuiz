@@ -19,8 +19,8 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <ListView
-        android:id="@+id/list_buttons_subjects_list_view"
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/list_buttons_subjects_recyclerview"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_marginStart="24dp"
@@ -30,10 +30,11 @@
         android:dividerHeight="8dp"
         android:fadeScrollbars="false"
         android:scrollbarSize="3dp"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/menu_subjects_prompt"
-        tools:listitem="@layout/button_menu_list_item" />
+        tools:listitem="@layout/button_subject_list_item" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

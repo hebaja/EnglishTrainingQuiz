@@ -6,13 +6,51 @@
     android:id="@+id/about_page_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
-    <ListView
-        android:id="@+id/averages_listview"
+    <TextView
+        android:id="@+id/averages_list_username_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="18sp"
+        android:text="User:" android:layout_margin="8dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0 "/>
+
+    <TextView
+        android:id="@+id/averages_list_username"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_margin="8dp"
+        android:textSize="18sp"
+        tools:text="Email"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toEndOf="@id/averages_list_username_title" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/averages_recyclerview"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:listitem="@layout/subject_average_cardview_item"
+        android:layout_marginTop="36dp"
+        android:divider="@null"
+        android:dividerHeight="0dp"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@id/averages_list_username_title"
+        tools:listitem="@layout/subject_average_cardview_item" />
+    
+    <ProgressBar
+        android:id="@+id/average_page_progress_bar"
+        style="?android:attr/progressBarStyleLarge"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/averages_list_username">
+    </ProgressBar>
 </androidx.constraintlayout.widget.ConstraintLayout>

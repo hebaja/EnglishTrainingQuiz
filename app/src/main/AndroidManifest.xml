@@ -5,7 +5,6 @@
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
 
-
     <application
         android:usesCleartextTraffic="true"
         android:allowBackup="true"
@@ -14,6 +13,7 @@
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+        <meta-data android:name="com.facebook.sdk.ApplicationId" android:value="@string/facebook_app_id"/>
         <activity
             android:name=".ui.activity.SplashScreenActivity"
             android:screenOrientation="nosensor"
@@ -26,6 +26,15 @@
         <activity
             android:name=".ui.activity.MainActivity"
             android:screenOrientation="nosensor">
+            <nav-graph android:value="@navigation/nav_graph" />
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+                <data
+                    android:scheme="my.special.scheme">
+                </data>
+            </intent-filter>
         </activity>
     </application>
 </manifest>

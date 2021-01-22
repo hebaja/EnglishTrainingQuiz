@@ -25,17 +25,9 @@ public class ButtonNextViewModel extends ViewModel {
         return buttonNextLiveData;
     }
 
-    private void checkIfDataIsNull() {
-        if (buttonNextLiveData == null) {
-            buttonNextLiveData = new MutableLiveData<>();
-        }
-    }
-
     public LiveData<ButtonNext> setState(ButtonNext buttonNext, int position) {
         checkIfDataIsNull();
-
         this.buttonNext = buttonNext;
-
         buttonNext.getCardView().setTag(R.drawable.next_circle_outline);
         if (position < 9) {
             buttonNext.getTextView().setText(NEXT_QUESTION);
@@ -43,17 +35,13 @@ public class ButtonNextViewModel extends ViewModel {
             buttonNext.getTextView().setText(FINAL_SCORE);
         }
         buttonNextLiveData.setValue(buttonNext);
-
         return buttonNextLiveData;
-
     }
 
     public LiveData<ButtonNext> getState() {
         checkIfDataIsNull();
         buttonNextLiveData.setValue(buttonNext);
-
         return buttonNextLiveData;
-
     }
 
     public LiveData<ButtonNext> reset() {
@@ -62,4 +50,9 @@ public class ButtonNextViewModel extends ViewModel {
         return buttonNextLiveData;
     }
 
+    private void checkIfDataIsNull() {
+        if (buttonNextLiveData == null) {
+            buttonNextLiveData = new MutableLiveData<>();
+        }
+    }
 }

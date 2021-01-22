@@ -5,6 +5,7 @@
     android:layout_height="wrap_content"
     android:layout_marginStart="10dp"
     android:layout_marginEnd="10dp"
+    android:layout_marginBottom="8dp"
     android:background="@drawable/orange_round_button"
     android:fontFamily="sans-serif-medium"
     android:textAlignment="center"

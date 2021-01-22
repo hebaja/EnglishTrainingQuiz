@@ -3,12 +3,14 @@
     xmlns:app="http://schemas.android.com/apk/res-auto">
     <item
         android:id="@+id/menu_final_score_feedback"
-        android:title="Feedback" />
-
+        android:title="@string/action_menu_feedback" />
     <item
         android:id="@+id/menu_final_score_about"
-        android:title="About" />
+        android:title="@string/action_menu_about" />
     <item
         android:id="@+id/menu_averages"
-        android:title="Averages" />
+        android:title="@string/action_menu_averages" />
+    <item
+        android:id="@+id/menu_logoff"
+        android:title="@string/action_menu_logoff"/>
 </menu>

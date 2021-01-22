@@ -2,15 +2,18 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_height="wrap_content"
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_margin="8dp"
-        android:background="@android:color/background_light"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginTop="2dp"
+        android:layout_marginBottom="2dp"
         app:cardCornerRadius="8dp"
+        app:cardBackgroundColor="#e6e6e6"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -18,13 +21,16 @@
         app:layout_constraintVertical_bias="0.0">
 
         <androidx.constraintlayout.widget.ConstraintLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content">
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
 
             <TextView
                 android:id="@+id/average_cardview_textview_subject"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginStart="4dp"
+                android:layout_marginTop="4dp"
+                android:textSize="18sp"
                 android:text="Subject:"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
@@ -33,6 +39,8 @@
                 android:id="@+id/average_cardview_subject"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:textSize="18sp"
                 android:layout_marginStart="8dp"
                 app:layout_constraintStart_toEndOf="@+id/average_cardview_textview_subject"
                 app:layout_constraintTop_toTopOf="parent"
@@ -42,6 +50,8 @@
                 android:id="@+id/average_cardview_textview_level"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginStart="4dp"
+                android:textSize="18sp"
                 android:text="Level:"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/average_cardview_textview_subject" />
@@ -50,6 +60,7 @@
                 android:id="@+id/average_cardview_level"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:textSize="18sp"
                 android:layout_marginStart="8dp"
                 app:layout_constraintStart_toEndOf="@+id/average_cardview_textview_level"
                 app:layout_constraintTop_toBottomOf="@id/average_cardview_textview_subject"
@@ -59,6 +70,9 @@
                 android:id="@+id/average_cardview_textview_average"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginStart="4dp"
+                android:layout_marginBottom="4dp"
+                android:textSize="18sp"
                 android:text="Average:"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/average_cardview_textview_level" />
@@ -67,19 +81,25 @@
                 android:id="@+id/average_cardview_score"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="8dp"
+                android:textSize="18sp"
+                android:layout_marginStart="4dp"
+                android:layout_marginBottom="4dp"
                 app:layout_constraintStart_toEndOf="@id/average_cardview_textview_average"
                 app:layout_constraintTop_toBottomOf="@id/average_cardview_textview_level"
-                tools:src="@sample/averages.json/averages/average" />
+                tools:src="@sample/averages.json/averages/average"
+                tools:text="0.0" />
 
             <ProgressBar
                 android:id="@+id/average_cardview_bar"
-                style="@android:style/Widget.ProgressBar.Horizontal"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="8dp"
+                style="@android:style/Widget.Holo.Light.ProgressBar.Horizontal"
+                android:layout_width="0dp"
+                android:layout_height="20dp"
+                android:layout_marginEnd="32dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="3dp"
+                app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toEndOf="@+id/average_cardview_score"
-                app:layout_constraintTop_toBottomOf="@+id/average_cardview_textview_level"/>
+                app:layout_constraintTop_toBottomOf="@+id/average_cardview_textview_level" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 

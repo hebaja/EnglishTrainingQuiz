@@ -21,12 +21,7 @@ public class SplashScreenActivity extends AppCompatActivity {
         getWindow().getDecorView().setSystemUiVisibility(View.SYSTEM_UI_FLAG_HIDE_NAVIGATION);
 
         Handler handler = new Handler();
-        handler.postDelayed(new Runnable() {
-            @Override
-            public void run() {
-                showMenuActivity();
-            }
-        },1500);
+        handler.postDelayed(() -> showMenuActivity(),1500);
     }
 
     private void showMenuActivity() {
