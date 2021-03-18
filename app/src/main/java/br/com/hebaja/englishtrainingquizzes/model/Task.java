@@ -1,13 +1,12 @@
 package br.com.hebaja.englishtrainingquizzes.model;
 
+import java.util.List;
+
 public class Task {
 
     private String prompt;
-    private String optionA;
-    private String optionB;
-    private String optionC;
-    private String rightOption;
-
+    private List<Option> options;
+    private int rightOption;
     public String getPrompt() {
             return prompt;
         }
@@ -16,35 +15,34 @@ public class Task {
             this.prompt = prompt;
         }
 
-    public String getOptionA() {
-            return optionA;
-        }
-
-    public void setOptionA(String optionA) {
-            this.optionA = optionA;
-        }
-
-    public String getOptionB() {
-            return optionB;
-        }
-
-    public void setOptionB(String optionB) {
-            this.optionB = optionB;
-        }
-
-    public String getOptionC() {
-            return optionC;
-        }
-
-    public void setOptionC(String optionC) {
-            this.optionC = optionC;
-        }
-
-    public String getRightOption() {
+    public int getRightOption() {
         return rightOption;
     }
 
-    public void setRightOption(String rightOption) {
+    public void setRightOption(int rightOption) {
         this.rightOption = rightOption;
+    }
+
+    public List<Option> getOptions() {
+        return options;
+    }
+
+    public void setOptions(List<Option> options) {
+        this.options = options;
+    }
+
+    public static class Option {
+
+        private String prompt;
+
+        private Option(String prompt) {
+            this.prompt = prompt;
+        }
+
+        public String getPrompt() { return prompt; }
+
+        public void setPrompt(String option0) {
+            this.prompt = option0;
+        }
     }
 }

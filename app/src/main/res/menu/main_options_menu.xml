@@ -13,4 +13,7 @@
     <item
         android:id="@+id/menu_logoff"
         android:title="@string/action_menu_logoff"/>
+    <item
+        android:id="@+id/menu_quit_app"
+        android:title="@string/action_menu_quit_app"/>
 </menu>

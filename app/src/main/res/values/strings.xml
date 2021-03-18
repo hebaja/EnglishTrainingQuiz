@@ -43,5 +43,15 @@
     <string name="action_menu_about">About</string>
     <string name="action_menu_averages">Averages</string>
     <string name="action_menu_logoff">Log off</string>
+    <string name="action_menu_quit_app">Quit app</string>
+    <string name="msg_subscribed">Device subscribed to topic file_checksum</string>
+    <string name="msg_subscribed_failed">It was not possible to subscribe to topic</string>
+    <string name="admob_ca_app_pub">ca-app-pub-2370319903588478~4186701959</string>
+    <string name="admob_quiz_banner_ca_app_pub">ca-app-pub-2370319903588478/9186573731</string>
+    <string name="average_cardview_subject_label">Subject:</string>
+    <string name="average_cardview_level_label">Level:</string>
+    <string name="average_cardview_average_label">Average:</string>
+    <string name="average_fragment_user_label">User:</string>
+    <string name="action_menu_averages_delete_user">Delete my account</string>
 
 </resources>

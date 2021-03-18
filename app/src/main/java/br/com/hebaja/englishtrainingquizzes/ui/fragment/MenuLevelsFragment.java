@@ -1,7 +1,6 @@
 package br.com.hebaja.englishtrainingquizzes.ui.fragment;
 
 import android.os.Bundle;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -9,17 +8,14 @@ import android.widget.Button;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
-import androidx.lifecycle.ViewModelProvider;
 import androidx.navigation.NavController;
 import androidx.navigation.Navigation;
 
 import br.com.hebaja.englishtrainingquizzes.R;
-import br.com.hebaja.englishtrainingquizzes.ui.viewmodel.EmailRegisterViewModel;
-import br.com.hebaja.englishtrainingquizzes.ui.viewmodel.UserViewModel;
 
-import static br.com.hebaja.englishtrainingquizzes.Constants.EASY_MODE;
-import static br.com.hebaja.englishtrainingquizzes.Constants.HARD_MODE;
-import static br.com.hebaja.englishtrainingquizzes.Constants.MEDIUM_MODE;
+import static br.com.hebaja.englishtrainingquizzes.utils.Constants.EASY_MODE;
+import static br.com.hebaja.englishtrainingquizzes.utils.Constants.HARD_MODE;
+import static br.com.hebaja.englishtrainingquizzes.utils.Constants.MEDIUM_MODE;
 import static br.com.hebaja.englishtrainingquizzes.ui.fragment.MenuLevelsFragmentDirections.ActionMenuLevelsToMenuSubjects;
 import static br.com.hebaja.englishtrainingquizzes.ui.fragment.MenuLevelsFragmentDirections.actionMenuLevelsToMenuSubjects;
 

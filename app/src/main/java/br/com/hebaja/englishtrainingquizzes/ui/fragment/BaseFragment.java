@@ -12,7 +12,7 @@ import androidx.fragment.app.Fragment;
 import androidx.navigation.NavController;
 import androidx.navigation.Navigation;
 
-import br.com.hebaja.englishtrainingquizzes.OptionsMenuConfigure;
+import br.com.hebaja.englishtrainingquizzes.utils.OptionsMenuConfigure;
 import br.com.hebaja.englishtrainingquizzes.R;
 
 public abstract class BaseFragment extends Fragment {

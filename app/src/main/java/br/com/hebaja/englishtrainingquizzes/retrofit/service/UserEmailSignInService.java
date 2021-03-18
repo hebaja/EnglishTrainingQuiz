@@ -9,6 +9,6 @@ import retrofit2.http.Path;
 
 public interface UserEmailSignInService {
 
-    @POST("user/email/{email}")
+    @POST("api/user/email/{email}")
     Call<User> sendUser(@Body User user, @Path("email") String email);
 }

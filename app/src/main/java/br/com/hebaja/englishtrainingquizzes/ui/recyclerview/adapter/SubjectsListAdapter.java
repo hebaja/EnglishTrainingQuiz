@@ -1,6 +1,7 @@
 package br.com.hebaja.englishtrainingquizzes.ui.recyclerview.adapter;
 
 import android.content.Context;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -63,8 +64,12 @@ public class SubjectsListAdapter extends RecyclerView.Adapter<SubjectsListAdapte
         public void binds(List<Subject> subjects, Integer chosenLevelKey, Integer buttonPosition) {
             button.setText(subjects.get(buttonPosition).getPrompt());
             button.setOnClickListener(view -> {
+
+                String fileName = subjects.get(buttonPosition).getFileName();
+                String subject = subjects.get(buttonPosition).getPrompt();
+
                 NavController controller = Navigation.findNavController(view);
-                MenuSubjectsFragmentDirections.ActionMenuSubjectsToQuiz directions = actionMenuSubjectsToQuiz(buttonPosition, chosenLevelKey);
+                MenuSubjectsFragmentDirections.ActionMenuSubjectsToQuiz directions = actionMenuSubjectsToQuiz(buttonPosition, chosenLevelKey, fileName, subject);
                 controller.navigate(directions);
             });
         }

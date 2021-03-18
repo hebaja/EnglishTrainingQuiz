@@ -1,7 +1,13 @@
 package br.com.hebaja.englishtrainingquizzes.ui.fragment;
 
+import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.LayoutInflater;
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ProgressBar;
@@ -11,32 +17,24 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 import androidx.lifecycle.ViewModelProvider;
+import androidx.navigation.NavController;
+import androidx.navigation.NavDirections;
+import androidx.navigation.Navigation;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.facebook.Profile;
-import com.google.android.gms.auth.api.signin.GoogleSignIn;
-import com.google.android.gms.auth.api.signin.GoogleSignInAccount;
-import com.google.android.material.snackbar.Snackbar;
-
-import java.util.List;
-import java.util.Objects;
+import org.jetbrains.annotations.NotNull;
 
 import br.com.hebaja.englishtrainingquizzes.R;
-import br.com.hebaja.englishtrainingquizzes.model.Average;
-import br.com.hebaja.englishtrainingquizzes.retrofit.BaseRetrofit;
-import br.com.hebaja.englishtrainingquizzes.retrofit.service.AveragesService;
-import br.com.hebaja.englishtrainingquizzes.ui.recyclerview.adapter.AveragesListAdapter;
-import br.com.hebaja.englishtrainingquizzes.ui.viewmodel.UserViewModel;
-import retrofit2.Call;
-import retrofit2.Callback;
-import retrofit2.Response;
-import retrofit2.internal.EverythingIsNonNull;
+import br.com.hebaja.englishtrainingquizzes.ui.utils.BuilderAverages;
+import br.com.hebaja.englishtrainingquizzes.ui.viewmodel.LoginViewModel;
 
 public class AveragesFragment extends Fragment {
 
-    public static final String AVERAGES_LOAD_ERROR_MESSAGE = "Could not load averages. Check your internet connection.";
-    private String email;
-    private TextView usernameTextView;
+    @Override
+    public void onCreate(@Nullable @org.jetbrains.annotations.Nullable Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setHasOptionsMenu(true);
+    }
 
     @Nullable
     @Override
@@ -48,67 +46,32 @@ public class AveragesFragment extends Fragment {
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
 
-        usernameTextView = view.findViewById(R.id.averages_list_username);
-        RecyclerView averagesList = view.findViewById(R.id.averages_recyclerview);
+        TextView usernameTextView = view.findViewById(R.id.averages_list_username);
+        RecyclerView averagesListRecyclerView = view.findViewById(R.id.averages_recyclerview);
         ProgressBar progressBar = view.findViewById(R.id.average_page_progress_bar);
 
-        GoogleSignInAccount currentGoogleAccount = GoogleSignIn.getLastSignedInAccount(requireContext());
-        Profile currentFacebookAccount = Profile.getCurrentProfile();
-
-        if (currentGoogleAccount != null) {
-            email = currentGoogleAccount.getEmail();
-            usernameTextView.setText(currentGoogleAccount.getGivenName());
-            AveragesService service = new BaseRetrofit().getAveragesService();
-            Call<List<Average>> call = service.getAveragesByEmail(email);
-            searchAverages(averagesList, call, progressBar);
-        } else if (currentFacebookAccount != null) {
-            String uid = currentFacebookAccount.getId();
-            usernameTextView.setText(currentFacebookAccount.getFirstName());
-            AveragesService service = new BaseRetrofit().getAveragesService();
-            Call<List<Average>> call = service.getAveragesByUid(uid);
-            searchAverages(averagesList, call, progressBar);
-        } else {
-            UserViewModel userViewModel = new ViewModelProvider(requireActivity()).get(UserViewModel.class);
-            userViewModel.getUserLiveData().observe(getViewLifecycleOwner(), user -> {
-                if (user != null) {
-                    email = user.getEmail();
-                    usernameTextView.setText(user.getUsername());
-                    AveragesService service = new BaseRetrofit().getAveragesService();
-                    Call<List<Average>> call = service.getAveragesByEmail(email);
-                    searchAverages(averagesList, call, progressBar);
-                }
-            });
-        }
+        final BuilderAverages builderAverages = new BuilderAverages(requireActivity(), requireContext());
+        builderAverages.build(usernameTextView, averagesListRecyclerView, progressBar, view);
     }
 
-    private void searchAverages(RecyclerView averagesList, Call<List<Average>> call, ProgressBar progressBar) {
-        progressBar.setVisibility(View.VISIBLE);
-        call.enqueue(new Callback<List<Average>>() {
-            @Override
-            @EverythingIsNonNull
-            public void onResponse(Call<List<Average>> call, Response<List<Average>> response) {
-                progressBar.setVisibility(View.GONE);
-                configureRecyclerView(response, averagesList);
-
-            }
-
-            @Override
-            @EverythingIsNonNull
-            public void onFailure(Call<List<Average>> call, Throwable t) {
-                progressBar.setVisibility(View.GONE);
-                Snackbar.make(requireView(), AVERAGES_LOAD_ERROR_MESSAGE, Snackbar.LENGTH_LONG).show();
-            }
-        });
+    @Override
+    public void onCreateOptionsMenu(@NonNull @NotNull Menu menu, @NonNull @NotNull MenuInflater inflater) {
+        super.onCreateOptionsMenu(menu, inflater);
+        inflater.inflate(R.menu.averages_fragment_delete_user, menu);
     }
 
-    private void configureRecyclerView(Response<List<Average>> response, RecyclerView averagesList) {
-        if (response.isSuccessful()) {
-            List<Average> averages = response.body();
-            if (averages != null) {
-                averagesList.setAdapter(new AveragesListAdapter(averages, getContext()));
-            }
-        } else {
-            Snackbar.make(requireView(), AVERAGES_LOAD_ERROR_MESSAGE, Snackbar.LENGTH_LONG).show();
+    @Override
+    public boolean onOptionsItemSelected(@NonNull @NotNull MenuItem item) {
+        if (item.getItemId() == R.id.averages_delete_user) {
+            Log.i("AveragesFragment", "onOptionsItemSelected: clicked");
+            Intent browserIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://trainingquizzes.com/user/android/delete"));
+            final LoginViewModel loginViewModel = new ViewModelProvider(requireActivity()).get(LoginViewModel.class);
+            loginViewModel.logoff();
+            final NavDirections directions = AveragesFragmentDirections.actionGlobalLogin();
+            final NavController controller = Navigation.findNavController(requireView());
+            controller.navigate(directions);
+            startActivity(browserIntent);
         }
+        return super.onOptionsItemSelected(item);
     }
 }

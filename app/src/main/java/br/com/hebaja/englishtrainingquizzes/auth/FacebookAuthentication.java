@@ -34,9 +34,9 @@ import retrofit2.Callback;
 import retrofit2.Response;
 import retrofit2.internal.EverythingIsNonNull;
 
-import static br.com.hebaja.englishtrainingquizzes.Constants.FACEBOOK_AUTHENTICATION_PROBLEM;
-import static br.com.hebaja.englishtrainingquizzes.Constants.FACEBOOK_READ_PERMISSION_EMAIL;
-import static br.com.hebaja.englishtrainingquizzes.Constants.FACEBOOK_READ_PERMISSION_PUBLIC_PROFILE;
+import static br.com.hebaja.englishtrainingquizzes.utils.Constants.FACEBOOK_AUTHENTICATION_PROBLEM;
+import static br.com.hebaja.englishtrainingquizzes.utils.Constants.FACEBOOK_READ_PERMISSION_EMAIL;
+import static br.com.hebaja.englishtrainingquizzes.utils.Constants.FACEBOOK_READ_PERMISSION_PUBLIC_PROFILE;
 
 public class FacebookAuthentication {
 

@@ -5,6 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:id="@+id/main_activity_parent"
+    android:background="@color/appBackground"
     tools:context=".ui.activity.MainActivity">
 
     <fragment
@@ -16,22 +17,7 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintBottom_toTopOf="@+id/linear_layout_button_quit"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:navGraph="@navigation/nav_graph" />
-
-    <LinearLayout
-        android:id="@+id/linear_layout_button_quit"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent">
-
-        <include layout="@layout/button_quit"
-            android:layout_height="match_parent"
-            android:layout_width="match_parent"
-            android:layout_marginStart="8dp"
-            android:layout_marginEnd="8dp" />
-    </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

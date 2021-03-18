@@ -69,6 +69,12 @@
             app:destination="@id/finalScore"
             app:enterAnim="@anim/from_right"
             app:exitAnim="@anim/to_left" />
+        <argument
+            android:name="file_name"
+            app:argType="string" />
+        <argument
+            android:name="subject_prompt"
+            app:argType="string" />
     </fragment>
     <fragment
         android:id="@+id/finalScore"
@@ -89,6 +95,11 @@
             app:destination="@id/quiz"
             app:enterAnim="@anim/from_left"
             app:exitAnim="@anim/to_right" />
+        <argument
+            android:name="subject_prompt"
+            app:argType="string" />
+        <argument android:name="file_name"
+            app:argType="string" />
     </fragment>
     <action
         android:id="@+id/action_global_menuLevels"

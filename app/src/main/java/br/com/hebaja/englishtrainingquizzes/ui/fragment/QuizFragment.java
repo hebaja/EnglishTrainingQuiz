@@ -7,26 +7,19 @@ import android.view.ViewGroup;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
-import androidx.lifecycle.ViewModelProvider;
 
-import java.util.ArrayList;
-import java.util.List;
+import com.google.android.gms.ads.AdRequest;
+import com.google.android.gms.ads.AdView;
 
 import br.com.hebaja.englishtrainingquizzes.R;
-import br.com.hebaja.englishtrainingquizzes.TaskObjectsGenerator;
-import br.com.hebaja.englishtrainingquizzes.enums.LevelType;
-import br.com.hebaja.englishtrainingquizzes.model.Task;
-import br.com.hebaja.englishtrainingquizzes.ui.viewmodel.EmailRegisterViewModel;
-import br.com.hebaja.englishtrainingquizzes.ui.viewmodel.TaskListViewModel;
-import br.com.hebaja.englishtrainingquizzes.ui.BuilderQuizFragmentViews;
+import br.com.hebaja.englishtrainingquizzes.ui.utils.BuilderExerciseFromApi;
 
 public class QuizFragment extends BaseFragment {
 
-    List<Task> tasks = new ArrayList<>();
     private int chosenLevel;
     private int chosenSubject;
-    private LevelType level;
-    private String subject;
+    private String fileName;
+    private String subjectPrompt;
 
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {
@@ -35,10 +28,8 @@ public class QuizFragment extends BaseFragment {
         assert getArguments() != null;
         chosenLevel = QuizFragmentArgs.fromBundle(getArguments()).getChosenLevel();
         chosenSubject = QuizFragmentArgs.fromBundle(getArguments()).getChosenOption();
-        TaskObjectsGenerator generator = new TaskObjectsGenerator(chosenLevel, chosenSubject, getContext());
-        tasks = generator.generateTaskObjectsFromJsonFile();
-        level = generator.getLevel();
-        subject = generator.getSubject();
+        fileName = QuizFragmentArgs.fromBundle(getArguments()).getFileName();
+        subjectPrompt = QuizFragmentArgs.fromBundle(getArguments()).getSubjectPrompt();
     }
 
     @Nullable
@@ -50,21 +41,22 @@ public class QuizFragment extends BaseFragment {
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
-        TaskListViewModel taskListViewModel = new ViewModelProvider(this).get(TaskListViewModel.class);
-        taskListViewModel.getTasks(chosenLevel, chosenSubject).observe(getViewLifecycleOwner(), taskList -> {
-            tasks = taskList;
 
-            BuilderQuizFragmentViews builderQuizFragmentViews = new BuilderQuizFragmentViews(
-                    view,
-                    taskList,
-                    requireActivity(),
-                    getViewLifecycleOwner(),
-                    level,
-                    subject);
-            builderQuizFragmentViews.initializeViews();
-            builderQuizFragmentViews.setButtons(chosenLevel, chosenSubject);
-            builderQuizFragmentViews.updatePosition();
-            builderQuizFragmentViews.updateTaskViews();
-        });
+        final AdView adView = view.findViewById(R.id.adview);
+        AdRequest adRequest = new AdRequest.Builder()
+                .build();
+
+        adView.loadAd(adRequest);
+
+        final BuilderExerciseFromApi builderExerciseFromApi = new BuilderExerciseFromApi(
+                view,
+                fileName,
+                requireActivity(),
+                chosenLevel,
+                chosenSubject,
+                subjectPrompt,
+                getViewLifecycleOwner());
+
+        builderExerciseFromApi.fetchExerciseFromApi();
     }
 }

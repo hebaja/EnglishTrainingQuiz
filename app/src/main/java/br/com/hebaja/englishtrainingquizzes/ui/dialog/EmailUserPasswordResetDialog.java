@@ -29,6 +29,11 @@ public class EmailUserPasswordResetDialog extends DialogFragment {
 
     public static final String EMAIL_USER_PASSWORD_RESET_DIALOG_EDIT_TEXT = "email_user_password_reset_dialog_edit_text";
     public static final int EMAIL_USER_PASSWORD_RESET_DIALOG_KEY_CODE = 321;
+    public static final String CHECK_YOUR_EMAIL_INBOX_MESSAGE = "Check your email inbox to complete password reset.";
+    public static final String PASSWORD_RESET_REQUEST_ERROR = "It was not possible to send password reset request.";
+    public static final String SERVER_CONNECT_ERROR = "Could not connect to server.";
+    public static final String PROVIDE_EMAIL_MESSAGE = "You must provide an e-mail.";
+    public static final String VALID_EMAIL_MESSAGE = "Insert a valid e-mail.";
     private TextInputLayout emailInputLayout;
     private final ProgressBar progressBar;
     private final View view;
@@ -73,10 +78,10 @@ public class EmailUserPasswordResetDialog extends DialogFragment {
                         public void onResponse(Call<Boolean> call, Response<Boolean> response) {
                             if(response.isSuccessful()) {
                                 if(response.body()) {
-                                    Snackbar.make(view, "Check your email inbox to complete password reset.", Snackbar.LENGTH_LONG).show();
+                                    Snackbar.make(view, CHECK_YOUR_EMAIL_INBOX_MESSAGE, Snackbar.LENGTH_LONG).show();
                                 }
                             } else {
-                                Snackbar.make(view, "It was not possible to send password reset request.", Snackbar.LENGTH_LONG).show();
+                                Snackbar.make(view, PASSWORD_RESET_REQUEST_ERROR, Snackbar.LENGTH_LONG).show();
                             }
                             progressBar.setVisibility(View.GONE);
                         }
@@ -84,11 +89,10 @@ public class EmailUserPasswordResetDialog extends DialogFragment {
                         @Override
                         @EverythingIsNonNull
                         public void onFailure(Call<Boolean> call, Throwable t) {
-                            Snackbar.make(view, "Could not connect to server.", Snackbar.LENGTH_LONG).show();
+                            Snackbar.make(view, SERVER_CONNECT_ERROR, Snackbar.LENGTH_LONG).show();
                             progressBar.setVisibility(View.GONE);
                         }
                     });
-
                 }
             });
         }
@@ -103,11 +107,11 @@ public class EmailUserPasswordResetDialog extends DialogFragment {
     private boolean validateInputs() {
         if(email.isEmpty()) {
             emailInputLayout.setErrorEnabled(true);
-            emailInputLayout.setError("You must provide an e-mail.");
+            emailInputLayout.setError(PROVIDE_EMAIL_MESSAGE);
             return false;
         } else if (!Patterns.EMAIL_ADDRESS.matcher(email).matches()){
             emailInputLayout.setErrorEnabled(true);
-            emailInputLayout.setError("Insert a valid e-mail.");
+            emailInputLayout.setError(VALID_EMAIL_MESSAGE);
             return false;
         }
         return true;

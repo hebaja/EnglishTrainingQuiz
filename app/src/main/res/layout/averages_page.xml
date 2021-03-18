@@ -11,7 +11,9 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textSize="18sp"
-        android:text="User:" android:layout_margin="8dp"
+        android:text="@string/average_fragment_user_label"
+        android:textColor="@color/average_fragment_text_color"
+        android:layout_margin="8dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -24,7 +26,8 @@
         android:layout_marginStart="8dp"
         android:layout_margin="8dp"
         android:textSize="18sp"
-        tools:text="Email"
+        android:textColor="@color/average_fragment_text_color"
+        tools:text="username"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintStart_toEndOf="@id/averages_list_username_title" />
 
@@ -45,7 +48,7 @@
     <ProgressBar
         android:id="@+id/average_page_progress_bar"
         style="?android:attr/progressBarStyleLarge"
-        android:layout_width="wrap_content"
+        android:layout_width="60dp"
         android:layout_height="wrap_content"
         android:visibility="invisible"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -53,4 +56,15 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@id/averages_list_username">
     </ProgressBar>
+
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:id="@+id/averages_coordinator_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -7,7 +7,7 @@ import retrofit2.http.Path;
 
 public interface FacebookIdTokenService {
 
-    @POST("user/facebook/{idToken}")
+    @POST("api/user/facebook/{idToken}")
     Call<User> sendFacebookIdToken(@Path("idToken") String idToken);
 
 }

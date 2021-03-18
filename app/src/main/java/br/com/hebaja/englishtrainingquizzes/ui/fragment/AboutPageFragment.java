@@ -15,7 +15,7 @@ import com.mikepenz.aboutlibraries.ui.LibsSupportFragment;
 
 import br.com.hebaja.englishtrainingquizzes.R;
 
-import static br.com.hebaja.englishtrainingquizzes.Constants.ABOUT_PAGE_APP_DESCRIPTION;
+import static br.com.hebaja.englishtrainingquizzes.utils.Constants.ABOUT_PAGE_APP_DESCRIPTION;
 
 public class AboutPageFragment extends Fragment {
 

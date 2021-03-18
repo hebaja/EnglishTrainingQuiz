@@ -9,8 +9,8 @@ import androidx.lifecycle.ViewModel;
 import br.com.hebaja.englishtrainingquizzes.R;
 import br.com.hebaja.englishtrainingquizzes.model.ButtonNext;
 
-import static br.com.hebaja.englishtrainingquizzes.Constants.FINAL_SCORE;
-import static br.com.hebaja.englishtrainingquizzes.Constants.NEXT_QUESTION;
+import static br.com.hebaja.englishtrainingquizzes.utils.Constants.FINAL_SCORE;
+import static br.com.hebaja.englishtrainingquizzes.utils.Constants.NEXT_QUESTION;
 
 public class ButtonNextViewModel extends ViewModel {
 
@@ -44,10 +44,12 @@ public class ButtonNextViewModel extends ViewModel {
         return buttonNextLiveData;
     }
 
-    public LiveData<ButtonNext> reset() {
-        buttonNext.getCardView().setVisibility(View.INVISIBLE);
-        buttonNextLiveData.setValue(buttonNext);
-        return buttonNextLiveData;
+    public void reset() {
+        checkIfDataIsNull();
+        if(buttonNext != null) {
+            buttonNext.getCardView().setVisibility(View.INVISIBLE);
+            buttonNextLiveData.setValue(buttonNext);
+        }
     }
 
     private void checkIfDataIsNull() {

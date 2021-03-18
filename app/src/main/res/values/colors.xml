@@ -13,5 +13,7 @@
     <color name="colorRedWrongAnswer">#A40000</color>
     <color name="buttonQuitkColorPrimary">#ff0000</color>
     <color name="buttonQuitkColorSecondary">#a40000</color>
-
+    <color name="appBackground">#f9fbe7</color>
+    <color name="average_fragment_text_color">#333333</color>
+    <color name="average_progress_gray">#cccccc</color>
 </resources>

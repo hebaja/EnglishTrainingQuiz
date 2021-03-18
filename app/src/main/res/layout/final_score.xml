@@ -1,68 +1,98 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/final_score_parent"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:id="@+id/final_score_parent">
+    android:layout_gravity="bottom"
+    app:layout_dodgeInsetEdges="bottom">
 
     <TextView
         android:id="@+id/final_score_textview"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="64dp"
         android:fontFamily="@font/allerta"
         android:text="@string/headline_final_score"
         android:textColor="@color/textColorPrimary"
         android:textSize="24sp"
-        app:layout_constraintBottom_toTopOf="@+id/final_score_counter"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.3" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/final_score_counter"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="72dp"
         android:layout_marginBottom="32dp"
         android:fontFamily="@font/allerta"
         android:text="@string/score_counter_final_score"
         android:textColor="@color/textColorPrimary"
         android:textSize="36sp"
-        app:layout_constraintBottom_toTopOf="@+id/final_score_button_try_again"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintEnd_toEndOf="@id/final_score_textview"
+        app:layout_constraintStart_toStartOf="@id/final_score_textview"
+        app:layout_constraintTop_toBottomOf="@id/final_score_textview" />
 
-    <Button
-        android:id="@+id/final_score_button_try_again"
-        android:layout_width="0dp"
+    <ProgressBar
+        android:id="@+id/final_score_progress_bar"
+        style="?android:attr/progressBarStyleLarge"
+        android:layout_width="60dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="10dp"
-        android:layout_marginEnd="10dp"
-        android:layout_marginBottom="10dp"
-        android:background="@drawable/light_orange_round_button"
-        android:text="@string/try_again"
-        android:textColor="@color/textColorPrimary"
-        android:textSize="18sp"
-        app:layout_constraintBottom_toTopOf="@+id/final_score_button_back_menu"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        android:layout_marginTop="96dp"
+        android:visibility="invisible"
+        app:layout_constraintStart_toStartOf="@id/final_score_counter"
+        app:layout_constraintEnd_toEndOf="@id/final_score_counter"
+        app:layout_constraintTop_toBottomOf="@id/final_score_counter" />
 
-    <Button
-        android:id="@+id/final_score_button_back_menu"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="10dp"
-        android:layout_marginEnd="10dp"
-        android:layout_marginBottom="8dp"
-        android:background="@drawable/orange_round_button"
-        android:text="@string/back_to_main_menu"
-        android:textColor="@color/textColorPrimary"
-        android:textSize="18sp"
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:id="@+id/final_score_fragment_coordinator_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_insetEdge="bottom">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="bottom"
+            app:layout_dodgeInsetEdges="bottom">
+
+            <Button
+                android:id="@+id/final_score_button_try_again"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginBottom="8dp"
+                android:background="@drawable/light_orange_round_button"
+                android:text="@string/try_again"
+                android:textColor="@color/textColorPrimary"
+                android:textSize="18sp"
+                app:layout_constraintBottom_toTopOf="@id/final_score_button_back_menu"
+                app:layout_constraintEnd_toEndOf="@id/final_score_button_back_menu"
+                app:layout_constraintStart_toStartOf="@id/final_score_button_back_menu" />
+
+            <Button
+                android:id="@+id/final_score_button_back_menu"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginBottom="8dp"
+                android:background="@drawable/orange_round_button"
+                android:text="@string/back_to_main_menu"
+                android:textColor="@color/textColorPrimary"
+                android:textSize="18sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_goneMarginBottom="8dp" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

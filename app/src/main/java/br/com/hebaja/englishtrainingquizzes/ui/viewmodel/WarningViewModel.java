@@ -45,12 +45,12 @@ public class WarningViewModel extends AndroidViewModel {
         return warningViewLiveData;
     }
 
-    public LiveData<WarningView> reset() {
+    public void reset() {
         checkIfDataIsNull();
-        chosenOptionWarning.getCardView().setVisibility(View.INVISIBLE);
-        warningViewLiveData.setValue(chosenOptionWarning);
-
-        return warningViewLiveData;
+        if(chosenOptionWarning != null) {
+            chosenOptionWarning.getCardView().setVisibility(View.INVISIBLE);
+            warningViewLiveData.setValue(chosenOptionWarning);
+        }
     }
 
     private void configureChosenOptionWarning(int imageRes, int tag, String answer, int color) {

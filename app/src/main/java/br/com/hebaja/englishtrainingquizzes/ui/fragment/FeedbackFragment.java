@@ -18,11 +18,11 @@ import androidx.fragment.app.Fragment;
 
 import br.com.hebaja.englishtrainingquizzes.R;
 
-import static br.com.hebaja.englishtrainingquizzes.Constants.EMAIL_SELECTOR_KEY;
-import static br.com.hebaja.englishtrainingquizzes.Constants.ON_EMPTY_MESSAGE_FEEDBACK_MESSAGE;
-import static br.com.hebaja.englishtrainingquizzes.Constants.RECIPIENT_EMAIL;
-import static br.com.hebaja.englishtrainingquizzes.Constants.START_EMAIL_CLIENT_ACTIVITY_MESSAGE;
-import static br.com.hebaja.englishtrainingquizzes.Constants.SUBJECT_EMAIL;
+import static br.com.hebaja.englishtrainingquizzes.utils.Constants.EMAIL_SELECTOR_KEY;
+import static br.com.hebaja.englishtrainingquizzes.utils.Constants.ON_EMPTY_MESSAGE_FEEDBACK_MESSAGE;
+import static br.com.hebaja.englishtrainingquizzes.utils.Constants.RECIPIENT_EMAIL;
+import static br.com.hebaja.englishtrainingquizzes.utils.Constants.START_EMAIL_CLIENT_ACTIVITY_MESSAGE;
+import static br.com.hebaja.englishtrainingquizzes.utils.Constants.SUBJECT_EMAIL;
 
 public class FeedbackFragment extends Fragment {
 

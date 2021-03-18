@@ -6,7 +6,7 @@ import retrofit2.http.Path;
 
 public interface EmailExistsService {
 
-    @GET("user/email/{email}")
+    @GET("api/user/email/{email}")
     Call<Boolean> emailExists(@Path("email") String email);
 
 }

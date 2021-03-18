@@ -8,7 +8,7 @@ import retrofit2.http.Path;
 
 public interface GoogleIdTokenService {
 
-    @POST("user/google/{idToken}")
+    @POST("api/user/google/{idToken}")
     Call<User> sendGoogleIdToken(@Path("idToken") String idToken);
 
 }

@@ -2,6 +2,7 @@ package br.com.hebaja.englishtrainingquizzes.ui.dialog;
 
 import android.app.AlertDialog;
 import android.app.Dialog;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.util.Patterns;
 import android.view.View;
@@ -11,7 +12,6 @@ import android.widget.ProgressBar;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.DialogFragment;
-import androidx.lifecycle.ViewModelProvider;
 
 import com.google.android.material.snackbar.Snackbar;
 import com.google.android.material.textfield.TextInputLayout;
@@ -23,11 +23,12 @@ import java.util.Objects;
 import br.com.hebaja.englishtrainingquizzes.R;
 import br.com.hebaja.englishtrainingquizzes.model.User;
 import br.com.hebaja.englishtrainingquizzes.retrofit.BaseRetrofit;
-import br.com.hebaja.englishtrainingquizzes.ui.viewmodel.UserViewModel;
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
 import retrofit2.internal.EverythingIsNonNull;
+
+import static br.com.hebaja.englishtrainingquizzes.utils.Constants.USERNAME_RECEIVED;
 
 public class EmailUserRegisterDialog extends DialogFragment {
 
@@ -63,10 +64,12 @@ public class EmailUserRegisterDialog extends DialogFragment {
     private TextInputLayout passwordConfirmInputLayout;
     private final View view;
     private final ProgressBar progressBar;
+    private final SharedPreferences preferences;
 
-    public EmailUserRegisterDialog(ProgressBar progressBar, View view) {
+    public EmailUserRegisterDialog(ProgressBar progressBar, View view, SharedPreferences preferences) {
         this.view = view;
         this.progressBar = progressBar;
+        this.preferences = preferences;
     }
 
     @NonNull
@@ -95,8 +98,7 @@ public class EmailUserRegisterDialog extends DialogFragment {
                 User user = configureUser();
 
                 if(inputsAreValid()) {
-                    UserViewModel userViewModel = new ViewModelProvider(requireActivity()).get(UserViewModel.class);
-                    attemptToSendUserRegisterRequest(dialog, user, userViewModel);
+                    attemptToSendUserRegisterRequest(dialog, user);
                 } else {
                     dialog.cancel();
                     Snackbar.make(view, USER_REGISTER_REQUEST_PROBLEM, Snackbar.LENGTH_LONG).show();
@@ -108,9 +110,9 @@ public class EmailUserRegisterDialog extends DialogFragment {
     @NotNull
     private User configureUser() {
         User user = new User();
-        user.setUsername(usernameInputLayout.getEditText().getText().toString());
-        user.setEmail(emailInputLayout.getEditText().getText().toString());
-        user.setPassword(passwordInputLayout.getEditText().getText().toString());
+        user.setUsername(Objects.requireNonNull(usernameInputLayout.getEditText()).getText().toString());
+        user.setEmail(Objects.requireNonNull(emailInputLayout.getEditText()).getText().toString());
+        user.setPassword(Objects.requireNonNull(passwordInputLayout.getEditText()).getText().toString());
         return user;
     }
 
@@ -122,7 +124,7 @@ public class EmailUserRegisterDialog extends DialogFragment {
         passwordConfirmInputLayout = dialog.findViewById(R.id.dialog_email_register_confirm_password_input_layout);
     }
 
-    private void attemptToSendUserRegisterRequest(AlertDialog dialog, User user, UserViewModel userViewModel) {
+    private void attemptToSendUserRegisterRequest(AlertDialog dialog, User user) {
         Call<Boolean> call = new BaseRetrofit().getEmailExistsService().emailExists(email);
         call.enqueue(new Callback<Boolean>() {
             @Override
@@ -134,7 +136,7 @@ public class EmailUserRegisterDialog extends DialogFragment {
                         emailInputLayout.setError(EMAIL_HAS_BEEN_USED_MESSAGE);
                     } else {
                         dialog.cancel();
-                        sendUserRegisterRequest(user, userViewModel);
+                        sendUserRegisterRequest(user);
                     }
                 }
             }
@@ -148,7 +150,7 @@ public class EmailUserRegisterDialog extends DialogFragment {
         });
     }
 
-    private void sendUserRegisterRequest(User user, UserViewModel userViewModel) {
+    private void sendUserRegisterRequest(User user) {
         progressBar.setVisibility(View.VISIBLE);
         Call<Boolean> userRegisterCall = new BaseRetrofit().getEmailUserRegisterService().register(user);
         userRegisterCall.enqueue(new Callback<Boolean>() {
@@ -157,7 +159,9 @@ public class EmailUserRegisterDialog extends DialogFragment {
             public void onResponse(Call<Boolean> call, Response<Boolean> response) {
                 if(response.isSuccessful()) {
                     if(response.body()) {
-                        userViewModel.setUserLiveData(user);
+                        final SharedPreferences.Editor editor = preferences.edit();
+                        editor.putString(USERNAME_RECEIVED, user.getUsername());
+                        editor.apply();
                         Snackbar.make(view, CHECK_EMAIL_REGISTRATION_MESSAGE, Snackbar.LENGTH_LONG).show();
                     }
                 } else {

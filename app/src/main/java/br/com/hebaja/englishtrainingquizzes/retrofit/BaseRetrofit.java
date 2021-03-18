@@ -1,11 +1,14 @@
 package br.com.hebaja.englishtrainingquizzes.retrofit;
 
 import br.com.hebaja.englishtrainingquizzes.retrofit.service.AveragesService;
+import br.com.hebaja.englishtrainingquizzes.retrofit.service.ChecksumService;
 import br.com.hebaja.englishtrainingquizzes.retrofit.service.EmailExistsService;
 import br.com.hebaja.englishtrainingquizzes.retrofit.service.EmailUserPasswordResetService;
+import br.com.hebaja.englishtrainingquizzes.retrofit.service.ExerciseService;
 import br.com.hebaja.englishtrainingquizzes.retrofit.service.FacebookIdTokenService;
 import br.com.hebaja.englishtrainingquizzes.retrofit.service.GoogleIdTokenService;
 import br.com.hebaja.englishtrainingquizzes.retrofit.service.EmailUserRegisterService;
+import br.com.hebaja.englishtrainingquizzes.retrofit.service.JsonArrayExerciseService;
 import br.com.hebaja.englishtrainingquizzes.retrofit.service.SaveExerciseService;
 import br.com.hebaja.englishtrainingquizzes.retrofit.service.UserEmailSignInService;
 import okhttp3.OkHttpClient;
@@ -23,6 +26,9 @@ public class BaseRetrofit {
     private final FacebookIdTokenService facebookIdTokenService;
     private final UserEmailSignInService userEmailSignInService;
     private final EmailUserPasswordResetService emailUserPasswordResetService;
+    private final ExerciseService exerciseService;
+    private final JsonArrayExerciseService jsonArrayExerciseService;
+    private final ChecksumService checksumService;
 
     public BaseRetrofit() {
         HttpLoggingInterceptor interceptor = new HttpLoggingInterceptor();
@@ -32,8 +38,7 @@ public class BaseRetrofit {
                 .build();
 
         Retrofit retrofit = new Retrofit.Builder()
-//                .baseUrl("https://englishtrainingquizzes.herokuapp.com/")
-                .baseUrl("http://192.168.1.100:8080")
+                .baseUrl("https://trainingquizzes.com/")
                 .client(client)
                 .addConverterFactory(GsonConverterFactory.create())
                 .build();
@@ -46,6 +51,9 @@ public class BaseRetrofit {
         facebookIdTokenService = retrofit.create(FacebookIdTokenService.class);
         userEmailSignInService = retrofit.create(UserEmailSignInService.class);
         emailUserPasswordResetService = retrofit.create(EmailUserPasswordResetService.class);
+        exerciseService = retrofit.create(ExerciseService.class);
+        jsonArrayExerciseService = retrofit.create(JsonArrayExerciseService.class);
+        checksumService = retrofit.create(ChecksumService.class);
     }
 
     public EmailUserRegisterService getEmailUserRegisterService() { return emailUserRegisterService; }
@@ -56,4 +64,7 @@ public class BaseRetrofit {
     public FacebookIdTokenService getFacebookIdTokenService() { return facebookIdTokenService; }
     public UserEmailSignInService getUserEmailSignInService() { return userEmailSignInService; }
     public EmailUserPasswordResetService getEmailUserPasswordResetService() { return emailUserPasswordResetService; }
+    public ExerciseService getExerciseService() { return exerciseService; }
+    public JsonArrayExerciseService getJsonArrayExerciseService() { return jsonArrayExerciseService; }
+    public ChecksumService getChecksumService() { return checksumService; }
 }

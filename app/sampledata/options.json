@@ -1,0 +1,19 @@
+{
+  "options": [
+    {
+      "prompt" : "Option A"
+    },
+    {
+      "prompt" : "Option B"
+    },
+    {
+      "prompt" : "Option C"
+    },
+    {
+      "prompt" : "Option D"
+    },
+    {
+      "prompt" : "Option E"
+    }
+  ]
+}

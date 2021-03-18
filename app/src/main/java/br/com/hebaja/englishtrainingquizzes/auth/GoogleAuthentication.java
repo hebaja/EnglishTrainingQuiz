@@ -27,7 +27,7 @@ import retrofit2.Callback;
 import retrofit2.Response;
 import retrofit2.internal.EverythingIsNonNull;
 
-import static br.com.hebaja.englishtrainingquizzes.Constants.GOOGLE_AUTHENTICATION_PROBLEM;
+import static br.com.hebaja.englishtrainingquizzes.utils.Constants.GOOGLE_AUTHENTICATION_PROBLEM;
 
 public class GoogleAuthentication {
 

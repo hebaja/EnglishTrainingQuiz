@@ -32,7 +32,8 @@ public class SubjectDAO {
                 new Subject("Prepositions", "medium_prepositions.json", order++),
                 new Subject("Reported Speech", "medium_reported_speech.json", order++),
                 new Subject("Second conditional", "medium_second_conditional.json", order++),
-                new Subject("Third conditional", "medium_third_conditional.json", order++)));
+                new Subject("Third conditional", "medium_third_conditional.json", order++),
+                new Subject("Adverbs", "medium_adverbs.json", order++)));
         return subjects;
     }
 

@@ -1,5 +1,6 @@
 package br.com.hebaja.englishtrainingquizzes.auth;
 
+import android.content.SharedPreferences;
 import android.util.Patterns;
 import android.view.View;
 import android.widget.Button;
@@ -20,11 +21,14 @@ import br.com.hebaja.englishtrainingquizzes.retrofit.BaseRetrofit;
 import br.com.hebaja.englishtrainingquizzes.retrofit.service.UserEmailSignInService;
 import br.com.hebaja.englishtrainingquizzes.ui.fragment.LoginFragmentDirections;
 import br.com.hebaja.englishtrainingquizzes.ui.viewmodel.LoginViewModel;
-import br.com.hebaja.englishtrainingquizzes.ui.viewmodel.UserViewModel;
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
 import retrofit2.internal.EverythingIsNonNull;
+
+import static br.com.hebaja.englishtrainingquizzes.utils.Constants.EMAIL_RECEIVED;
+import static br.com.hebaja.englishtrainingquizzes.utils.Constants.UID_RECEIVED;
+import static br.com.hebaja.englishtrainingquizzes.utils.Constants.USERNAME_RECEIVED;
 
 public class EmailAuthentication {
 
@@ -42,8 +46,8 @@ public class EmailAuthentication {
                                       TextInputLayout passwordTextInputLayout,
                                       View view,
                                       LoginViewModel loginViewModel,
-                                      UserViewModel userViewModel,
-                                      ProgressBar progressBar) {
+                                      ProgressBar progressBar,
+                                      SharedPreferences preferences) {
         emailSignInButton.setOnClickListener(v -> {
 
             emailTextInputLayout.setErrorEnabled(false);
@@ -59,9 +63,9 @@ public class EmailAuthentication {
                         passwordTextInputLayout,
                         view,
                         loginViewModel,
-                        userViewModel,
                         progressBar,
-                        user);
+                        user,
+                        preferences);
             }
         });
     }
@@ -70,9 +74,9 @@ public class EmailAuthentication {
                                            TextInputLayout passwordTextInputLayout,
                                            View view,
                                            LoginViewModel loginViewModel,
-                                           UserViewModel userViewModel,
                                            ProgressBar progressBar,
-                                           User user) {
+                                           User user,
+                                           SharedPreferences preferences) {
         UserEmailSignInService service = new BaseRetrofit().getUserEmailSignInService();
         Call<User> call = service.sendUser(user, user.getEmail());
         progressBar.setVisibility(View.VISIBLE);
@@ -85,7 +89,7 @@ public class EmailAuthentication {
                     if(userReturned != null) {
                         BCrypt.Result result = BCrypt.verifyer().verify(user.getPassword().toCharArray(), userReturned.getPassword());
                         if(result.verified) {
-                            doWhenPasswordIsCorrect(userReturned, view, loginViewModel, userViewModel);
+                            doWhenPasswordIsCorrect(userReturned, view, loginViewModel, preferences);
                         } else {
                             passwordTextInputLayout.setError(WRONG_PASSWORD_MESSAGE);
                         }
@@ -106,10 +110,14 @@ public class EmailAuthentication {
 
     }
 
-    private void doWhenPasswordIsCorrect(User userReturned, View view, LoginViewModel loginViewModel, UserViewModel userViewModel) {
+    private void doWhenPasswordIsCorrect(User userReturned, View view, LoginViewModel loginViewModel, SharedPreferences preferences) {
         navigateToMenuLevels(view);
         loginViewModel.login();
-        userViewModel.setUserLiveData(userReturned);
+        final SharedPreferences.Editor editor = preferences.edit();
+        editor.putString(EMAIL_RECEIVED, userReturned.getEmail());
+        editor.putString(USERNAME_RECEIVED, userReturned.getUsername());
+        editor.putString(UID_RECEIVED, userReturned.getUid());
+        editor.apply();
     }
 
     private boolean validateInputs(TextInputLayout emailTextInputLayout, TextInputLayout passwordTextInputLayout) {

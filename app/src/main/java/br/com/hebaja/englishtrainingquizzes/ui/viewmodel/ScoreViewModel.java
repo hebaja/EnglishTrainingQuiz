@@ -10,7 +10,7 @@ public class ScoreViewModel extends ViewModel {
     private Integer score = 0;
 
     public LiveData<Integer> request(int request) {
-        scoreLiveData = new MutableLiveData<>();
+        checkIfDataIsNull();
         if(request == 0) {
             score++;
         }
@@ -18,10 +18,16 @@ public class ScoreViewModel extends ViewModel {
         return scoreLiveData;
     }
 
-    public LiveData<Integer> reset() {
+    public void reset() {
+        checkIfDataIsNull();
         score = 0;
         scoreLiveData.setValue(0);
-        return scoreLiveData;
+    }
+
+    private void checkIfDataIsNull() {
+        if(scoreLiveData == null) {
+            scoreLiveData = new MutableLiveData<>();
+        }
     }
 
 }

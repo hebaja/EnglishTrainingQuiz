@@ -1,14 +1,18 @@
 package br.com.hebaja.englishtrainingquizzes.ui.fragment;
 
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.net.Uri;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.LinearLayout;
 import android.widget.ProgressBar;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -35,14 +39,16 @@ import br.com.hebaja.englishtrainingquizzes.auth.GoogleAuthentication;
 import br.com.hebaja.englishtrainingquizzes.ui.dialog.EmailUserPasswordResetDialog;
 import br.com.hebaja.englishtrainingquizzes.ui.dialog.EmailUserRegisterDialog;
 import br.com.hebaja.englishtrainingquizzes.ui.viewmodel.LoginViewModel;
-import br.com.hebaja.englishtrainingquizzes.ui.viewmodel.UserViewModel;
 
-import static br.com.hebaja.englishtrainingquizzes.Constants.GOOGLE_REQUEST_CODE;
+import static br.com.hebaja.englishtrainingquizzes.utils.Constants.GOOGLE_REQUEST_CODE;
+import static br.com.hebaja.englishtrainingquizzes.utils.Constants.SHARED_PREFERENCES_KEY;
+import static br.com.hebaja.englishtrainingquizzes.utils.Constants.USERNAME_RECEIVED;
 
 public class LoginFragment extends Fragment {
 
     public static final String QUERY_PARAMETER_KEY = "id";
     public static final String QUERY_PARAMETER_USER = "user-register";
+    public static final String QUERY_PARAMETER_USER_REMOVED = "user-removed";
     public static final String QUERY_PARAMETER_PASSWORD = "password-reset";
     private GoogleSignInClient googleSignInClient;
     private LoginViewModel loginViewModel;
@@ -58,7 +64,6 @@ public class LoginFragment extends Fragment {
     private TextInputLayout passwordTextInputLayout;
     private Button emailUserRegisterButton;
     private Button emailUserResetPasswordButton;
-    private UserViewModel userViewModel;
 
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {
@@ -76,8 +81,9 @@ public class LoginFragment extends Fragment {
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
         controller = Navigation.findNavController(view);
+        final SharedPreferences preferences = requireContext().getSharedPreferences(SHARED_PREFERENCES_KEY, Context.MODE_PRIVATE);
         configureViewModels();
-        getIntentData(view, userViewModel);
+        getIntentData(view, preferences);
         configureViews(view);
         checkIfUserIsSignedIn();
 
@@ -90,10 +96,10 @@ public class LoginFragment extends Fragment {
                 passwordTextInputLayout,
                 getView(),
                 loginViewModel,
-                userViewModel,
-                progressBar);
+                progressBar,
+                preferences);
 
-        emailUserRegisterButton.setOnClickListener(v -> configureUserRegisterDialog(view));
+        emailUserRegisterButton.setOnClickListener(v -> configureUserRegisterDialog(view, preferences));
         emailUserResetPasswordButton.setOnClickListener(v -> configurePasswordResetDialog(view));
     }
 
@@ -116,15 +122,18 @@ public class LoginFragment extends Fragment {
         emailAuthentication = new EmailAuthentication();
     }
 
-    private void getIntentData(@NotNull View view, UserViewModel userViewModel) {
+    private void getIntentData(@NotNull View view, SharedPreferences preferences) {
         Uri data = requireActivity().getIntent().getData();
         if (data != null) {
             if(data.getQueryParameter(QUERY_PARAMETER_KEY).equals(QUERY_PARAMETER_USER)) {
-                userViewModel.getUserLiveData().observe(getViewLifecycleOwner(), user -> {
-                    Snackbar.make(view, "User " + user.getUsername() + " was successfully registered. You can sign in now.", Snackbar.LENGTH_LONG).show();
-                });
+                final String username = preferences.getString(USERNAME_RECEIVED, null);
+//                Snackbar.make(view, "User " + username + " was successfully registered. You can sign in now.", Snackbar.LENGTH_LONG).show();
+                Toast.makeText(requireContext(), "User " + username + " was successfully registered. You can sign in now.", Toast.LENGTH_LONG).show();
             } else if(data.getQueryParameter(QUERY_PARAMETER_KEY).equals(QUERY_PARAMETER_PASSWORD)) {
-                Snackbar.make(view, "You can sign in with new password.", Snackbar.LENGTH_LONG).show();
+//                Snackbar.make(view, "You can sign in with new password.", Snackbar.LENGTH_LONG).show();
+                Toast.makeText(requireContext(), "You can sign in with new password.", Toast.LENGTH_LONG).show();
+            } else if(data.getQueryParameter(QUERY_PARAMETER_KEY).equals(QUERY_PARAMETER_USER_REMOVED)) {
+                Toast.makeText(requireContext(), "User was successfully removed.", Toast.LENGTH_LONG).show();
             }
             clearIntentData();
         }
@@ -140,7 +149,6 @@ public class LoginFragment extends Fragment {
 
     private void configureViewModels() {
         loginViewModel = new ViewModelProvider(requireActivity()).get(LoginViewModel.class);
-        userViewModel = new ViewModelProvider(requireActivity()).get(UserViewModel.class);
     }
 
     private void configureViews(@NotNull View view) {
@@ -180,8 +188,8 @@ public class LoginFragment extends Fragment {
         emailUserPasswordResetDialog.show(getParentFragmentManager(), EmailUserPasswordResetDialog.EMAIL_USER_PASSWORD_RESET_DIALOG_EDIT_TEXT);
     }
 
-    private void configureUserRegisterDialog(@NotNull View view) {
-        EmailUserRegisterDialog emailUserRegisterDialog = new EmailUserRegisterDialog(progressBar, view);
+    private void configureUserRegisterDialog(@NotNull View view, SharedPreferences preferences) {
+        EmailUserRegisterDialog emailUserRegisterDialog = new EmailUserRegisterDialog(progressBar, view, preferences);
         emailUserRegisterDialog.setTargetFragment(this, EmailUserRegisterDialog.EMAIL_USER_REGISTER_DIALOG_KEY_CODE);
         emailUserRegisterDialog.show(getParentFragmentManager(), EmailUserRegisterDialog.EMAIL_USER_REGISTER_DIALOG_EDIT_TEXT);
     }
