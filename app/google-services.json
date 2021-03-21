@@ -7,18 +7,18 @@
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:92591554945:android:78c909013dcd0be86ba880",
+        "mobilesdk_app_id": "1:92591554945:android:e9522ca32b6c57fd6ba880",
         "android_client_info": {
           "package_name": "br.com.hebaja.englishtrainingquizzes"
         }
       },
       "oauth_client": [
         {
-          "client_id": "92591554945-etrrmsd5cbfptfsjums91kbkgm2k58p4.apps.googleusercontent.com",
+          "client_id": "92591554945-5qaj4r34080rv95o2ouisssqbomr8g7b.apps.googleusercontent.com",
           "client_type": 1,
           "android_info": {
             "package_name": "br.com.hebaja.englishtrainingquizzes",
-            "certificate_hash": "9efdcf17be735bdc6fcfa83d36842d22a17ddee8"
+            "certificate_hash": "8eb13bfab731319bf237eb65a55cc7990cf0fc10"
           }
         },
         {

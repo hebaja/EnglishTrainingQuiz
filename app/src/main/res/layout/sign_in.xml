@@ -18,7 +18,7 @@
             android:paddingTop="@dimen/activity_vertical_margin"
             android:paddingRight="@dimen/activity_horizontal_margin"
             android:paddingBottom="@dimen/activity_vertical_margin">
-
+<!--
             <LinearLayout
                 android:id="@+id/sign_in_google_button"
                 android:layout_width="match_parent"
@@ -56,17 +56,26 @@
                         app:layout_constraintTop_toTopOf="parent" />
                 </androidx.constraintlayout.widget.ConstraintLayout>
             </LinearLayout>
+    -->
 
             <LinearLayout
                 android:id="@+id/facebook_sign_in_button"
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
                 android:background="#385fad"
-                android:layout_marginTop="16dp"
+
                 android:clickable="true"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <!--
                 app:layout_constraintEnd_toEndOf="@id/sign_in_google_button"
                 app:layout_constraintStart_toStartOf="@id/sign_in_google_button"
                 app:layout_constraintTop_toBottomOf="@+id/sign_in_google_button">
+                -->
+
+
                 <androidx.constraintlayout.widget.ConstraintLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent">

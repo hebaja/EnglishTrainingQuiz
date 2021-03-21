@@ -48,6 +48,7 @@
     <string name="msg_subscribed_failed">It was not possible to subscribe to topic</string>
     <string name="admob_ca_app_pub">ca-app-pub-2370319903588478~4186701959</string>
     <string name="admob_quiz_banner_ca_app_pub">ca-app-pub-2370319903588478/9186573731</string>
+    <string name="admob_quiz_banner_ca_app_pub_test">"ca-app-pub-3940256099942544/6300978111"</string>
     <string name="average_cardview_subject_label">Subject:</string>
     <string name="average_cardview_level_label">Level:</string>
     <string name="average_cardview_average_label">Average:</string>

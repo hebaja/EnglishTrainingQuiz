@@ -86,7 +86,6 @@ public class AveragesListAdapter extends RecyclerView.Adapter<AveragesListAdapte
         private void setColorBar(Average average) {
             if(average.getAverage() < 4) {
                 linearProgressIndicator.setIndicatorColor(Color.RED);
-
             } else if(average.getAverage() < 7) {
                 linearProgressIndicator.setIndicatorColor(Color.parseColor("#ffd600"));
             } else {

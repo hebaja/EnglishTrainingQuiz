@@ -4,6 +4,7 @@ import android.app.AlertDialog;
 import android.app.Dialog;
 import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.util.Log;
 import android.util.Patterns;
 import android.view.View;
 import android.widget.Button;
@@ -77,12 +78,8 @@ public class EmailUserRegisterDialog extends DialogFragment {
     public Dialog onCreateDialog(@Nullable Bundle savedInstanceState) {
         AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
         builder.setView(getLayoutInflater().inflate(R.layout.email_user_register_dialog, null))
-                .setPositiveButton(POSITIVE_BUTTON_LABEL, (dialog, which) -> {
-
-                })
-                .setNegativeButton(NEGATIVE_BUTTON_LABEL, (dialog, which) -> {
-
-                });
+                .setPositiveButton(POSITIVE_BUTTON_LABEL, (dialog, which) -> {})
+                .setNegativeButton(NEGATIVE_BUTTON_LABEL, (dialog, which) -> {});
         return builder.create();
     }
 
@@ -99,9 +96,6 @@ public class EmailUserRegisterDialog extends DialogFragment {
 
                 if(inputsAreValid()) {
                     attemptToSendUserRegisterRequest(dialog, user);
-                } else {
-                    dialog.cancel();
-                    Snackbar.make(view, USER_REGISTER_REQUEST_PROBLEM, Snackbar.LENGTH_LONG).show();
                 }
             });
         }
@@ -131,12 +125,14 @@ public class EmailUserRegisterDialog extends DialogFragment {
             @EverythingIsNonNull
             public void onResponse(Call<Boolean> call, Response<Boolean> response) {
                 if(response.isSuccessful()) {
-                    if(response.body()) {
-                        emailInputLayout.setErrorEnabled(true);
-                        emailInputLayout.setError(EMAIL_HAS_BEEN_USED_MESSAGE);
-                    } else {
-                        dialog.cancel();
-                        sendUserRegisterRequest(user);
+                    if(response.body() != null) {
+                        if(response.body()) {
+                            emailInputLayout.setErrorEnabled(true);
+                            emailInputLayout.setError(EMAIL_HAS_BEEN_USED_MESSAGE);
+                        } else {
+                            dialog.cancel();
+                            sendUserRegisterRequest(user);
+                        }
                     }
                 }
             }
@@ -158,11 +154,13 @@ public class EmailUserRegisterDialog extends DialogFragment {
             @EverythingIsNonNull
             public void onResponse(Call<Boolean> call, Response<Boolean> response) {
                 if(response.isSuccessful()) {
-                    if(response.body()) {
-                        final SharedPreferences.Editor editor = preferences.edit();
-                        editor.putString(USERNAME_RECEIVED, user.getUsername());
-                        editor.apply();
-                        Snackbar.make(view, CHECK_EMAIL_REGISTRATION_MESSAGE, Snackbar.LENGTH_LONG).show();
+                    if(response.body() != null) {
+                        if(response.body()) {
+                            final SharedPreferences.Editor editor = preferences.edit();
+                            editor.putString(USERNAME_RECEIVED, user.getUsername());
+                            editor.apply();
+                            Snackbar.make(view, CHECK_EMAIL_REGISTRATION_MESSAGE, Snackbar.LENGTH_LONG).show();
+                        }
                     }
                 } else {
                     Snackbar.make(view, USER_REGISTER_REQUEST_ERROR_MESSAGE, Snackbar.LENGTH_LONG).show();

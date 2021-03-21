@@ -1,6 +1,7 @@
 package br.com.hebaja.englishtrainingquizzes.auth;
 
 import android.content.Context;
+import android.util.Log;
 import android.view.View;
 import android.widget.ProgressBar;
 
@@ -39,10 +40,10 @@ public class GoogleAuthentication {
 
     public GoogleSignInClient getSignInClient(Context context) {
         GoogleSignInOptions gso = new GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)
-                .requestIdToken(context.getString(R.string.default_web_client_id))
+//                .requestIdToken("945534568573-8a8em43b9danr56900a89n84vdna1d58.apps.googleusercontent.com")
+                .requestIdToken("92591554945-5kg21uubvnae5dv15fcrm6kr35pim6o2.apps.googleusercontent.com")
                 .requestEmail()
                 .build();
-
         return GoogleSignIn.getClient(context, gso);
     }
 

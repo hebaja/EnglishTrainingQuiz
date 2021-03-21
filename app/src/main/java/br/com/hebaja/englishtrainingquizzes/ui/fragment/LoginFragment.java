@@ -87,7 +87,7 @@ public class LoginFragment extends Fragment {
         configureViews(view);
         checkIfUserIsSignedIn();
 
-        configureGoogleSignInButton(googleSignInButton);
+//        configureGoogleSignInButton(googleSignInButton);
         facebookAuthentication.configureSignInButton(facebookSignInButton, this, view, progressBar);
 
         emailAuthentication.configureSignInButton(
@@ -152,7 +152,7 @@ public class LoginFragment extends Fragment {
     }
 
     private void configureViews(@NotNull View view) {
-        googleSignInButton = view.findViewById(R.id.sign_in_google_button);
+//        googleSignInButton = view.findViewById(R.id.sign_in_google_button);
         facebookSignInButton = view.findViewById(R.id.facebook_sign_in_button);
         emailSignInButton = view.findViewById(R.id.email_sign_in_button);
         emailTextInputLayout = view.findViewById(R.id.email_sign_in_text_input_layout);
@@ -162,12 +162,12 @@ public class LoginFragment extends Fragment {
         progressBar = view.findViewById(R.id.sign_in_progress_bar);
     }
 
-    private void configureGoogleSignInButton(LinearLayout googleSignInButton) {
-        googleSignInButton.setOnClickListener(v -> {
-            Intent signInIntent = googleSignInClient.getSignInIntent();
-            startActivityForResult(signInIntent, GOOGLE_REQUEST_CODE);
-        });
-    }
+//    private void configureGoogleSignInButton(LinearLayout googleSignInButton) {
+//        googleSignInButton.setOnClickListener(v -> {
+//            Intent signInIntent = googleSignInClient.getSignInIntent();
+//            startActivityForResult(signInIntent, GOOGLE_REQUEST_CODE);
+//        });
+//    }
 
     private void checkIfUserIsSignedIn() {
         loginViewModel.isLoggedIn().observe(getViewLifecycleOwner(), logged -> {
@@ -194,13 +194,18 @@ public class LoginFragment extends Fragment {
         emailUserRegisterDialog.show(getParentFragmentManager(), EmailUserRegisterDialog.EMAIL_USER_REGISTER_DIALOG_EDIT_TEXT);
     }
 
-    private void setGoogleSignInAuthentication(@org.jetbrains.annotations.Nullable Intent data) {
+    private void setGoogleSignInAuthentication(Intent data) {
+
         Task<GoogleSignInAccount> task = GoogleSignIn.getSignedInAccountFromIntent(data);
         try {
             GoogleSignInAccount googleAccount = task.getResult(ApiException.class);
-            assert googleAccount != null;
-            googleAuthentication.authenticate(googleAccount, progressBar, getView());
+
+            if(googleAccount != null) {
+                googleAuthentication.authenticate(googleAccount, progressBar, getView());
+
+            }
         } catch (ApiException e) {
+           Snackbar.make(requireView(), "There was a problem during authentication " + e.getMessage(), Snackbar.LENGTH_SHORT).show();
             e.printStackTrace();
         }
     }

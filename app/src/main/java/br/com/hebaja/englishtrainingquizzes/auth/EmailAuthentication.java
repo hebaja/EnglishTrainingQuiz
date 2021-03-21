@@ -87,11 +87,19 @@ public class EmailAuthentication {
                 if(response.isSuccessful()) {
                     User userReturned = response.body();
                     if(userReturned != null) {
-                        BCrypt.Result result = BCrypt.verifyer().verify(user.getPassword().toCharArray(), userReturned.getPassword());
-                        if(result.verified) {
-                            doWhenPasswordIsCorrect(userReturned, view, loginViewModel, preferences);
+                        BCrypt.Result result = null;
+                        if(user.getPassword() != null && userReturned.getPassword() != null) {
+
+                             result = BCrypt.verifyer().verify(user.getPassword().toCharArray(), userReturned.getPassword());
+                        }
+                        if(result != null) {
+                            if(result.verified) {
+                                doWhenPasswordIsCorrect(userReturned, view, loginViewModel, preferences);
+                            } else {
+                                passwordTextInputLayout.setError(WRONG_PASSWORD_MESSAGE);
+                            }
                         } else {
-                            passwordTextInputLayout.setError(WRONG_PASSWORD_MESSAGE);
+                            emailTextInputLayout.setError("You should use Facebook or Google buttons.");
                         }
                     }
                 } else {

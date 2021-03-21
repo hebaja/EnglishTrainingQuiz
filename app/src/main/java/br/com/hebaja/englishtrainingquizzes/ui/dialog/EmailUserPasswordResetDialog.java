@@ -49,12 +49,8 @@ public class EmailUserPasswordResetDialog extends DialogFragment {
     public Dialog onCreateDialog(@Nullable Bundle savedInstanceState) {
         AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
         builder.setView(getLayoutInflater().inflate(R.layout.email_user_password_reset_dialog, null))
-                .setPositiveButton("Confirm", (dialog, which) -> {
-
-                })
-                .setNegativeButton("Cancel", (dialog, which) -> {
-
-                });
+                .setPositiveButton("Confirm", (dialog, which) -> {})
+                .setNegativeButton("Cancel", (dialog, which) -> {});
         return builder.create();
     }
 
@@ -65,11 +61,10 @@ public class EmailUserPasswordResetDialog extends DialogFragment {
         if(dialog != null) {
             Button button = dialog.getButton(Dialog.BUTTON_POSITIVE);
             button.setOnClickListener(v -> {
-
                 emailInputLayout = dialog.findViewById(R.id.dialog_email_user_password_reset_input_layout);
-                progressBar.setVisibility(View.VISIBLE);
                 if(inputsAreValid()) {
                     dialog.cancel();
+                    progressBar.setVisibility(View.VISIBLE);
                     EmailUserPasswordResetService service = new BaseRetrofit().getEmailUserPasswordResetService();
                     Call<Boolean> call = service.resetPassword(email);
                     call.enqueue(new Callback<Boolean>() {
@@ -77,8 +72,10 @@ public class EmailUserPasswordResetDialog extends DialogFragment {
                         @EverythingIsNonNull
                         public void onResponse(Call<Boolean> call, Response<Boolean> response) {
                             if(response.isSuccessful()) {
-                                if(response.body()) {
-                                    Snackbar.make(view, CHECK_YOUR_EMAIL_INBOX_MESSAGE, Snackbar.LENGTH_LONG).show();
+                                if(response.body() != null) {
+                                    if(response.body()) {
+                                        Snackbar.make(view, CHECK_YOUR_EMAIL_INBOX_MESSAGE, Snackbar.LENGTH_LONG).show();
+                                    }
                                 }
                             } else {
                                 Snackbar.make(view, PASSWORD_RESET_REQUEST_ERROR, Snackbar.LENGTH_LONG).show();
